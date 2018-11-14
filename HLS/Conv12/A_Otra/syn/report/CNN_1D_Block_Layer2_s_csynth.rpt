@@ -1,0 +1,431 @@
+
+
+================================================================
+== Vivado HLS Report for 'CNN_1D_Block_Layer2_s'
+================================================================
+* Date:           Sun Jul  1 02:49:31 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.87|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   60|   60|   60|   60|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     16|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|   1075|
+|Register         |        -|      -|    1124|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|    1124|   1091|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       1|      2|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------+----------+-------+---+----+------------+------------+
+    |   Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1   |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state61  |    or    |      0|  0|   8|           1|           1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |Total             |          |      0|  0|  16|           2|           2|
+    +------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+-----+-----------+-----+-----------+
+    |            Name           | LUT | Input Size| Bits| Total Bits|
+    +---------------------------+-----+-----------+-----+-----------+
+    |Layer3_Bias_V_Addr_A_orig  |  261|         61|   32|       1952|
+    |ap_NS_fsm                  |  265|         62|    1|         62|
+    |ap_done                    |    9|          2|    1|          2|
+    |sum_0_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_10_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_11_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_12_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_13_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_14_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_15_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_16_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_17_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_18_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_19_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_1_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_20_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_21_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_22_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_23_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_24_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_25_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_26_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_27_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_28_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_29_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_2_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_30_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_31_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_32_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_33_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_34_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_35_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_36_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_37_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_38_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_39_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_3_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_40_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_41_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_42_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_43_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_44_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_45_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_46_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_47_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_48_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_49_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_4_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_50_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_51_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_52_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_53_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_54_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_55_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_56_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_57_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_58_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_59_V_out_out_blk_n     |    9|          2|    1|          2|
+    |sum_5_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_6_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_7_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_8_V_out_out_blk_n      |    9|          2|    1|          2|
+    |sum_9_V_out_out_blk_n      |    9|          2|    1|          2|
+    +---------------------------+-----+-----------+-----+-----------+
+    |Total                      | 1075|        245|   94|       2136|
+    +---------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+----+----+-----+-----------+
+    |        Name       | FF | LUT| Bits| Const Bits|
+    +-------------------+----+----+-----+-----------+
+    |ap_CS_fsm          |  61|   0|   61|          0|
+    |ap_done_reg        |   1|   0|    1|          0|
+    |sum_0_V_reg_1236   |  18|   0|   18|          0|
+    |sum_10_V_reg_1336  |  18|   0|   18|          0|
+    |sum_11_V_reg_1346  |  18|   0|   18|          0|
+    |sum_12_V_reg_1356  |  18|   0|   18|          0|
+    |sum_13_V_reg_1366  |  18|   0|   18|          0|
+    |sum_14_V_reg_1376  |  18|   0|   18|          0|
+    |sum_15_V_reg_1386  |  18|   0|   18|          0|
+    |sum_16_V_reg_1396  |  18|   0|   18|          0|
+    |sum_17_V_reg_1406  |  18|   0|   18|          0|
+    |sum_18_V_reg_1416  |  18|   0|   18|          0|
+    |sum_19_V_reg_1426  |  18|   0|   18|          0|
+    |sum_1_V_reg_1246   |  18|   0|   18|          0|
+    |sum_20_V_reg_1436  |  18|   0|   18|          0|
+    |sum_21_V_reg_1446  |  18|   0|   18|          0|
+    |sum_22_V_reg_1456  |  18|   0|   18|          0|
+    |sum_23_V_reg_1466  |  18|   0|   18|          0|
+    |sum_24_V_reg_1476  |  18|   0|   18|          0|
+    |sum_25_V_reg_1486  |  18|   0|   18|          0|
+    |sum_26_V_reg_1496  |  18|   0|   18|          0|
+    |sum_27_V_reg_1506  |  18|   0|   18|          0|
+    |sum_28_V_reg_1516  |  18|   0|   18|          0|
+    |sum_29_V_reg_1526  |  18|   0|   18|          0|
+    |sum_2_V_reg_1256   |  18|   0|   18|          0|
+    |sum_30_V_reg_1536  |  18|   0|   18|          0|
+    |sum_31_V_reg_1546  |  18|   0|   18|          0|
+    |sum_32_V_reg_1556  |  18|   0|   18|          0|
+    |sum_33_V_reg_1566  |  18|   0|   18|          0|
+    |sum_34_V_reg_1576  |  18|   0|   18|          0|
+    |sum_35_V_reg_1586  |  18|   0|   18|          0|
+    |sum_36_V_reg_1596  |  18|   0|   18|          0|
+    |sum_37_V_reg_1606  |  18|   0|   18|          0|
+    |sum_38_V_reg_1616  |  18|   0|   18|          0|
+    |sum_39_V_reg_1626  |  18|   0|   18|          0|
+    |sum_3_V_reg_1266   |  18|   0|   18|          0|
+    |sum_40_V_reg_1636  |  18|   0|   18|          0|
+    |sum_41_V_reg_1646  |  18|   0|   18|          0|
+    |sum_42_V_reg_1656  |  18|   0|   18|          0|
+    |sum_43_V_reg_1666  |  18|   0|   18|          0|
+    |sum_44_V_reg_1676  |  18|   0|   18|          0|
+    |sum_45_V_reg_1686  |  18|   0|   18|          0|
+    |sum_46_V_reg_1696  |  18|   0|   18|          0|
+    |sum_47_V_reg_1706  |  18|   0|   18|          0|
+    |sum_48_V_reg_1716  |  18|   0|   18|          0|
+    |sum_49_V_reg_1726  |  18|   0|   18|          0|
+    |sum_4_V_reg_1276   |  18|   0|   18|          0|
+    |sum_50_V_reg_1736  |  18|   0|   18|          0|
+    |sum_51_V_reg_1746  |  18|   0|   18|          0|
+    |sum_52_V_reg_1756  |  18|   0|   18|          0|
+    |sum_53_V_reg_1766  |  18|   0|   18|          0|
+    |sum_54_V_reg_1776  |  18|   0|   18|          0|
+    |sum_55_V_reg_1786  |  18|   0|   18|          0|
+    |sum_56_V_reg_1796  |  18|   0|   18|          0|
+    |sum_57_V_reg_1806  |  18|   0|   18|          0|
+    |sum_58_V_reg_1816  |  18|   0|   18|          0|
+    |sum_5_V_reg_1286   |  18|   0|   18|          0|
+    |sum_6_V_reg_1296   |  18|   0|   18|          0|
+    |sum_7_V_reg_1306   |  18|   0|   18|          0|
+    |sum_8_V_reg_1316   |  18|   0|   18|          0|
+    |sum_9_V_reg_1326   |  18|   0|   18|          0|
+    +-------------------+----+----+-----+-----------+
+    |Total              |1124|   0| 1124|          0|
+    +-------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|ap_continue              |  in |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | CNN_1D_Block_Layer2_ | return value |
+|Layer3_Bias_V_Addr_A     | out |   32|    bram    |     Layer3_Bias_V    |     array    |
+|Layer3_Bias_V_EN_A       | out |    1|    bram    |     Layer3_Bias_V    |     array    |
+|Layer3_Bias_V_WEN_A      | out |    4|    bram    |     Layer3_Bias_V    |     array    |
+|Layer3_Bias_V_Din_A      | out |   32|    bram    |     Layer3_Bias_V    |     array    |
+|Layer3_Bias_V_Dout_A     |  in |   32|    bram    |     Layer3_Bias_V    |     array    |
+|sum_0_V_out_out_din      | out |   18|   ap_fifo  |    sum_0_V_out_out   |    pointer   |
+|sum_0_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_0_V_out_out   |    pointer   |
+|sum_0_V_out_out_write    | out |    1|   ap_fifo  |    sum_0_V_out_out   |    pointer   |
+|sum_1_V_out_out_din      | out |   18|   ap_fifo  |    sum_1_V_out_out   |    pointer   |
+|sum_1_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_1_V_out_out   |    pointer   |
+|sum_1_V_out_out_write    | out |    1|   ap_fifo  |    sum_1_V_out_out   |    pointer   |
+|sum_2_V_out_out_din      | out |   18|   ap_fifo  |    sum_2_V_out_out   |    pointer   |
+|sum_2_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_2_V_out_out   |    pointer   |
+|sum_2_V_out_out_write    | out |    1|   ap_fifo  |    sum_2_V_out_out   |    pointer   |
+|sum_3_V_out_out_din      | out |   18|   ap_fifo  |    sum_3_V_out_out   |    pointer   |
+|sum_3_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_3_V_out_out   |    pointer   |
+|sum_3_V_out_out_write    | out |    1|   ap_fifo  |    sum_3_V_out_out   |    pointer   |
+|sum_4_V_out_out_din      | out |   18|   ap_fifo  |    sum_4_V_out_out   |    pointer   |
+|sum_4_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_4_V_out_out   |    pointer   |
+|sum_4_V_out_out_write    | out |    1|   ap_fifo  |    sum_4_V_out_out   |    pointer   |
+|sum_5_V_out_out_din      | out |   18|   ap_fifo  |    sum_5_V_out_out   |    pointer   |
+|sum_5_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_5_V_out_out   |    pointer   |
+|sum_5_V_out_out_write    | out |    1|   ap_fifo  |    sum_5_V_out_out   |    pointer   |
+|sum_6_V_out_out_din      | out |   18|   ap_fifo  |    sum_6_V_out_out   |    pointer   |
+|sum_6_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_6_V_out_out   |    pointer   |
+|sum_6_V_out_out_write    | out |    1|   ap_fifo  |    sum_6_V_out_out   |    pointer   |
+|sum_7_V_out_out_din      | out |   18|   ap_fifo  |    sum_7_V_out_out   |    pointer   |
+|sum_7_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_7_V_out_out   |    pointer   |
+|sum_7_V_out_out_write    | out |    1|   ap_fifo  |    sum_7_V_out_out   |    pointer   |
+|sum_8_V_out_out_din      | out |   18|   ap_fifo  |    sum_8_V_out_out   |    pointer   |
+|sum_8_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_8_V_out_out   |    pointer   |
+|sum_8_V_out_out_write    | out |    1|   ap_fifo  |    sum_8_V_out_out   |    pointer   |
+|sum_9_V_out_out_din      | out |   18|   ap_fifo  |    sum_9_V_out_out   |    pointer   |
+|sum_9_V_out_out_full_n   |  in |    1|   ap_fifo  |    sum_9_V_out_out   |    pointer   |
+|sum_9_V_out_out_write    | out |    1|   ap_fifo  |    sum_9_V_out_out   |    pointer   |
+|sum_10_V_out_out_din     | out |   18|   ap_fifo  |   sum_10_V_out_out   |    pointer   |
+|sum_10_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_10_V_out_out   |    pointer   |
+|sum_10_V_out_out_write   | out |    1|   ap_fifo  |   sum_10_V_out_out   |    pointer   |
+|sum_11_V_out_out_din     | out |   18|   ap_fifo  |   sum_11_V_out_out   |    pointer   |
+|sum_11_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_11_V_out_out   |    pointer   |
+|sum_11_V_out_out_write   | out |    1|   ap_fifo  |   sum_11_V_out_out   |    pointer   |
+|sum_12_V_out_out_din     | out |   18|   ap_fifo  |   sum_12_V_out_out   |    pointer   |
+|sum_12_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_12_V_out_out   |    pointer   |
+|sum_12_V_out_out_write   | out |    1|   ap_fifo  |   sum_12_V_out_out   |    pointer   |
+|sum_13_V_out_out_din     | out |   18|   ap_fifo  |   sum_13_V_out_out   |    pointer   |
+|sum_13_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_13_V_out_out   |    pointer   |
+|sum_13_V_out_out_write   | out |    1|   ap_fifo  |   sum_13_V_out_out   |    pointer   |
+|sum_14_V_out_out_din     | out |   18|   ap_fifo  |   sum_14_V_out_out   |    pointer   |
+|sum_14_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_14_V_out_out   |    pointer   |
+|sum_14_V_out_out_write   | out |    1|   ap_fifo  |   sum_14_V_out_out   |    pointer   |
+|sum_15_V_out_out_din     | out |   18|   ap_fifo  |   sum_15_V_out_out   |    pointer   |
+|sum_15_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_15_V_out_out   |    pointer   |
+|sum_15_V_out_out_write   | out |    1|   ap_fifo  |   sum_15_V_out_out   |    pointer   |
+|sum_16_V_out_out_din     | out |   18|   ap_fifo  |   sum_16_V_out_out   |    pointer   |
+|sum_16_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_16_V_out_out   |    pointer   |
+|sum_16_V_out_out_write   | out |    1|   ap_fifo  |   sum_16_V_out_out   |    pointer   |
+|sum_17_V_out_out_din     | out |   18|   ap_fifo  |   sum_17_V_out_out   |    pointer   |
+|sum_17_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_17_V_out_out   |    pointer   |
+|sum_17_V_out_out_write   | out |    1|   ap_fifo  |   sum_17_V_out_out   |    pointer   |
+|sum_18_V_out_out_din     | out |   18|   ap_fifo  |   sum_18_V_out_out   |    pointer   |
+|sum_18_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_18_V_out_out   |    pointer   |
+|sum_18_V_out_out_write   | out |    1|   ap_fifo  |   sum_18_V_out_out   |    pointer   |
+|sum_19_V_out_out_din     | out |   18|   ap_fifo  |   sum_19_V_out_out   |    pointer   |
+|sum_19_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_19_V_out_out   |    pointer   |
+|sum_19_V_out_out_write   | out |    1|   ap_fifo  |   sum_19_V_out_out   |    pointer   |
+|sum_20_V_out_out_din     | out |   18|   ap_fifo  |   sum_20_V_out_out   |    pointer   |
+|sum_20_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_20_V_out_out   |    pointer   |
+|sum_20_V_out_out_write   | out |    1|   ap_fifo  |   sum_20_V_out_out   |    pointer   |
+|sum_21_V_out_out_din     | out |   18|   ap_fifo  |   sum_21_V_out_out   |    pointer   |
+|sum_21_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_21_V_out_out   |    pointer   |
+|sum_21_V_out_out_write   | out |    1|   ap_fifo  |   sum_21_V_out_out   |    pointer   |
+|sum_22_V_out_out_din     | out |   18|   ap_fifo  |   sum_22_V_out_out   |    pointer   |
+|sum_22_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_22_V_out_out   |    pointer   |
+|sum_22_V_out_out_write   | out |    1|   ap_fifo  |   sum_22_V_out_out   |    pointer   |
+|sum_23_V_out_out_din     | out |   18|   ap_fifo  |   sum_23_V_out_out   |    pointer   |
+|sum_23_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_23_V_out_out   |    pointer   |
+|sum_23_V_out_out_write   | out |    1|   ap_fifo  |   sum_23_V_out_out   |    pointer   |
+|sum_24_V_out_out_din     | out |   18|   ap_fifo  |   sum_24_V_out_out   |    pointer   |
+|sum_24_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_24_V_out_out   |    pointer   |
+|sum_24_V_out_out_write   | out |    1|   ap_fifo  |   sum_24_V_out_out   |    pointer   |
+|sum_25_V_out_out_din     | out |   18|   ap_fifo  |   sum_25_V_out_out   |    pointer   |
+|sum_25_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_25_V_out_out   |    pointer   |
+|sum_25_V_out_out_write   | out |    1|   ap_fifo  |   sum_25_V_out_out   |    pointer   |
+|sum_26_V_out_out_din     | out |   18|   ap_fifo  |   sum_26_V_out_out   |    pointer   |
+|sum_26_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_26_V_out_out   |    pointer   |
+|sum_26_V_out_out_write   | out |    1|   ap_fifo  |   sum_26_V_out_out   |    pointer   |
+|sum_27_V_out_out_din     | out |   18|   ap_fifo  |   sum_27_V_out_out   |    pointer   |
+|sum_27_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_27_V_out_out   |    pointer   |
+|sum_27_V_out_out_write   | out |    1|   ap_fifo  |   sum_27_V_out_out   |    pointer   |
+|sum_28_V_out_out_din     | out |   18|   ap_fifo  |   sum_28_V_out_out   |    pointer   |
+|sum_28_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_28_V_out_out   |    pointer   |
+|sum_28_V_out_out_write   | out |    1|   ap_fifo  |   sum_28_V_out_out   |    pointer   |
+|sum_29_V_out_out_din     | out |   18|   ap_fifo  |   sum_29_V_out_out   |    pointer   |
+|sum_29_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_29_V_out_out   |    pointer   |
+|sum_29_V_out_out_write   | out |    1|   ap_fifo  |   sum_29_V_out_out   |    pointer   |
+|sum_30_V_out_out_din     | out |   18|   ap_fifo  |   sum_30_V_out_out   |    pointer   |
+|sum_30_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_30_V_out_out   |    pointer   |
+|sum_30_V_out_out_write   | out |    1|   ap_fifo  |   sum_30_V_out_out   |    pointer   |
+|sum_31_V_out_out_din     | out |   18|   ap_fifo  |   sum_31_V_out_out   |    pointer   |
+|sum_31_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_31_V_out_out   |    pointer   |
+|sum_31_V_out_out_write   | out |    1|   ap_fifo  |   sum_31_V_out_out   |    pointer   |
+|sum_32_V_out_out_din     | out |   18|   ap_fifo  |   sum_32_V_out_out   |    pointer   |
+|sum_32_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_32_V_out_out   |    pointer   |
+|sum_32_V_out_out_write   | out |    1|   ap_fifo  |   sum_32_V_out_out   |    pointer   |
+|sum_33_V_out_out_din     | out |   18|   ap_fifo  |   sum_33_V_out_out   |    pointer   |
+|sum_33_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_33_V_out_out   |    pointer   |
+|sum_33_V_out_out_write   | out |    1|   ap_fifo  |   sum_33_V_out_out   |    pointer   |
+|sum_34_V_out_out_din     | out |   18|   ap_fifo  |   sum_34_V_out_out   |    pointer   |
+|sum_34_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_34_V_out_out   |    pointer   |
+|sum_34_V_out_out_write   | out |    1|   ap_fifo  |   sum_34_V_out_out   |    pointer   |
+|sum_35_V_out_out_din     | out |   18|   ap_fifo  |   sum_35_V_out_out   |    pointer   |
+|sum_35_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_35_V_out_out   |    pointer   |
+|sum_35_V_out_out_write   | out |    1|   ap_fifo  |   sum_35_V_out_out   |    pointer   |
+|sum_36_V_out_out_din     | out |   18|   ap_fifo  |   sum_36_V_out_out   |    pointer   |
+|sum_36_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_36_V_out_out   |    pointer   |
+|sum_36_V_out_out_write   | out |    1|   ap_fifo  |   sum_36_V_out_out   |    pointer   |
+|sum_37_V_out_out_din     | out |   18|   ap_fifo  |   sum_37_V_out_out   |    pointer   |
+|sum_37_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_37_V_out_out   |    pointer   |
+|sum_37_V_out_out_write   | out |    1|   ap_fifo  |   sum_37_V_out_out   |    pointer   |
+|sum_38_V_out_out_din     | out |   18|   ap_fifo  |   sum_38_V_out_out   |    pointer   |
+|sum_38_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_38_V_out_out   |    pointer   |
+|sum_38_V_out_out_write   | out |    1|   ap_fifo  |   sum_38_V_out_out   |    pointer   |
+|sum_39_V_out_out_din     | out |   18|   ap_fifo  |   sum_39_V_out_out   |    pointer   |
+|sum_39_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_39_V_out_out   |    pointer   |
+|sum_39_V_out_out_write   | out |    1|   ap_fifo  |   sum_39_V_out_out   |    pointer   |
+|sum_40_V_out_out_din     | out |   18|   ap_fifo  |   sum_40_V_out_out   |    pointer   |
+|sum_40_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_40_V_out_out   |    pointer   |
+|sum_40_V_out_out_write   | out |    1|   ap_fifo  |   sum_40_V_out_out   |    pointer   |
+|sum_41_V_out_out_din     | out |   18|   ap_fifo  |   sum_41_V_out_out   |    pointer   |
+|sum_41_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_41_V_out_out   |    pointer   |
+|sum_41_V_out_out_write   | out |    1|   ap_fifo  |   sum_41_V_out_out   |    pointer   |
+|sum_42_V_out_out_din     | out |   18|   ap_fifo  |   sum_42_V_out_out   |    pointer   |
+|sum_42_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_42_V_out_out   |    pointer   |
+|sum_42_V_out_out_write   | out |    1|   ap_fifo  |   sum_42_V_out_out   |    pointer   |
+|sum_43_V_out_out_din     | out |   18|   ap_fifo  |   sum_43_V_out_out   |    pointer   |
+|sum_43_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_43_V_out_out   |    pointer   |
+|sum_43_V_out_out_write   | out |    1|   ap_fifo  |   sum_43_V_out_out   |    pointer   |
+|sum_44_V_out_out_din     | out |   18|   ap_fifo  |   sum_44_V_out_out   |    pointer   |
+|sum_44_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_44_V_out_out   |    pointer   |
+|sum_44_V_out_out_write   | out |    1|   ap_fifo  |   sum_44_V_out_out   |    pointer   |
+|sum_45_V_out_out_din     | out |   18|   ap_fifo  |   sum_45_V_out_out   |    pointer   |
+|sum_45_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_45_V_out_out   |    pointer   |
+|sum_45_V_out_out_write   | out |    1|   ap_fifo  |   sum_45_V_out_out   |    pointer   |
+|sum_46_V_out_out_din     | out |   18|   ap_fifo  |   sum_46_V_out_out   |    pointer   |
+|sum_46_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_46_V_out_out   |    pointer   |
+|sum_46_V_out_out_write   | out |    1|   ap_fifo  |   sum_46_V_out_out   |    pointer   |
+|sum_47_V_out_out_din     | out |   18|   ap_fifo  |   sum_47_V_out_out   |    pointer   |
+|sum_47_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_47_V_out_out   |    pointer   |
+|sum_47_V_out_out_write   | out |    1|   ap_fifo  |   sum_47_V_out_out   |    pointer   |
+|sum_48_V_out_out_din     | out |   18|   ap_fifo  |   sum_48_V_out_out   |    pointer   |
+|sum_48_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_48_V_out_out   |    pointer   |
+|sum_48_V_out_out_write   | out |    1|   ap_fifo  |   sum_48_V_out_out   |    pointer   |
+|sum_49_V_out_out_din     | out |   18|   ap_fifo  |   sum_49_V_out_out   |    pointer   |
+|sum_49_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_49_V_out_out   |    pointer   |
+|sum_49_V_out_out_write   | out |    1|   ap_fifo  |   sum_49_V_out_out   |    pointer   |
+|sum_50_V_out_out_din     | out |   18|   ap_fifo  |   sum_50_V_out_out   |    pointer   |
+|sum_50_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_50_V_out_out   |    pointer   |
+|sum_50_V_out_out_write   | out |    1|   ap_fifo  |   sum_50_V_out_out   |    pointer   |
+|sum_51_V_out_out_din     | out |   18|   ap_fifo  |   sum_51_V_out_out   |    pointer   |
+|sum_51_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_51_V_out_out   |    pointer   |
+|sum_51_V_out_out_write   | out |    1|   ap_fifo  |   sum_51_V_out_out   |    pointer   |
+|sum_52_V_out_out_din     | out |   18|   ap_fifo  |   sum_52_V_out_out   |    pointer   |
+|sum_52_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_52_V_out_out   |    pointer   |
+|sum_52_V_out_out_write   | out |    1|   ap_fifo  |   sum_52_V_out_out   |    pointer   |
+|sum_53_V_out_out_din     | out |   18|   ap_fifo  |   sum_53_V_out_out   |    pointer   |
+|sum_53_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_53_V_out_out   |    pointer   |
+|sum_53_V_out_out_write   | out |    1|   ap_fifo  |   sum_53_V_out_out   |    pointer   |
+|sum_54_V_out_out_din     | out |   18|   ap_fifo  |   sum_54_V_out_out   |    pointer   |
+|sum_54_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_54_V_out_out   |    pointer   |
+|sum_54_V_out_out_write   | out |    1|   ap_fifo  |   sum_54_V_out_out   |    pointer   |
+|sum_55_V_out_out_din     | out |   18|   ap_fifo  |   sum_55_V_out_out   |    pointer   |
+|sum_55_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_55_V_out_out   |    pointer   |
+|sum_55_V_out_out_write   | out |    1|   ap_fifo  |   sum_55_V_out_out   |    pointer   |
+|sum_56_V_out_out_din     | out |   18|   ap_fifo  |   sum_56_V_out_out   |    pointer   |
+|sum_56_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_56_V_out_out   |    pointer   |
+|sum_56_V_out_out_write   | out |    1|   ap_fifo  |   sum_56_V_out_out   |    pointer   |
+|sum_57_V_out_out_din     | out |   18|   ap_fifo  |   sum_57_V_out_out   |    pointer   |
+|sum_57_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_57_V_out_out   |    pointer   |
+|sum_57_V_out_out_write   | out |    1|   ap_fifo  |   sum_57_V_out_out   |    pointer   |
+|sum_58_V_out_out_din     | out |   18|   ap_fifo  |   sum_58_V_out_out   |    pointer   |
+|sum_58_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_58_V_out_out   |    pointer   |
+|sum_58_V_out_out_write   | out |    1|   ap_fifo  |   sum_58_V_out_out   |    pointer   |
+|sum_59_V_out_out_din     | out |   18|   ap_fifo  |   sum_59_V_out_out   |    pointer   |
+|sum_59_V_out_out_full_n  |  in |    1|   ap_fifo  |   sum_59_V_out_out   |    pointer   |
+|sum_59_V_out_out_write   | out |    1|   ap_fifo  |   sum_59_V_out_out   |    pointer   |
++-------------------------+-----+-----+------------+----------------------+--------------+
+

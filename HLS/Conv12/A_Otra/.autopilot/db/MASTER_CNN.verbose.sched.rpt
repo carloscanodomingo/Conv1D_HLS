@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'MASTER_CNN'
+================================================================
+* Date:           Sun Jul  1 02:49:19 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+---------+------+---------+---------+
+    |     Latency    |    Interval    | Pipeline|
+    |  min |   max   |  min |   max   |   Type  |
+    +------+---------+------+---------+---------+
+    |  7526|  1518801|  7526|  1518801|   none  |
+    +------+---------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+        |                |     Latency    |  Iteration  |  Initiation Interval  |   Trip  |          |
+        |    Loop Name   |  min |   max   |   Latency   |  achieved |   target  |  Count  | Pipelined|
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+        |- Loop_Rep_CNN  |  7525|  1518800| 7525 ~ 7594 |          -|          -| 1 ~ 200 |    no    |
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	2  / true
+
+* FSM state operations: 
+
+ <State 1> : 3.92ns
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_3_V), !map !656"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_2_V), !map !663"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_1_V), !map !669"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_0_V), !map !675"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %Config_rep), !map !681"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([38400 x i18]* %src_V), !map !687"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([600 x i16]* %dst_V), !map !694"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1920 x i18]* %saveValueLayer1_V), !map !700"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([960 x i18]* %saveValueLayer2_V), !map !706"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([60 x i18]* %saveValueLayer3_V), !map !712"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([190 x i18]* %Layer1_WeightArray_V), !map !718"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x i18]* %Layer1_BiasArray_V), !map !724"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([900 x i18]* %Layer2_WeightMatrix_V), !map !729"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x i18]* %Layer2_BiasArray_V), !map !735"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([60 x i18]* %Layer3_Bias_V), !map !739"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([180 x i18]* %Layer4_weightArray_V), !map !743"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i18]* %Layer4_Bias_V), !map !748"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @MASTER_CNN_str) nounwind"
+ST_1 : Operation 22 [1/1] (1.00ns)   --->   "%Config_rep_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %Config_rep)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind" [SRC/2_Manage_CNN.cpp:6]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([38400 x i18]* %src_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([38400 x i18]* %src_V, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([600 x i16]* %dst_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([600 x i16]* %dst_V, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8 %Config_rep, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind" [SRC/2_Manage_CNN.cpp:9]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([3 x i18]* %Layer4_Bias_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([3 x i18]* %Layer4_Bias_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([180 x i18]* %Layer4_weightArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([180 x i18]* %Layer4_weightArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([60 x i18]* %Layer3_Bias_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([60 x i18]* %Layer3_Bias_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([10 x i18]* %Layer2_BiasArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([10 x i18]* %Layer2_BiasArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([900 x i18]* %Layer2_WeightMatrix_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([900 x i18]* %Layer2_WeightMatrix_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([10 x i18]* %Layer1_BiasArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([10 x i18]* %Layer1_BiasArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([190 x i18]* %Layer1_WeightArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([190 x i18]* %Layer1_WeightArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([60 x i18]* %saveValueLayer3_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([60 x i18]* %saveValueLayer3_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([960 x i18]* %saveValueLayer2_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([960 x i18]* %saveValueLayer2_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([1920 x i18]* %saveValueLayer1_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([1920 x i18]* %saveValueLayer1_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 51 [1/1] (1.55ns)   --->   "%tmp = icmp ult i8 %Config_rep_read, -56" [SRC/2_Manage_CNN.cpp:40]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (1.37ns)   --->   "%Config_rep_s = select i1 %tmp, i8 %Config_rep_read, i8 -56" [SRC/2_Manage_CNN.cpp:40]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (1.76ns)   --->   "br label %0" [SRC/2_Manage_CNN.cpp:46]
+
+ <State 2> : 1.92ns
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%i = phi i8 [ 0, %._crit_edge ], [ %i_1, %1 ]"
+ST_2 : Operation 55 [1/1] (1.55ns)   --->   "%exitcond = icmp eq i8 %i, %Config_rep_s" [SRC/2_Manage_CNN.cpp:46]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (1.91ns)   --->   "%i_1 = add i8 %i, 1" [SRC/2_Manage_CNN.cpp:46]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %2, label %1" [SRC/2_Manage_CNN.cpp:46]
+ST_2 : Operation 58 [2/2] (0.00ns)   --->   "call fastcc void @CNN_1D([38400 x i18]* %src_V, i8 %i, [1920 x i18]* %saveValueLayer1_V, [960 x i18]* %saveValueLayer2_V, [60 x i18]* %saveValueLayer3_V, [190 x i18]* %Layer1_WeightArray_V, [10 x i18]* %Layer1_BiasArray_V, [900 x i18]* %Layer2_WeightMatrix_V, [10 x i18]* %Layer2_BiasArray_V, [7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [60 x i18]* %Layer3_Bias_V, [180 x i18]* %Layer4_weightArray_V, [3 x i18]* %Layer4_Bias_V, [600 x i16]* %dst_V)" [SRC/2_Manage_CNN.cpp:51]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "ret void" [SRC/2_Manage_CNN.cpp:53]
+
+ <State 3> : 0.00ns
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str7105) nounwind" [SRC/2_Manage_CNN.cpp:46]
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str7105)" [SRC/2_Manage_CNN.cpp:46]
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 1, i32 200, i32 50, [1 x i8]* @p_str2100) nounwind" [SRC/2_Manage_CNN.cpp:47]
+ST_3 : Operation 63 [1/2] (0.00ns)   --->   "call fastcc void @CNN_1D([38400 x i18]* %src_V, i8 %i, [1920 x i18]* %saveValueLayer1_V, [960 x i18]* %saveValueLayer2_V, [60 x i18]* %saveValueLayer3_V, [190 x i18]* %Layer1_WeightArray_V, [10 x i18]* %Layer1_BiasArray_V, [900 x i18]* %Layer2_WeightMatrix_V, [10 x i18]* %Layer2_BiasArray_V, [7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [60 x i18]* %Layer3_Bias_V, [180 x i18]* %Layer4_weightArray_V, [3 x i18]* %Layer4_Bias_V, [600 x i16]* %dst_V)" [SRC/2_Manage_CNN.cpp:51]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str7105, i32 %tmp_s)" [SRC/2_Manage_CNN.cpp:52]
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "br label %0" [SRC/2_Manage_CNN.cpp:46]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.92ns
+The critical path consists of the following:
+	s_axi read on port 'Config_rep' [38]  (1 ns)
+	'icmp' operation ('tmp', SRC/2_Manage_CNN.cpp:40) [67]  (1.55 ns)
+	'select' operation ('Config_rep_s', SRC/2_Manage_CNN.cpp:40) [68]  (1.37 ns)
+
+ <State 2>: 1.92ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', SRC/2_Manage_CNN.cpp:46) [71]  (0 ns)
+	'add' operation ('i', SRC/2_Manage_CNN.cpp:46) [73]  (1.92 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

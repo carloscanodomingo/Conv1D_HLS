@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;SRC/1_keras.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;SRC/2_Manage_CNN.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;INLINE&apos; cannot be applied: Function &apos;mult&apos; does not exist in any synthesis source file." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;UNROLL&apos; cannot be applied: Label &apos;fill_Filters&apos; does not exist in function &apos;Layer1_Conv&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;INTERFACE&apos; cannot be applied: Function &apos;dst&apos; does not exist in any synthesis source file." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_K4&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_cos_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::cos_K3&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::cos_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::cos_K2&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_K2&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::sin_cos_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::cos_K4&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_cos_K2&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_cos_K3&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_cos_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::cos_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;first_order_fixed_16::sin_cos_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::cos_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_K3&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_cos_K4&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::sin_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::sin_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::cos_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;first_order_fixed_16::sin_cos_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::cos_K2&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::sin_cos_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::sin_K2&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_K0&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;second_order_float::sin_cos_K2&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sin_or_cos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;RESOURCE&apos; for core &apos;ROM_1P_LUTRAM&apos; cannot be applied: Variable &apos;fourth_order_double::sin_K1&apos; can not be recognized(UNKNOWN VARIABLE) in &apos;sincos_approximation&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 100.820 ; gain = 45.848" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:57 . Memory (MB): peak = 100.855 ; gain = 45.883" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="890" content="Ignored unroll directive &apos;Loop_OUT&apos; (SRC/1_keras.cpp:283) in function &apos;Layer3_Dense(ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [60], ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)&apos;: multiple loop unroll directives in one loop, use the first one and ignore the rest." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:403) in function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_col(ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, int)&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:123) in function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_pixels_left()&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:403) in function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_col(ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, int)&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:123) in function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_pixels_left()&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_pixels_left&apos; into &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_left&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:533)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_left&apos; into &apos;Layer1_Conv1D&apos; (SRC/1_keras.cpp:108)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_col&apos; into &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_right_col&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:468)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_right_col&apos; into &apos;Layer1_Conv1D&apos; (SRC/1_keras.cpp:109)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 19, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::getval&apos; into &apos;Layer1_mult&apos; (SRC/1_keras.cpp:382)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;poslin&apos; into &apos;Layer1_Conv1D&apos; (SRC/1_keras.cpp:114)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;poslin&apos; into &apos;Layer3_Dense&apos; (SRC/1_keras.cpp:292)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer1_Conv1D&apos; into &apos;Layer1_Conv&apos; (SRC/1_keras.cpp:83)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer1_Conv&apos; into &apos;CNN_1D&apos; (SRC/1_keras.cpp:28)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_pixels_left&apos; into &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_left&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:533)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::shift_left&apos; into &apos;Layer2_Conv1D&apos; (SRC/1_keras.cpp:222)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_col&apos; into &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_right_col&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:468)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::insert_right_col&apos; into &apos;Layer2_Conv1D&apos; (SRC/1_keras.cpp:223)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;hls::Window&lt;1, 9, ap_fixed&lt;18, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; &gt;::getval&apos; into &apos;Layer2_mult_inner&apos; (SRC/1_keras.cpp:412)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer2_mult_add&apos; into &apos;Layer2_mult_inner&apos; (SRC/1_keras.cpp:412)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer2_Conv1D&apos; into &apos;Layer2_Conv&apos; (SRC/1_keras.cpp:184)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer2_Conv&apos; into &apos;CNN_1D&apos; (SRC/1_keras.cpp:29)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer3_mult_add&apos; into &apos;Layer3_Dense&apos; (SRC/1_keras.cpp:286)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer3_Dense&apos; into &apos;CNN_1D&apos; (SRC/1_keras.cpp:31)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;Layer4_mult_add&apos; into &apos;Layer4_Dense&apos; (SRC/1_keras.cpp:322)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:01:06 . Memory (MB): peak = 265.859 ; gain = 210.887" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;hls::exp&lt;24, 16&gt;&apos; into &apos;Layer4_Dense&apos; (SRC/1_keras.cpp:337) automatically." tag=""/>
+	<Message prefix="[SYNCHK 200-23]" severity="WARNING" keynum="579" content="C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:283: variable-indexed range selection may cause suboptimal QoR." tag=""/>
+	<Message prefix="[SYNCHK 200-10]" severity="INFO" keynum="597" content="0 error(s), 1 warning(s)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:01:08 . Memory (MB): peak = 327.102 ; gain = 272.129" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:37:30)." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop_Padding_Read&apos; (SRC/1_keras.cpp:246) in function &apos;Layer23_Maxpool_read&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;Layer2_mult_out&apos; (SRC/1_keras.cpp:387)." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop_Padding_Read&apos; (SRC/1_keras.cpp:137) in function &apos;Layer12_Maxpool_read&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;Layer1_mult&apos; (SRC/1_keras.cpp:375)." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Convolution_Loop&apos; (SRC/1_keras.cpp:105) in function &apos;CNN_1D&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Convolution_Loop&apos; (SRC/1_keras.cpp:217) in function &apos;CNN_1D&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop_Mult&apos; (SRC/1_keras.cpp:279) in function &apos;CNN_1D&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-503]" severity="WARNING" keynum="815" content="Ignored partial unroll directive for loop &apos;Loop_OUT&apos; (SRC/1_keras.cpp:283) because its parent loop or function is pipelined." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop_Mult&apos; (SRC/1_keras.cpp:315) in function &apos;Layer4_Dense&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;Layer2_mult_inner&apos; (SRC/1_keras.cpp:406)." tag=""/>
+	<Message prefix="[XFORM 203-505]" severity="WARNING" keynum="814" content="Ignored pipeline directive for loop &apos;Loop_Mult_inner&apos; (SRC/1_keras.cpp:410) because its parent loop or function is pipelined." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop_Padding_Read&apos; (SRC/1_keras.cpp:49) in function &apos;Layer1_ReadPadding&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:282) in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:289) in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-3&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:516) in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-4&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:522) in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-5&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:525) in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Layer23_Maxpool_read_label0&apos; (SRC/1_keras.cpp:249) in function &apos;Layer23_Maxpool_read&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_Mult_Out&apos; (SRC/1_keras.cpp:391) in function &apos;Layer2_mult_out&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_SUM&apos; (SRC/1_keras.cpp:398) in function &apos;Layer2_mult_out&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;fill_loop&apos; (SRC/1_keras.cpp:123) in function &apos;Layer12_Maxpool_read&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_NFILTERS_PADDING_Before&apos; (SRC/1_keras.cpp:128) in function &apos;Layer12_Maxpool_read&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.1&apos; (SRC/1_keras.cpp:151) in function &apos;Layer12_Maxpool_read&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_NFILTERS_PADDING_After&apos; (SRC/1_keras.cpp:161) in function &apos;Layer12_Maxpool_read&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_Mult&apos; (SRC/1_keras.cpp:381) in function &apos;Layer1_mult&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.2.1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:125) in function &apos;CNN_1D&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_Ind_Conv&apos; (SRC/1_keras.cpp:220) in function &apos;CNN_1D&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.3.1.1&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls/hls_video_mem.h:125) in function &apos;CNN_1D&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Load_Bias&apos; (SRC/1_keras.cpp:274) in function &apos;CNN_1D&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_OUT&apos; (SRC/1_keras.cpp:283) in function &apos;CNN_1D&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_DST&apos; (SRC/1_keras.cpp:290) in function &apos;CNN_1D&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Load_Bias&apos; (SRC/1_keras.cpp:310) in function &apos;Layer4_Dense&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_OUT&apos; (SRC/1_keras.cpp:319) in function &apos;Layer4_Dense&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_Exp&apos; (SRC/1_keras.cpp:332) in function &apos;Layer4_Dense&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_DIV_Save&apos; (SRC/1_keras.cpp:349) in function &apos;Layer4_Dense&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_Mult_inner&apos; (SRC/1_keras.cpp:410) in function &apos;Layer2_mult_inner&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_NFILTERS_PADDING_Before&apos; (SRC/1_keras.cpp:42) in function &apos;Layer1_ReadPadding&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_NFILTERS_PADDING_Read&apos; (SRC/1_keras.cpp:52) in function &apos;Layer1_ReadPadding&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop_NFILTERS_PADDING_After&apos; (SRC/1_keras.cpp:60) in function &apos;Layer1_ReadPadding&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;filters.val.V.0&apos; automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;filters.val.V.0&apos; automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="688" content="Automatically partitioning streamed array &apos;Conv2_Inter.V.V&apos; (SRC/1_keras.cpp:180) ." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="688" content="Automatically partitioning streamed array &apos;maxpool.V.V&apos; (SRC/1_keras.cpp:75) ." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="688" content="Automatically partitioning streamed array &apos;Layer1_Int.V.V&apos; (SRC/1_keras.cpp:15) ." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="688" content="Automatically partitioning streamed array &apos;intermediate.V.V&apos; (SRC/1_keras.cpp:70) ." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="687" content="Partitioning array &apos;Layer3_weightArray.V&apos; (SRC/2_Manage_CNN.cpp:4) in dimension 2 with a block factor 4." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;sum.V&apos; (SRC/1_keras.cpp:388) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-105]" severity="WARNING" keynum="689" content="Ignore complete array partition directive on &apos;Layer2_Int.V&apos; (SRC/1_keras.cpp:17) in dimension 1: conflict with memory core assignment directive.
+." tag=""/>
+	<Message prefix="[XFORM 203-105]" severity="WARNING" keynum="689" content="Ignore complete array partition directive on &apos;Layer3_Int.V&apos; (SRC/1_keras.cpp:20) in dimension 1: conflict with memory core assignment directive.
+." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;intermediate.V.V&apos; (SRC/1_keras.cpp:70) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;maxpool.V.V&apos; (SRC/1_keras.cpp:75) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V&apos; (SRC/1_keras.cpp:92) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.1&apos; (SRC/1_keras.cpp:93) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Conv2_Inter.V.V&apos; (SRC/1_keras.cpp:180) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;sum.V&apos; (SRC/1_keras.cpp:271) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;sum.V&apos; (SRC/1_keras.cpp:307) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Exp_Int.V&apos; (SRC/1_keras.cpp:327) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Exp_Out.V&apos; (SRC/1_keras.cpp:329) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.0&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.1&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.2&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.3&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.4&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.5&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.6&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.7&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.8&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;Layer1_Int.V.V.9&apos; (SRC/1_keras.cpp:15) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.0&apos; (SRC/1_keras.cpp:92) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.1&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.2&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.3&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.4&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.5&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.6&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.7&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.8&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.9&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.0&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.11354&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.2&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.3&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.4&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.5&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.6&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.7&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.8&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;weight_in.V.9&apos; (SRC/1_keras.cpp:204) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.0.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.1.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.2.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.3.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.4.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.5.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.6.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.7.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.8.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;windows_filter.val.V.1.9.0&apos; (SRC/1_keras.cpp:203) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;hls::exp&lt;24, 16&gt;&apos; into &apos;Layer4_Dense&apos; (SRC/1_keras.cpp:337) automatically." tag=""/>
+	<Message prefix="[XFORM 203-721]" severity="INFO" keynum="875" content="Changing loop &apos;Loop_Loop_Conv_proc&apos; (SRC/1_keras.cpp:79) to a process function for dataflow in function &apos;CNN_1D&apos;." tag=""/>
+	<Message prefix="[XFORM 203-721]" severity="INFO" keynum="875" content="Changing loop &apos;Loop_2_proc&apos; (SRC/1_keras.cpp:200) to a process function for dataflow in function &apos;CNN_1D&apos;." tag=""/>
+	<Message prefix="[XFORM 203-721]" severity="INFO" keynum="875" content="Changing loop &apos;Loop_Loop_Mult_proc&apos; (SRC/1_keras.cpp:279) to a process function for dataflow in function &apos;CNN_1D&apos;." tag=""/>
+	<Message prefix="[XFORM 203-713]" severity="WARNING" keynum="768" content="All the elements of global array &apos;saveValueLayer2.V&apos; (SRC/1_keras.cpp:11) should be updated in process function &apos;Layer23_Maxpool_read&apos; (SRC/1_keras.cpp:240), otherwise it may not be synthesized correctly." tag=""/>
+	<Message prefix="[XFORM 203-713]" severity="WARNING" keynum="768" content="All the elements of global array &apos;dst.V&apos; (SRC/1_keras.cpp:11) should be updated in process function &apos;Layer4_Dense&apos; (SRC/1_keras.cpp:306), otherwise it may not be synthesized correctly." tag=""/>
+	<Message prefix="[XFORM 203-712]" severity="INFO" keynum="801" content="Applying dataflow to function &apos;CNN_1D&apos; (SRC/1_keras.cpp:11), detected/extracted 10 process function(s): 
+	 &apos;CNN_1D.entry142&apos;
+	 &apos;Layer1_ReadPadding&apos;
+	 &apos;CNN_1D_Loop_Loop_Conv_proc140&apos;
+	 &apos;Layer12_Maxpool_read&apos;
+	 &apos;CNN_1D_Loop_2_proc141&apos;
+	 &apos;Layer23_Maxpool_read&apos;
+	 &apos;CNN_1D_Block_Layer2_Conv.exit65_proc&apos;
+	 &apos;CNN_1D_Loop_Loop_Mult_proc&apos;
+	 &apos;CNN_1D_Block_.preheader.i.0_proc&apos;
+	 &apos;Layer4_Dense&apos;." tag=""/>
+	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:37:1) to (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:928:1) in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos;... converting 4 basic blocks." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;Layer1_mult&apos; into &apos;CNN_1D_Loop_Loop_Conv_proc140&apos; (SRC/1_keras.cpp:112-&gt;SRC/1_keras.cpp:83-&gt;SRC/1_keras.cpp:28) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;Layer2_mult_out&apos; into &apos;CNN_1D_Loop_2_proc141&apos; (SRC/1_keras.cpp:227-&gt;SRC/1_keras.cpp:184-&gt;SRC/1_keras.cpp:29) automatically." tag=""/>
+	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:37:1)...10 expression(s) balanced." tag=""/>
+	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;CNN_1D_Loop_2_proc141&apos; (SRC/1_keras.cpp:200:6)...19 expression(s) balanced." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:01:30 . Memory (MB): peak = 448.875 ; gain = 393.902" tag=""/>
+	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;Loop-11&apos; (SRC/1_keras.cpp:135:16) in function &apos;Layer12_Maxpool_read&apos;." tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Loop_Conv&apos; (SRC/1_keras.cpp:79:30) in function &apos;CNN_1D_Loop_Loop_Conv_proc140&apos; : 
+
+more than one sub loop." tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Loop-1&apos; (SRC/1_keras.cpp:200:14) in function &apos;CNN_1D_Loop_2_proc141&apos; : 
+
+more than one sub loop." tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;exp_reduce::exp&lt;24, 16&gt;&apos; to &apos;exp&lt;24, 16&gt;&apos; (C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:37:1)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;CNN_1D_Loop_Loop_Mult_proc&apos; to &apos;CNN_1D_Loop_Loop_Mul&apos; (SRC/1_keras.cpp:279:11)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;CNN_1D_Loop_Loop_Conv_proc140&apos; to &apos;CNN_1D_Loop_Loop_Con&apos; (SRC/1_keras.cpp:75)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;CNN_1D_Loop_2_proc141&apos; to &apos;CNN_1D_Loop_2_proc14&apos; (SRC/1_keras.cpp:200:6)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;CNN_1D_Block_Layer2_Conv.exit65_proc&apos; to &apos;CNN_1D_Block_Layer2_&apos; (SRC/1_keras.cpp:276:2)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;CNN_1D_Block_.preheader.i.0_proc&apos; to &apos;CNN_1D_Block_.prehea&apos; (SRC/1_keras.cpp:294:4)" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:01:48 . Memory (MB): peak = 646.715 ; gain = 591.742" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;MASTER_CNN&apos; ..." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;CNN_1D.entry11&apos; to &apos;CNN_1D_entry11&apos;." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;CNN_1D.entry142&apos; to &apos;CNN_1D_entry142&apos;." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;CNN_1D_Block_Layer2_&apos; to &apos;CNN_1D_Block_Layer2_s&apos;." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;CNN_1D_Block_.prehea&apos; to &apos;CNN_1D_Block_prehea&apos;." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;exp&lt;24, 16&gt;&apos; to &apos;exp_24_16_s&apos;." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:420): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:427-&gt;SRC/1_keras.cpp:412): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="69" content="Cannot apply memory assignment of &apos;RAM_2P_LUTRAM&apos; on &apos;dst_V&apos;, which is not an array." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="69" content="Cannot apply memory assignment of &apos;RAM_2P_LUTRAM&apos; on &apos;Layer2_Int_V&apos;, which is not an array." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:433-&gt;SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:439-&gt;SRC/1_keras.cpp:322): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:439-&gt;SRC/1_keras.cpp:322): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;DSP48&apos; (SRC/1_keras.cpp:439-&gt;SRC/1_keras.cpp:322): &apos;return&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="69" content="Cannot apply memory assignment of &apos;RAM_2P_LUTRAM&apos; (SRC/1_keras.cpp:18) on &apos;Layer2_Int_V&apos;, which is not an array." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_entry11&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 109.267 seconds; current allocated memory: 566.401 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.195 seconds; current allocated memory: 566.457 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_entry142&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.249 seconds; current allocated memory: 566.538 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.181 seconds; current allocated memory: 566.583 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Layer1_ReadPadding&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop_Padding_Read&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.21 seconds; current allocated memory: 566.934 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.241 seconds; current allocated memory: 567.204 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;mult_add&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;mult_add&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.27 seconds; current allocated memory: 567.286 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.168 seconds; current allocated memory: 567.337 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_Loop_Loop_Con&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Load_weight&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Convolution_Loop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 21." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.936 seconds; current allocated memory: 568.552 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.428 seconds; current allocated memory: 569.381 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Layer12_Maxpool_read&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;L_Loop_Padding_Read&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port &apos;src_8_V_V&apos; (SRC/1_keras.cpp:141) and fifo read on port &apos;src_8_V_V&apos; (SRC/1_keras.cpp:140)." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 2, Depth = 4." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 11.021 seconds; current allocated memory: 580.181 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.983 seconds; current allocated memory: 582.040 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Layer2_mult_inner&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;Layer2_mult_inner&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;mul&apos; operation (&apos;p_Val2_1&apos;, SRC/1_keras.cpp:429-&gt;SRC/1_keras.cpp:412) (3.36 ns)
+	&apos;add&apos; operation (&apos;p_Val2_51_1&apos;, SRC/1_keras.cpp:429-&gt;SRC/1_keras.cpp:412) (3.02 ns)
+	&apos;add&apos; operation (&apos;p_Val2_51_2&apos;, SRC/1_keras.cpp:429-&gt;SRC/1_keras.cpp:412) (3.02 ns)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.972 seconds; current allocated memory: 582.327 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.243 seconds; current allocated memory: 582.612 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_Loop_2_proc14&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Convolution_Loop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 11." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (9.4ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;call&apos; operation (&apos;sum[0].V&apos;, SRC/1_keras.cpp:393-&gt;SRC/1_keras.cpp:227-&gt;SRC/1_keras.cpp:184-&gt;SRC/1_keras.cpp:29) to &apos;Layer2_mult_inner&apos; (9.4 ns)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 4.675 seconds; current allocated memory: 588.889 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.133 seconds; current allocated memory: 592.989 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Layer23_Maxpool_read&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop_Padding_Read&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos; and &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos; and &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos; and &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos; and &apos;store&apos; operation (SRC/1_keras.cpp:253) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:250 on array &apos;saveValueLayer2_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;store&apos; operation (SRC/1_keras.cpp:254) of variable &apos;tmp.V&apos;, SRC/1_keras.cpp:251 on array &apos;saveValueLayer2_V&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;saveValueLayer2_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 20, Depth = 21." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.304 seconds; current allocated memory: 593.521 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.41 seconds; current allocated memory: 593.995 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_Block_Layer2_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.375 seconds; current allocated memory: 594.769 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.539 seconds; current allocated memory: 595.846 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_Loop_Loop_Mul&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop_Mult&apos;." tag=""/>
+	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;load&apos; operation (&apos;Layer3_weightArray_0_16&apos;, SRC/1_keras.cpp:286-&gt;SRC/1_keras.cpp:31) on array &apos;Layer3_weightArray_0_V&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;Layer3_weightArray_0_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 15, Depth = 17." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 3.403 seconds; current allocated memory: 598.959 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.126 seconds; current allocated memory: 602.139 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D_Block_prehea&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.259 seconds; current allocated memory: 603.468 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.731 seconds; current allocated memory: 604.985 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;exp_24_16_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;exp&lt;24, 16&gt;&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 5." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.769 seconds; current allocated memory: 605.278 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.252 seconds; current allocated memory: 605.457 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Layer4_Dense&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop_Mult&apos;." tag=""/>
+	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;load&apos; operation (&apos;weight_V_load_1&apos;, SRC/1_keras.cpp:322) on array &apos;weight_V&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;weight_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 3, Depth = 6." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 2&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.421 seconds; current allocated memory: 606.290 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.563 seconds; current allocated memory: 607.160 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;CNN_1D&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.686 seconds; current allocated memory: 608.340 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.636 seconds; current allocated memory: 612.994 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;MASTER_CNN&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.217 seconds; current allocated memory: 613.360 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.418 seconds; current allocated memory: 613.684 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_entry11&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_entry11&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.729 seconds; current allocated memory: 614.073 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_entry142&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_entry142&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.233 seconds; current allocated memory: 614.283 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Layer1_ReadPadding&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Layer1_ReadPadding&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.252 seconds; current allocated memory: 614.730 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;mult_add&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;MASTER_CNN_mac_muladd_18s_18s_28ns_28_1_1&apos; to &apos;MASTER_CNN_mac_mubkb&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mac_mubkb&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;mult_add&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.431 seconds; current allocated memory: 614.884 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_Loop_Loop_Con&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Con/Layer1_BiasArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Con/Layer1_BiasArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Con/Layer1_WeightArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Con/Layer1_WeightArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_Loop_Loop_Con&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.77 seconds; current allocated memory: 616.649 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Layer12_Maxpool_read&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Layer12_Maxpool_read&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.152 seconds; current allocated memory: 622.821 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Layer2_mult_inner&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;MASTER_CNN_mul_mul_18s_18s_28_1_0&apos; to &apos;MASTER_CNN_mul_mucud&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mac_mubkb&apos;: 8 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mul_mucud&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Layer2_mult_inner&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.166 seconds; current allocated memory: 621.796 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_Loop_2_proc14&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_2_proc14/Layer2_BiasArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_2_proc14/Layer2_BiasArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_2_proc14/Layer2_WeightMatrix_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_2_proc14/Layer2_WeightMatrix_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_Loop_2_proc14&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.698 seconds; current allocated memory: 627.827 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Layer23_Maxpool_read&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Layer23_Maxpool_read&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.977 seconds; current allocated memory: 629.786 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_Block_Layer2_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Block_Layer2_s/Layer3_Bias_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Block_Layer2_s/Layer3_Bias_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_Block_Layer2_s&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.795 seconds; current allocated memory: 631.501 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_Loop_Loop_Mul&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_0_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_0_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_1_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_1_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_2_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_2_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_3_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;CNN_1D_Loop_Loop_Mul/Layer3_weightArray_3_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mac_mubkb&apos;: 60 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_Loop_Loop_Mul&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.237 seconds; current allocated memory: 667.776 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D_Block_prehea&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D_Block_prehea&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.034 seconds; current allocated memory: 670.690 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;exp_24_16_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;exp_24_16_s_f_x_msb_2_table&apos; to &apos;exp_24_16_s_f_x_mdEe&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;exp_24_16_s_exp_x_msb_1_table32&apos; to &apos;exp_24_16_s_exp_xeOg&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;MASTER_CNN_mul_50ns_50ns_100_2_1&apos; to &apos;MASTER_CNN_mul_50fYi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mul_50fYi&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;exp_24_16_s&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.351 seconds; current allocated memory: 671.733 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Layer4_Dense&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;MASTER_CNN_mux_32_24_1_1&apos; to &apos;MASTER_CNN_mux_32g8j&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;MASTER_CNN_sdiv_32ns_24s_16_36_seq_1&apos; to &apos;MASTER_CNN_sdiv_3hbi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;MASTER_CNN_mul_mul_17ns_18s_35_1_1&apos; to &apos;MASTER_CNN_mul_muibs&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;Layer4_Dense/weight_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;Layer4_Dense/weight_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;Layer4_Dense/Bias_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;Layer4_Dense/Bias_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mul_muibs&apos;: 3 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_mux_32g8j&apos;: 1 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;MASTER_CNN_sdiv_3hbi&apos;: 3 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Layer4_Dense&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.67 seconds; current allocated memory: 673.332 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;CNN_1D&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;start_for_CNN_1D_entry142_U0&apos; to &apos;start_for_CNN_1D_jbC&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;start_for_Layer12_Maxpool_read_U0&apos; to &apos;start_for_Layer12kbM&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;start_for_Layer23_Maxpool_read_U0&apos; to &apos;start_for_Layer23lbW&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;CNN_1D&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 4.881 seconds; current allocated memory: 685.461 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;MASTER_CNN&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Config_rep&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/src_V&apos; to &apos;s_axilite &amp; ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/dst_V&apos; to &apos;s_axilite &amp; ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/saveValueLayer1_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/saveValueLayer2_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/saveValueLayer3_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer1_WeightArray_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer1_BiasArray_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer2_WeightMatrix_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer2_BiasArray_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer3_weightArray_0_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer3_weightArray_1_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer3_weightArray_2_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer3_weightArray_3_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer3_Bias_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer4_weightArray_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;MASTER_CNN/Layer4_Bias_V&apos; to &apos;bram&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;MASTER_CNN&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="364" content="Bundling port &apos;return&apos;, &apos;Config_rep&apos;, &apos;src_V&apos; and &apos;dst_V&apos; to AXI-Lite port BUS_A." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer1_WeightArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer1_WeightArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer1_BiasArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer1_BiasArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer2_WeightMatrix_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer2_WeightMatrix_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer2_BiasArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer2_BiasArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_0_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_0_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_1_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_1_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_2_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_2_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_3_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_weightArray_3_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_Bias_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer3_Bias_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer4_weightArray_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer4_weightArray_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer4_Bias_V_WEN_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;MASTER_CNN/Layer4_Bias_V_Din_A&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;MASTER_CNN&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 7.406 seconds; current allocated memory: 687.607 MB." tag=""/>
+	<Message prefix="[RTMG 210-282]" severity="INFO" keynum="RTMG_282_1796" content="Generating pipelined core: &apos;MASTER_CNN_mul_50fYi_MulnS_0&apos;" tag=""/>
+	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;exp_24_16_s_f_x_mdEe_rom&apos; using auto ROMs." tag=""/>
+	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;exp_24_16_s_exp_xeOg_rom&apos; using auto ROMs." tag=""/>
+	<Message prefix="[RTMG 210-282]" severity="INFO" keynum="RTMG_282_1796" content="Generating pipelined core: &apos;MASTER_CNN_sdiv_3hbi_div&apos;" tag=""/>
+	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1790" content="Implementing memory &apos;CNN_1D_Layer3_Int_V_memcore_ram (RAM)&apos; using block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w8_d7_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d192_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d210_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d104_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d5_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w18_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w17_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;start_for_Layer12kbM&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;start_for_Layer23lbW&apos; using Shift Registers." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:02:05 ; elapsed = 00:03:21 . Memory (MB): peak = 863.938 ; gain = 808.965" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for MASTER_CNN." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for MASTER_CNN." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for MASTER_CNN." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 200.96 seconds; peak allocated memory: 687.607 MB." tag=""/>
+</Messages>

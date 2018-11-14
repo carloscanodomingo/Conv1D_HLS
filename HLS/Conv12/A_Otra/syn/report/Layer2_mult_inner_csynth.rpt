@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vivado HLS Report for 'Layer2_mult_inner'
+================================================================
+* Date:           Sun Jul  1 02:49:26 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    4|    4|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      9|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      9|
+|Register         |        0|      -|    1287|    256|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      9|    1287|    265|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      4|       1|   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    +---------------------------+----------------------+--------------+
+    |          Instance         |        Module        |  Expression  |
+    +---------------------------+----------------------+--------------+
+    |MASTER_CNN_mac_mubkb_U154  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U155  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U156  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U157  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U158  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U159  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U160  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mac_mubkb_U161  |MASTER_CNN_mac_mubkb  | i0 * i1 + i2 |
+    |MASTER_CNN_mul_mucud_U153  |MASTER_CNN_mul_mucud  |    i0 * i1   |
+    +---------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_return  |   9|          2|   18|         36|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |   9|          2|   18|         36|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_ce_reg                                   |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_p_read_5_reg_508           |  18|   0|   18|          0|
+    |ap_reg_pp0_iter1_p_read_6_reg_513           |  18|   0|   18|          0|
+    |ap_reg_pp0_iter1_weight_3_V_read_1_reg_473  |  18|   0|   18|          0|
+    |ap_reg_pp0_iter1_weight_4_V_read_1_reg_468  |  18|   0|   18|          0|
+    |ap_return_int_reg                           |  18|   0|   18|          0|
+    |p_read1_int_reg                             |  18|   0|   18|          0|
+    |p_read2_int_reg                             |  18|   0|   18|          0|
+    |p_read3_int_reg                             |  18|   0|   18|          0|
+    |p_read4_int_reg                             |  18|   0|   18|          0|
+    |p_read5_int_reg                             |  18|   0|   18|          0|
+    |p_read6_int_reg                             |  18|   0|   18|          0|
+    |p_read7_int_reg                             |  18|   0|   18|          0|
+    |p_read8_int_reg                             |  18|   0|   18|          0|
+    |p_read_1_reg_488                            |  18|   0|   18|          0|
+    |p_read_2_reg_493                            |  18|   0|   18|          0|
+    |p_read_3_reg_498                            |  18|   0|   18|          0|
+    |p_read_4_reg_503                            |  18|   0|   18|          0|
+    |p_read_5_reg_508                            |  18|   0|   18|          0|
+    |p_read_6_reg_513                            |  18|   0|   18|          0|
+    |p_read_7_reg_518                            |  18|   0|   18|          0|
+    |p_read_8_reg_523                            |  18|   0|   18|          0|
+    |p_read_int_reg                              |  18|   0|   18|          0|
+    |tmp_25_reg_528                              |  18|   0|   18|          0|
+    |tmp_27_reg_533                              |  18|   0|   18|          0|
+    |tmp_29_reg_538                              |  18|   0|   18|          0|
+    |tmp_31_reg_543                              |  18|   0|   18|          0|
+    |weight_0_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_1_V_read_1_reg_483                   |  18|   0|   18|          0|
+    |weight_1_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_2_V_read_1_reg_478                   |  18|   0|   18|          0|
+    |weight_2_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_3_V_read_1_reg_473                   |  18|   0|   18|          0|
+    |weight_3_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_4_V_read_1_reg_468                   |  18|   0|   18|          0|
+    |weight_4_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_5_V_read_1_reg_463                   |  18|   0|   18|          0|
+    |weight_5_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_6_V_read_1_reg_458                   |  18|   0|   18|          0|
+    |weight_6_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_7_V_read_1_reg_453                   |  18|   0|   18|          0|
+    |weight_7_V_read_int_reg                     |  18|   0|   18|          0|
+    |weight_8_V_read_1_reg_448                   |  18|   0|   18|          0|
+    |weight_8_V_read_int_reg                     |  18|   0|   18|          0|
+    |p_read_1_reg_488                            |  64|  32|   18|          0|
+    |p_read_2_reg_493                            |  64|  32|   18|          0|
+    |p_read_3_reg_498                            |  64|  32|   18|          0|
+    |p_read_4_reg_503                            |  64|  32|   18|          0|
+    |weight_5_V_read_1_reg_463                   |  64|  32|   18|          0|
+    |weight_6_V_read_1_reg_458                   |  64|  32|   18|          0|
+    |weight_7_V_read_1_reg_453                   |  64|  32|   18|          0|
+    |weight_8_V_read_1_reg_448                   |  64|  32|   18|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       |1287| 256|  919|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+-------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-----------------+-----+-----+------------+-------------------+--------------+
+|ap_clk           |  in |    1| ap_ctrl_hs | Layer2_mult_inner | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs | Layer2_mult_inner | return value |
+|ap_return        | out |   18| ap_ctrl_hs | Layer2_mult_inner | return value |
+|ap_ce            |  in |    1| ap_ctrl_hs | Layer2_mult_inner | return value |
+|p_read           |  in |   18|   ap_none  |       p_read      |    scalar    |
+|p_read1          |  in |   18|   ap_none  |      p_read1      |    scalar    |
+|p_read2          |  in |   18|   ap_none  |      p_read2      |    scalar    |
+|p_read3          |  in |   18|   ap_none  |      p_read3      |    scalar    |
+|p_read4          |  in |   18|   ap_none  |      p_read4      |    scalar    |
+|p_read5          |  in |   18|   ap_none  |      p_read5      |    scalar    |
+|p_read6          |  in |   18|   ap_none  |      p_read6      |    scalar    |
+|p_read7          |  in |   18|   ap_none  |      p_read7      |    scalar    |
+|p_read8          |  in |   18|   ap_none  |      p_read8      |    scalar    |
+|weight_0_V_read  |  in |   18|   ap_none  |  weight_0_V_read  |    scalar    |
+|weight_1_V_read  |  in |   18|   ap_none  |  weight_1_V_read  |    scalar    |
+|weight_2_V_read  |  in |   18|   ap_none  |  weight_2_V_read  |    scalar    |
+|weight_3_V_read  |  in |   18|   ap_none  |  weight_3_V_read  |    scalar    |
+|weight_4_V_read  |  in |   18|   ap_none  |  weight_4_V_read  |    scalar    |
+|weight_5_V_read  |  in |   18|   ap_none  |  weight_5_V_read  |    scalar    |
+|weight_6_V_read  |  in |   18|   ap_none  |  weight_6_V_read  |    scalar    |
+|weight_7_V_read  |  in |   18|   ap_none  |  weight_7_V_read  |    scalar    |
+|weight_8_V_read  |  in |   18|   ap_none  |  weight_8_V_read  |    scalar    |
++-----------------+-----+-----+------------+-------------------+--------------+
+

@@ -1,0 +1,949 @@
+
+
+================================================================
+== Vivado HLS Report for 'CNN_1D_Block_Layer2_s'
+================================================================
+* Date:           Sun Jul  1 02:49:06 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.87|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   60|   60|   60|   60|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 61
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+
+* FSM state operations: 
+
+ <State 1> : 3.25ns
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 0" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_1 : Operation 63 [2/2] (3.25ns)   --->   "%sum_0_V = load i18* %Layer3_Bias_V_addr, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 2> : 3.25ns
+ST_2 : Operation 64 [1/2] (3.25ns)   --->   "%sum_0_V = load i18* %Layer3_Bias_V_addr, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_1 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 1" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_2 : Operation 66 [2/2] (3.25ns)   --->   "%sum_1_V = load i18* %Layer3_Bias_V_addr_1, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 3> : 3.25ns
+ST_3 : Operation 67 [1/2] (3.25ns)   --->   "%sum_1_V = load i18* %Layer3_Bias_V_addr_1, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_2 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 2" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_3 : Operation 69 [2/2] (3.25ns)   --->   "%sum_2_V = load i18* %Layer3_Bias_V_addr_2, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 4> : 3.25ns
+ST_4 : Operation 70 [1/2] (3.25ns)   --->   "%sum_2_V = load i18* %Layer3_Bias_V_addr_2, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_3 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 3" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_4 : Operation 72 [2/2] (3.25ns)   --->   "%sum_3_V = load i18* %Layer3_Bias_V_addr_3, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 5> : 3.25ns
+ST_5 : Operation 73 [1/2] (3.25ns)   --->   "%sum_3_V = load i18* %Layer3_Bias_V_addr_3, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_5 : Operation 74 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_4 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_5 : Operation 75 [2/2] (3.25ns)   --->   "%sum_4_V = load i18* %Layer3_Bias_V_addr_4, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 6> : 3.25ns
+ST_6 : Operation 76 [1/2] (3.25ns)   --->   "%sum_4_V = load i18* %Layer3_Bias_V_addr_4, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_5 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 5" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_6 : Operation 78 [2/2] (3.25ns)   --->   "%sum_5_V = load i18* %Layer3_Bias_V_addr_5, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 7> : 3.25ns
+ST_7 : Operation 79 [1/2] (3.25ns)   --->   "%sum_5_V = load i18* %Layer3_Bias_V_addr_5, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_7 : Operation 80 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_6 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 6" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_7 : Operation 81 [2/2] (3.25ns)   --->   "%sum_6_V = load i18* %Layer3_Bias_V_addr_6, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 8> : 3.25ns
+ST_8 : Operation 82 [1/2] (3.25ns)   --->   "%sum_6_V = load i18* %Layer3_Bias_V_addr_6, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_7 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 7" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_8 : Operation 84 [2/2] (3.25ns)   --->   "%sum_7_V = load i18* %Layer3_Bias_V_addr_7, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 9> : 3.25ns
+ST_9 : Operation 85 [1/2] (3.25ns)   --->   "%sum_7_V = load i18* %Layer3_Bias_V_addr_7, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_8 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 8" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_9 : Operation 87 [2/2] (3.25ns)   --->   "%sum_8_V = load i18* %Layer3_Bias_V_addr_8, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 10> : 3.25ns
+ST_10 : Operation 88 [1/2] (3.25ns)   --->   "%sum_8_V = load i18* %Layer3_Bias_V_addr_8, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_10 : Operation 89 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_9 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 9" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_10 : Operation 90 [2/2] (3.25ns)   --->   "%sum_9_V = load i18* %Layer3_Bias_V_addr_9, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 11> : 3.25ns
+ST_11 : Operation 91 [1/2] (3.25ns)   --->   "%sum_9_V = load i18* %Layer3_Bias_V_addr_9, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_11 : Operation 92 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_10 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 10" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_11 : Operation 93 [2/2] (3.25ns)   --->   "%sum_10_V = load i18* %Layer3_Bias_V_addr_10, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 12> : 3.25ns
+ST_12 : Operation 94 [1/2] (3.25ns)   --->   "%sum_10_V = load i18* %Layer3_Bias_V_addr_10, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_12 : Operation 95 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_11 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 11" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_12 : Operation 96 [2/2] (3.25ns)   --->   "%sum_11_V = load i18* %Layer3_Bias_V_addr_11, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 13> : 3.25ns
+ST_13 : Operation 97 [1/2] (3.25ns)   --->   "%sum_11_V = load i18* %Layer3_Bias_V_addr_11, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_13 : Operation 98 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_12 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 12" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_13 : Operation 99 [2/2] (3.25ns)   --->   "%sum_12_V = load i18* %Layer3_Bias_V_addr_12, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 14> : 3.25ns
+ST_14 : Operation 100 [1/2] (3.25ns)   --->   "%sum_12_V = load i18* %Layer3_Bias_V_addr_12, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_14 : Operation 101 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_13 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 13" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_14 : Operation 102 [2/2] (3.25ns)   --->   "%sum_13_V = load i18* %Layer3_Bias_V_addr_13, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 15> : 3.25ns
+ST_15 : Operation 103 [1/2] (3.25ns)   --->   "%sum_13_V = load i18* %Layer3_Bias_V_addr_13, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_15 : Operation 104 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_14 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 14" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_15 : Operation 105 [2/2] (3.25ns)   --->   "%sum_14_V = load i18* %Layer3_Bias_V_addr_14, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 16> : 3.25ns
+ST_16 : Operation 106 [1/2] (3.25ns)   --->   "%sum_14_V = load i18* %Layer3_Bias_V_addr_14, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_16 : Operation 107 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_15 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 15" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_16 : Operation 108 [2/2] (3.25ns)   --->   "%sum_15_V = load i18* %Layer3_Bias_V_addr_15, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 17> : 3.25ns
+ST_17 : Operation 109 [1/2] (3.25ns)   --->   "%sum_15_V = load i18* %Layer3_Bias_V_addr_15, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_17 : Operation 110 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_16 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 16" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_17 : Operation 111 [2/2] (3.25ns)   --->   "%sum_16_V = load i18* %Layer3_Bias_V_addr_16, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 18> : 3.25ns
+ST_18 : Operation 112 [1/2] (3.25ns)   --->   "%sum_16_V = load i18* %Layer3_Bias_V_addr_16, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_18 : Operation 113 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_17 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 17" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_18 : Operation 114 [2/2] (3.25ns)   --->   "%sum_17_V = load i18* %Layer3_Bias_V_addr_17, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 19> : 3.25ns
+ST_19 : Operation 115 [1/2] (3.25ns)   --->   "%sum_17_V = load i18* %Layer3_Bias_V_addr_17, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_19 : Operation 116 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_18 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 18" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_19 : Operation 117 [2/2] (3.25ns)   --->   "%sum_18_V = load i18* %Layer3_Bias_V_addr_18, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 20> : 3.25ns
+ST_20 : Operation 118 [1/2] (3.25ns)   --->   "%sum_18_V = load i18* %Layer3_Bias_V_addr_18, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_20 : Operation 119 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_19 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 19" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_20 : Operation 120 [2/2] (3.25ns)   --->   "%sum_19_V = load i18* %Layer3_Bias_V_addr_19, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 21> : 3.25ns
+ST_21 : Operation 121 [1/2] (3.25ns)   --->   "%sum_19_V = load i18* %Layer3_Bias_V_addr_19, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_21 : Operation 122 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_20 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 20" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_21 : Operation 123 [2/2] (3.25ns)   --->   "%sum_20_V = load i18* %Layer3_Bias_V_addr_20, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 22> : 3.25ns
+ST_22 : Operation 124 [1/2] (3.25ns)   --->   "%sum_20_V = load i18* %Layer3_Bias_V_addr_20, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_22 : Operation 125 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_21 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 21" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_22 : Operation 126 [2/2] (3.25ns)   --->   "%sum_21_V = load i18* %Layer3_Bias_V_addr_21, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 23> : 3.25ns
+ST_23 : Operation 127 [1/2] (3.25ns)   --->   "%sum_21_V = load i18* %Layer3_Bias_V_addr_21, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_23 : Operation 128 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_22 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 22" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_23 : Operation 129 [2/2] (3.25ns)   --->   "%sum_22_V = load i18* %Layer3_Bias_V_addr_22, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 24> : 3.25ns
+ST_24 : Operation 130 [1/2] (3.25ns)   --->   "%sum_22_V = load i18* %Layer3_Bias_V_addr_22, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_24 : Operation 131 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_23 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 23" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_24 : Operation 132 [2/2] (3.25ns)   --->   "%sum_23_V = load i18* %Layer3_Bias_V_addr_23, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 25> : 3.25ns
+ST_25 : Operation 133 [1/2] (3.25ns)   --->   "%sum_23_V = load i18* %Layer3_Bias_V_addr_23, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_25 : Operation 134 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_24 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 24" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_25 : Operation 135 [2/2] (3.25ns)   --->   "%sum_24_V = load i18* %Layer3_Bias_V_addr_24, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 26> : 3.25ns
+ST_26 : Operation 136 [1/2] (3.25ns)   --->   "%sum_24_V = load i18* %Layer3_Bias_V_addr_24, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_26 : Operation 137 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_25 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 25" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_26 : Operation 138 [2/2] (3.25ns)   --->   "%sum_25_V = load i18* %Layer3_Bias_V_addr_25, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 27> : 3.25ns
+ST_27 : Operation 139 [1/2] (3.25ns)   --->   "%sum_25_V = load i18* %Layer3_Bias_V_addr_25, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_27 : Operation 140 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_26 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 26" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_27 : Operation 141 [2/2] (3.25ns)   --->   "%sum_26_V = load i18* %Layer3_Bias_V_addr_26, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 28> : 3.25ns
+ST_28 : Operation 142 [1/2] (3.25ns)   --->   "%sum_26_V = load i18* %Layer3_Bias_V_addr_26, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_28 : Operation 143 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_27 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 27" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_28 : Operation 144 [2/2] (3.25ns)   --->   "%sum_27_V = load i18* %Layer3_Bias_V_addr_27, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 29> : 3.25ns
+ST_29 : Operation 145 [1/2] (3.25ns)   --->   "%sum_27_V = load i18* %Layer3_Bias_V_addr_27, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_29 : Operation 146 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_28 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 28" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_29 : Operation 147 [2/2] (3.25ns)   --->   "%sum_28_V = load i18* %Layer3_Bias_V_addr_28, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 30> : 3.25ns
+ST_30 : Operation 148 [1/2] (3.25ns)   --->   "%sum_28_V = load i18* %Layer3_Bias_V_addr_28, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_30 : Operation 149 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_29 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 29" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_30 : Operation 150 [2/2] (3.25ns)   --->   "%sum_29_V = load i18* %Layer3_Bias_V_addr_29, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 31> : 3.25ns
+ST_31 : Operation 151 [1/2] (3.25ns)   --->   "%sum_29_V = load i18* %Layer3_Bias_V_addr_29, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_31 : Operation 152 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_30 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 30" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_31 : Operation 153 [2/2] (3.25ns)   --->   "%sum_30_V = load i18* %Layer3_Bias_V_addr_30, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 32> : 3.25ns
+ST_32 : Operation 154 [1/2] (3.25ns)   --->   "%sum_30_V = load i18* %Layer3_Bias_V_addr_30, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_32 : Operation 155 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_31 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 31" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_32 : Operation 156 [2/2] (3.25ns)   --->   "%sum_31_V = load i18* %Layer3_Bias_V_addr_31, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 33> : 3.25ns
+ST_33 : Operation 157 [1/2] (3.25ns)   --->   "%sum_31_V = load i18* %Layer3_Bias_V_addr_31, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_33 : Operation 158 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_32 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 32" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_33 : Operation 159 [2/2] (3.25ns)   --->   "%sum_32_V = load i18* %Layer3_Bias_V_addr_32, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 34> : 3.25ns
+ST_34 : Operation 160 [1/2] (3.25ns)   --->   "%sum_32_V = load i18* %Layer3_Bias_V_addr_32, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_34 : Operation 161 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_33 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 33" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_34 : Operation 162 [2/2] (3.25ns)   --->   "%sum_33_V = load i18* %Layer3_Bias_V_addr_33, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 35> : 3.25ns
+ST_35 : Operation 163 [1/2] (3.25ns)   --->   "%sum_33_V = load i18* %Layer3_Bias_V_addr_33, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_35 : Operation 164 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_34 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 34" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_35 : Operation 165 [2/2] (3.25ns)   --->   "%sum_34_V = load i18* %Layer3_Bias_V_addr_34, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 36> : 3.25ns
+ST_36 : Operation 166 [1/2] (3.25ns)   --->   "%sum_34_V = load i18* %Layer3_Bias_V_addr_34, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_36 : Operation 167 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_35 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 35" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_36 : Operation 168 [2/2] (3.25ns)   --->   "%sum_35_V = load i18* %Layer3_Bias_V_addr_35, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 37> : 3.25ns
+ST_37 : Operation 169 [1/2] (3.25ns)   --->   "%sum_35_V = load i18* %Layer3_Bias_V_addr_35, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_37 : Operation 170 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_36 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 36" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_37 : Operation 171 [2/2] (3.25ns)   --->   "%sum_36_V = load i18* %Layer3_Bias_V_addr_36, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 38> : 3.25ns
+ST_38 : Operation 172 [1/2] (3.25ns)   --->   "%sum_36_V = load i18* %Layer3_Bias_V_addr_36, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_38 : Operation 173 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_37 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 37" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_38 : Operation 174 [2/2] (3.25ns)   --->   "%sum_37_V = load i18* %Layer3_Bias_V_addr_37, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 39> : 3.25ns
+ST_39 : Operation 175 [1/2] (3.25ns)   --->   "%sum_37_V = load i18* %Layer3_Bias_V_addr_37, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_39 : Operation 176 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_38 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 38" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_39 : Operation 177 [2/2] (3.25ns)   --->   "%sum_38_V = load i18* %Layer3_Bias_V_addr_38, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 40> : 3.25ns
+ST_40 : Operation 178 [1/2] (3.25ns)   --->   "%sum_38_V = load i18* %Layer3_Bias_V_addr_38, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_40 : Operation 179 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_39 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 39" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_40 : Operation 180 [2/2] (3.25ns)   --->   "%sum_39_V = load i18* %Layer3_Bias_V_addr_39, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 41> : 3.25ns
+ST_41 : Operation 181 [1/2] (3.25ns)   --->   "%sum_39_V = load i18* %Layer3_Bias_V_addr_39, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_41 : Operation 182 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_40 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 40" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_41 : Operation 183 [2/2] (3.25ns)   --->   "%sum_40_V = load i18* %Layer3_Bias_V_addr_40, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 42> : 3.25ns
+ST_42 : Operation 184 [1/2] (3.25ns)   --->   "%sum_40_V = load i18* %Layer3_Bias_V_addr_40, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_42 : Operation 185 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_41 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 41" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_42 : Operation 186 [2/2] (3.25ns)   --->   "%sum_41_V = load i18* %Layer3_Bias_V_addr_41, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 43> : 3.25ns
+ST_43 : Operation 187 [1/2] (3.25ns)   --->   "%sum_41_V = load i18* %Layer3_Bias_V_addr_41, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_43 : Operation 188 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_42 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 42" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_43 : Operation 189 [2/2] (3.25ns)   --->   "%sum_42_V = load i18* %Layer3_Bias_V_addr_42, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 44> : 3.25ns
+ST_44 : Operation 190 [1/2] (3.25ns)   --->   "%sum_42_V = load i18* %Layer3_Bias_V_addr_42, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_44 : Operation 191 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_43 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 43" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_44 : Operation 192 [2/2] (3.25ns)   --->   "%sum_43_V = load i18* %Layer3_Bias_V_addr_43, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 45> : 3.25ns
+ST_45 : Operation 193 [1/2] (3.25ns)   --->   "%sum_43_V = load i18* %Layer3_Bias_V_addr_43, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_45 : Operation 194 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_44 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 44" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_45 : Operation 195 [2/2] (3.25ns)   --->   "%sum_44_V = load i18* %Layer3_Bias_V_addr_44, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 46> : 3.25ns
+ST_46 : Operation 196 [1/2] (3.25ns)   --->   "%sum_44_V = load i18* %Layer3_Bias_V_addr_44, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_46 : Operation 197 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_45 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 45" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_46 : Operation 198 [2/2] (3.25ns)   --->   "%sum_45_V = load i18* %Layer3_Bias_V_addr_45, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 47> : 3.25ns
+ST_47 : Operation 199 [1/2] (3.25ns)   --->   "%sum_45_V = load i18* %Layer3_Bias_V_addr_45, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_47 : Operation 200 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_46 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 46" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_47 : Operation 201 [2/2] (3.25ns)   --->   "%sum_46_V = load i18* %Layer3_Bias_V_addr_46, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 48> : 3.25ns
+ST_48 : Operation 202 [1/2] (3.25ns)   --->   "%sum_46_V = load i18* %Layer3_Bias_V_addr_46, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_48 : Operation 203 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_47 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 47" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_48 : Operation 204 [2/2] (3.25ns)   --->   "%sum_47_V = load i18* %Layer3_Bias_V_addr_47, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 49> : 3.25ns
+ST_49 : Operation 205 [1/2] (3.25ns)   --->   "%sum_47_V = load i18* %Layer3_Bias_V_addr_47, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_49 : Operation 206 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_48 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 48" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_49 : Operation 207 [2/2] (3.25ns)   --->   "%sum_48_V = load i18* %Layer3_Bias_V_addr_48, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 50> : 3.25ns
+ST_50 : Operation 208 [1/2] (3.25ns)   --->   "%sum_48_V = load i18* %Layer3_Bias_V_addr_48, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_50 : Operation 209 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_49 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 49" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_50 : Operation 210 [2/2] (3.25ns)   --->   "%sum_49_V = load i18* %Layer3_Bias_V_addr_49, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 51> : 3.25ns
+ST_51 : Operation 211 [1/2] (3.25ns)   --->   "%sum_49_V = load i18* %Layer3_Bias_V_addr_49, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_51 : Operation 212 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_50 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 50" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_51 : Operation 213 [2/2] (3.25ns)   --->   "%sum_50_V = load i18* %Layer3_Bias_V_addr_50, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 52> : 3.25ns
+ST_52 : Operation 214 [1/2] (3.25ns)   --->   "%sum_50_V = load i18* %Layer3_Bias_V_addr_50, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_52 : Operation 215 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_51 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 51" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_52 : Operation 216 [2/2] (3.25ns)   --->   "%sum_51_V = load i18* %Layer3_Bias_V_addr_51, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 53> : 3.25ns
+ST_53 : Operation 217 [1/2] (3.25ns)   --->   "%sum_51_V = load i18* %Layer3_Bias_V_addr_51, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_53 : Operation 218 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_52 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 52" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_53 : Operation 219 [2/2] (3.25ns)   --->   "%sum_52_V = load i18* %Layer3_Bias_V_addr_52, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 54> : 3.25ns
+ST_54 : Operation 220 [1/2] (3.25ns)   --->   "%sum_52_V = load i18* %Layer3_Bias_V_addr_52, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_54 : Operation 221 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_53 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 53" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_54 : Operation 222 [2/2] (3.25ns)   --->   "%sum_53_V = load i18* %Layer3_Bias_V_addr_53, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 55> : 3.25ns
+ST_55 : Operation 223 [1/2] (3.25ns)   --->   "%sum_53_V = load i18* %Layer3_Bias_V_addr_53, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_55 : Operation 224 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_54 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 54" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_55 : Operation 225 [2/2] (3.25ns)   --->   "%sum_54_V = load i18* %Layer3_Bias_V_addr_54, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 56> : 3.25ns
+ST_56 : Operation 226 [1/2] (3.25ns)   --->   "%sum_54_V = load i18* %Layer3_Bias_V_addr_54, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_56 : Operation 227 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_55 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 55" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_56 : Operation 228 [2/2] (3.25ns)   --->   "%sum_55_V = load i18* %Layer3_Bias_V_addr_55, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 57> : 3.25ns
+ST_57 : Operation 229 [1/2] (3.25ns)   --->   "%sum_55_V = load i18* %Layer3_Bias_V_addr_55, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_57 : Operation 230 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_56 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 56" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_57 : Operation 231 [2/2] (3.25ns)   --->   "%sum_56_V = load i18* %Layer3_Bias_V_addr_56, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 58> : 3.25ns
+ST_58 : Operation 232 [1/2] (3.25ns)   --->   "%sum_56_V = load i18* %Layer3_Bias_V_addr_56, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_58 : Operation 233 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_57 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 57" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_58 : Operation 234 [2/2] (3.25ns)   --->   "%sum_57_V = load i18* %Layer3_Bias_V_addr_57, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 59> : 3.25ns
+ST_59 : Operation 235 [1/2] (3.25ns)   --->   "%sum_57_V = load i18* %Layer3_Bias_V_addr_57, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_59 : Operation 236 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_58 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 58" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_59 : Operation 237 [2/2] (3.25ns)   --->   "%sum_58_V = load i18* %Layer3_Bias_V_addr_58, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 60> : 3.25ns
+ST_60 : Operation 238 [1/2] (3.25ns)   --->   "%sum_58_V = load i18* %Layer3_Bias_V_addr_58, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_60 : Operation 239 [1/1] (0.00ns)   --->   "%Layer3_Bias_V_addr_59 = getelementptr [60 x i18]* %Layer3_Bias_V, i64 0, i64 59" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]
+ST_60 : Operation 240 [2/2] (3.25ns)   --->   "%sum_59_V = load i18* %Layer3_Bias_V_addr_59, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+
+ <State 61> : 6.87ns
+ST_61 : Operation 241 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([60 x i18]* %Layer3_Bias_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_61 : Operation 242 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([60 x i18]* %Layer3_Bias_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_61 : Operation 243 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_59_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 244 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_58_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 245 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_57_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 246 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_56_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 247 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_55_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 248 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_54_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 249 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_53_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 250 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_52_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 251 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_51_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 252 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_50_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 253 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_49_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 254 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_48_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 255 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_47_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 256 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_46_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 257 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_45_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 258 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_44_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 259 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_43_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 260 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_42_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 261 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_41_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 262 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_40_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 263 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_39_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 264 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_38_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 265 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_37_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 266 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_36_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 267 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_35_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 268 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_34_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 269 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_33_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 270 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_32_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 271 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_31_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 272 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_30_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 273 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_29_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 274 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_28_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 275 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_27_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 276 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_26_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 277 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_25_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 278 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_24_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 279 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_23_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 280 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_22_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 281 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_21_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 282 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_20_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 283 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_19_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 284 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_18_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 285 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_17_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 286 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_16_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 287 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_15_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 288 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_14_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 289 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_13_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 290 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_12_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 291 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_11_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 292 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_10_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 293 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_9_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 294 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_8_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 295 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_7_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 296 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_6_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 297 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_5_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 298 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_4_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 299 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_3_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 300 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_2_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 301 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_1_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 302 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %sum_0_V_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_61 : Operation 303 [1/2] (3.25ns)   --->   "%sum_59_V = load i18* %Layer3_Bias_V_addr_59, align 4" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 44 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 60> <RAM>
+ST_61 : Operation 304 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_0_V_out_out, i18 %sum_0_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 305 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_1_V_out_out, i18 %sum_1_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 306 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_2_V_out_out, i18 %sum_2_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 307 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_3_V_out_out, i18 %sum_3_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 308 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_4_V_out_out, i18 %sum_4_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 309 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_5_V_out_out, i18 %sum_5_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 310 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_6_V_out_out, i18 %sum_6_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 311 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_7_V_out_out, i18 %sum_7_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 312 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_8_V_out_out, i18 %sum_8_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 313 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_9_V_out_out, i18 %sum_9_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 314 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_10_V_out_out, i18 %sum_10_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 315 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_11_V_out_out, i18 %sum_11_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 316 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_12_V_out_out, i18 %sum_12_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 317 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_13_V_out_out, i18 %sum_13_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 318 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_14_V_out_out, i18 %sum_14_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 319 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_15_V_out_out, i18 %sum_15_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 320 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_16_V_out_out, i18 %sum_16_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 321 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_17_V_out_out, i18 %sum_17_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 322 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_18_V_out_out, i18 %sum_18_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 323 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_19_V_out_out, i18 %sum_19_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 324 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_20_V_out_out, i18 %sum_20_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 325 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_21_V_out_out, i18 %sum_21_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 326 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_22_V_out_out, i18 %sum_22_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 327 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_23_V_out_out, i18 %sum_23_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 328 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_24_V_out_out, i18 %sum_24_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 329 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_25_V_out_out, i18 %sum_25_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 330 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_26_V_out_out, i18 %sum_26_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 331 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_27_V_out_out, i18 %sum_27_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 332 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_28_V_out_out, i18 %sum_28_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 333 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_29_V_out_out, i18 %sum_29_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 334 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_30_V_out_out, i18 %sum_30_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 335 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_31_V_out_out, i18 %sum_31_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 336 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_32_V_out_out, i18 %sum_32_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 337 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_33_V_out_out, i18 %sum_33_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 338 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_34_V_out_out, i18 %sum_34_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 339 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_35_V_out_out, i18 %sum_35_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 340 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_36_V_out_out, i18 %sum_36_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 341 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_37_V_out_out, i18 %sum_37_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 342 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_38_V_out_out, i18 %sum_38_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 343 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_39_V_out_out, i18 %sum_39_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 344 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_40_V_out_out, i18 %sum_40_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 345 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_41_V_out_out, i18 %sum_41_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 346 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_42_V_out_out, i18 %sum_42_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 347 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_43_V_out_out, i18 %sum_43_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 348 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_44_V_out_out, i18 %sum_44_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 349 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_45_V_out_out, i18 %sum_45_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 350 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_46_V_out_out, i18 %sum_46_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 351 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_47_V_out_out, i18 %sum_47_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 352 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_48_V_out_out, i18 %sum_48_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 353 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_49_V_out_out, i18 %sum_49_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 354 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_50_V_out_out, i18 %sum_50_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 355 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_51_V_out_out, i18 %sum_51_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 356 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_52_V_out_out, i18 %sum_52_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 357 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_53_V_out_out, i18 %sum_53_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 358 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_54_V_out_out, i18 %sum_54_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 359 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_55_V_out_out, i18 %sum_55_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 360 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_56_V_out_out, i18 %sum_56_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 361 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_57_V_out_out, i18 %sum_57_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 362 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_58_V_out_out, i18 %sum_58_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 363 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i18P(i18* %sum_59_V_out_out, i18 %sum_59_V)" [SRC/1_keras.cpp:276->SRC/1_keras.cpp:31]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_61 : Operation 364 [1/1] (0.00ns)   --->   "ret void"
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('Layer3_Bias_V_addr', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) [124]  (0 ns)
+	'load' operation ('sum[0].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [125]  (3.25 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[0].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [125]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[1].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [127]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[2].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [129]  (3.25 ns)
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[3].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [131]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[4].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [133]  (3.25 ns)
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[5].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [135]  (3.25 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[6].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [137]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[7].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [139]  (3.25 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[8].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [141]  (3.25 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[9].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [143]  (3.25 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[10].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [145]  (3.25 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[11].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [147]  (3.25 ns)
+
+ <State 14>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[12].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [149]  (3.25 ns)
+
+ <State 15>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[13].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [151]  (3.25 ns)
+
+ <State 16>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[14].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [153]  (3.25 ns)
+
+ <State 17>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[15].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [155]  (3.25 ns)
+
+ <State 18>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[16].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [157]  (3.25 ns)
+
+ <State 19>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[17].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [159]  (3.25 ns)
+
+ <State 20>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[18].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [161]  (3.25 ns)
+
+ <State 21>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[19].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [163]  (3.25 ns)
+
+ <State 22>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[20].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [165]  (3.25 ns)
+
+ <State 23>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[21].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [167]  (3.25 ns)
+
+ <State 24>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[22].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [169]  (3.25 ns)
+
+ <State 25>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[23].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [171]  (3.25 ns)
+
+ <State 26>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[24].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [173]  (3.25 ns)
+
+ <State 27>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[25].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [175]  (3.25 ns)
+
+ <State 28>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[26].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [177]  (3.25 ns)
+
+ <State 29>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[27].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [179]  (3.25 ns)
+
+ <State 30>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[28].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [181]  (3.25 ns)
+
+ <State 31>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[29].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [183]  (3.25 ns)
+
+ <State 32>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[30].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [185]  (3.25 ns)
+
+ <State 33>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[31].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [187]  (3.25 ns)
+
+ <State 34>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[32].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [189]  (3.25 ns)
+
+ <State 35>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[33].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [191]  (3.25 ns)
+
+ <State 36>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[34].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [193]  (3.25 ns)
+
+ <State 37>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[35].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [195]  (3.25 ns)
+
+ <State 38>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[36].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [197]  (3.25 ns)
+
+ <State 39>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[37].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [199]  (3.25 ns)
+
+ <State 40>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[38].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [201]  (3.25 ns)
+
+ <State 41>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[39].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [203]  (3.25 ns)
+
+ <State 42>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[40].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [205]  (3.25 ns)
+
+ <State 43>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[41].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [207]  (3.25 ns)
+
+ <State 44>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[42].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [209]  (3.25 ns)
+
+ <State 45>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[43].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [211]  (3.25 ns)
+
+ <State 46>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[44].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [213]  (3.25 ns)
+
+ <State 47>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[45].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [215]  (3.25 ns)
+
+ <State 48>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[46].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [217]  (3.25 ns)
+
+ <State 49>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[47].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [219]  (3.25 ns)
+
+ <State 50>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[48].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [221]  (3.25 ns)
+
+ <State 51>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[49].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [223]  (3.25 ns)
+
+ <State 52>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[50].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [225]  (3.25 ns)
+
+ <State 53>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[51].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [227]  (3.25 ns)
+
+ <State 54>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[52].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [229]  (3.25 ns)
+
+ <State 55>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[53].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [231]  (3.25 ns)
+
+ <State 56>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[54].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [233]  (3.25 ns)
+
+ <State 57>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[55].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [235]  (3.25 ns)
+
+ <State 58>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[56].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [237]  (3.25 ns)
+
+ <State 59>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[57].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [239]  (3.25 ns)
+
+ <State 60>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sum[58].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [241]  (3.25 ns)
+
+ <State 61>: 6.87ns
+The critical path consists of the following:
+	'load' operation ('sum[59].V', SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) on array 'Layer3_Bias_V' [243]  (3.25 ns)
+	fifo write on port 'sum_59_V_out_out' (SRC/1_keras.cpp:276->SRC/1_keras.cpp:31) [303]  (3.61 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

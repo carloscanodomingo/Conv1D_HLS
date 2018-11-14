@@ -1,0 +1,67 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'CNN_1D_Loop_Loop_Con'" level="0">
+<item name = "Date">Sun Jul  1 02:48:42 2018
+</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Project">Conv12</item>
+<item name = "Solution">A_Otra</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.75, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2541, 2541, 2541, 2541, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="sum_V_1_mult_add_fu_559">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_2_mult_add_fu_566">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_3_mult_add_fu_573">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_4_mult_add_fu_580">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_5_mult_add_fu_587">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_6_mult_add_fu_594">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_7_mult_add_fu_601">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_8_mult_add_fu_608">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_9_mult_add_fu_615">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_10_mult_add_fu_622">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_11_mult_add_fu_629">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_12_mult_add_fu_636">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_13_mult_add_fu_643">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_14_mult_add_fu_650">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_15_mult_add_fu_657">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_16_mult_add_fu_664">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_17_mult_add_fu_671">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_18_mult_add_fu_678">mult_add, 0, 0, 1, 1, function</column>
+<column name="sum_V_20_mult_add_fu_685">mult_add, 0, 0, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop_Conv">2540, 2540, 254, -, -, 10, no</column>
+<column name=" + Load_weight">19, 19, 2, 1, 1, 19, yes</column>
+<column name=" + Convolution_Loop">229, 229, 21, 1, 1, 210, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

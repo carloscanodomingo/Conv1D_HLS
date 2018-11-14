@@ -1,0 +1,33 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="Layer1_Conv1D" label="Convolution_Loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="mult" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="Layer1_Conv" label="fill_Filters" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="skip_exit_check" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="Layer3_Dense" label="Loop_Mult_inner" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="100"/>
+            </pragma>
+        </directive>
+        <directive functionName="Layer4_Dense" label="Loop_DST" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="dst" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="CNN_1D"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

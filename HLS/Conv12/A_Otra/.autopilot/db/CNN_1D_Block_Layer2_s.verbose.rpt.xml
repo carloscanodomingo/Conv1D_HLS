@@ -1,0 +1,418 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'CNN_1D_Block_Layer2_s'" level="0">
+<item name = "Date">Sun Jul  1 02:49:31 2018
+</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Project">Conv12</item>
+<item name = "Solution">A_Otra</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 6.87, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">60, 60, 60, 60, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 16</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 1075</column>
+<column name="Register">-, -, 1124, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 2</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state61">or, 0, 0, 8, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Layer3_Bias_V_Addr_A_orig">261, 61, 32, 1952</column>
+<column name="ap_NS_fsm">265, 62, 1, 62</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="sum_0_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_10_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_11_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_12_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_13_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_14_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_15_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_16_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_17_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_18_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_19_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_1_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_20_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_21_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_22_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_23_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_24_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_25_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_26_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_27_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_28_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_29_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_2_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_30_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_31_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_32_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_33_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_34_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_35_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_36_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_37_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_38_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_39_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_3_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_40_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_41_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_42_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_43_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_44_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_45_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_46_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_47_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_48_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_49_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_4_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_50_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_51_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_52_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_53_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_54_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_55_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_56_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_57_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_58_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_59_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_5_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_6_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_7_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_8_V_out_out_blk_n">9, 2, 1, 2</column>
+<column name="sum_9_V_out_out_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">61, 0, 61, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="sum_0_V_reg_1236">18, 0, 18, 0</column>
+<column name="sum_10_V_reg_1336">18, 0, 18, 0</column>
+<column name="sum_11_V_reg_1346">18, 0, 18, 0</column>
+<column name="sum_12_V_reg_1356">18, 0, 18, 0</column>
+<column name="sum_13_V_reg_1366">18, 0, 18, 0</column>
+<column name="sum_14_V_reg_1376">18, 0, 18, 0</column>
+<column name="sum_15_V_reg_1386">18, 0, 18, 0</column>
+<column name="sum_16_V_reg_1396">18, 0, 18, 0</column>
+<column name="sum_17_V_reg_1406">18, 0, 18, 0</column>
+<column name="sum_18_V_reg_1416">18, 0, 18, 0</column>
+<column name="sum_19_V_reg_1426">18, 0, 18, 0</column>
+<column name="sum_1_V_reg_1246">18, 0, 18, 0</column>
+<column name="sum_20_V_reg_1436">18, 0, 18, 0</column>
+<column name="sum_21_V_reg_1446">18, 0, 18, 0</column>
+<column name="sum_22_V_reg_1456">18, 0, 18, 0</column>
+<column name="sum_23_V_reg_1466">18, 0, 18, 0</column>
+<column name="sum_24_V_reg_1476">18, 0, 18, 0</column>
+<column name="sum_25_V_reg_1486">18, 0, 18, 0</column>
+<column name="sum_26_V_reg_1496">18, 0, 18, 0</column>
+<column name="sum_27_V_reg_1506">18, 0, 18, 0</column>
+<column name="sum_28_V_reg_1516">18, 0, 18, 0</column>
+<column name="sum_29_V_reg_1526">18, 0, 18, 0</column>
+<column name="sum_2_V_reg_1256">18, 0, 18, 0</column>
+<column name="sum_30_V_reg_1536">18, 0, 18, 0</column>
+<column name="sum_31_V_reg_1546">18, 0, 18, 0</column>
+<column name="sum_32_V_reg_1556">18, 0, 18, 0</column>
+<column name="sum_33_V_reg_1566">18, 0, 18, 0</column>
+<column name="sum_34_V_reg_1576">18, 0, 18, 0</column>
+<column name="sum_35_V_reg_1586">18, 0, 18, 0</column>
+<column name="sum_36_V_reg_1596">18, 0, 18, 0</column>
+<column name="sum_37_V_reg_1606">18, 0, 18, 0</column>
+<column name="sum_38_V_reg_1616">18, 0, 18, 0</column>
+<column name="sum_39_V_reg_1626">18, 0, 18, 0</column>
+<column name="sum_3_V_reg_1266">18, 0, 18, 0</column>
+<column name="sum_40_V_reg_1636">18, 0, 18, 0</column>
+<column name="sum_41_V_reg_1646">18, 0, 18, 0</column>
+<column name="sum_42_V_reg_1656">18, 0, 18, 0</column>
+<column name="sum_43_V_reg_1666">18, 0, 18, 0</column>
+<column name="sum_44_V_reg_1676">18, 0, 18, 0</column>
+<column name="sum_45_V_reg_1686">18, 0, 18, 0</column>
+<column name="sum_46_V_reg_1696">18, 0, 18, 0</column>
+<column name="sum_47_V_reg_1706">18, 0, 18, 0</column>
+<column name="sum_48_V_reg_1716">18, 0, 18, 0</column>
+<column name="sum_49_V_reg_1726">18, 0, 18, 0</column>
+<column name="sum_4_V_reg_1276">18, 0, 18, 0</column>
+<column name="sum_50_V_reg_1736">18, 0, 18, 0</column>
+<column name="sum_51_V_reg_1746">18, 0, 18, 0</column>
+<column name="sum_52_V_reg_1756">18, 0, 18, 0</column>
+<column name="sum_53_V_reg_1766">18, 0, 18, 0</column>
+<column name="sum_54_V_reg_1776">18, 0, 18, 0</column>
+<column name="sum_55_V_reg_1786">18, 0, 18, 0</column>
+<column name="sum_56_V_reg_1796">18, 0, 18, 0</column>
+<column name="sum_57_V_reg_1806">18, 0, 18, 0</column>
+<column name="sum_58_V_reg_1816">18, 0, 18, 0</column>
+<column name="sum_5_V_reg_1286">18, 0, 18, 0</column>
+<column name="sum_6_V_reg_1296">18, 0, 18, 0</column>
+<column name="sum_7_V_reg_1306">18, 0, 18, 0</column>
+<column name="sum_8_V_reg_1316">18, 0, 18, 0</column>
+<column name="sum_9_V_reg_1326">18, 0, 18, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, CNN_1D_Block_Layer2_, return value</column>
+<column name="Layer3_Bias_V_Addr_A">out, 32, bram, Layer3_Bias_V, array</column>
+<column name="Layer3_Bias_V_EN_A">out, 1, bram, Layer3_Bias_V, array</column>
+<column name="Layer3_Bias_V_WEN_A">out, 4, bram, Layer3_Bias_V, array</column>
+<column name="Layer3_Bias_V_Din_A">out, 32, bram, Layer3_Bias_V, array</column>
+<column name="Layer3_Bias_V_Dout_A">in, 32, bram, Layer3_Bias_V, array</column>
+<column name="sum_0_V_out_out_din">out, 18, ap_fifo, sum_0_V_out_out, pointer</column>
+<column name="sum_0_V_out_out_full_n">in, 1, ap_fifo, sum_0_V_out_out, pointer</column>
+<column name="sum_0_V_out_out_write">out, 1, ap_fifo, sum_0_V_out_out, pointer</column>
+<column name="sum_1_V_out_out_din">out, 18, ap_fifo, sum_1_V_out_out, pointer</column>
+<column name="sum_1_V_out_out_full_n">in, 1, ap_fifo, sum_1_V_out_out, pointer</column>
+<column name="sum_1_V_out_out_write">out, 1, ap_fifo, sum_1_V_out_out, pointer</column>
+<column name="sum_2_V_out_out_din">out, 18, ap_fifo, sum_2_V_out_out, pointer</column>
+<column name="sum_2_V_out_out_full_n">in, 1, ap_fifo, sum_2_V_out_out, pointer</column>
+<column name="sum_2_V_out_out_write">out, 1, ap_fifo, sum_2_V_out_out, pointer</column>
+<column name="sum_3_V_out_out_din">out, 18, ap_fifo, sum_3_V_out_out, pointer</column>
+<column name="sum_3_V_out_out_full_n">in, 1, ap_fifo, sum_3_V_out_out, pointer</column>
+<column name="sum_3_V_out_out_write">out, 1, ap_fifo, sum_3_V_out_out, pointer</column>
+<column name="sum_4_V_out_out_din">out, 18, ap_fifo, sum_4_V_out_out, pointer</column>
+<column name="sum_4_V_out_out_full_n">in, 1, ap_fifo, sum_4_V_out_out, pointer</column>
+<column name="sum_4_V_out_out_write">out, 1, ap_fifo, sum_4_V_out_out, pointer</column>
+<column name="sum_5_V_out_out_din">out, 18, ap_fifo, sum_5_V_out_out, pointer</column>
+<column name="sum_5_V_out_out_full_n">in, 1, ap_fifo, sum_5_V_out_out, pointer</column>
+<column name="sum_5_V_out_out_write">out, 1, ap_fifo, sum_5_V_out_out, pointer</column>
+<column name="sum_6_V_out_out_din">out, 18, ap_fifo, sum_6_V_out_out, pointer</column>
+<column name="sum_6_V_out_out_full_n">in, 1, ap_fifo, sum_6_V_out_out, pointer</column>
+<column name="sum_6_V_out_out_write">out, 1, ap_fifo, sum_6_V_out_out, pointer</column>
+<column name="sum_7_V_out_out_din">out, 18, ap_fifo, sum_7_V_out_out, pointer</column>
+<column name="sum_7_V_out_out_full_n">in, 1, ap_fifo, sum_7_V_out_out, pointer</column>
+<column name="sum_7_V_out_out_write">out, 1, ap_fifo, sum_7_V_out_out, pointer</column>
+<column name="sum_8_V_out_out_din">out, 18, ap_fifo, sum_8_V_out_out, pointer</column>
+<column name="sum_8_V_out_out_full_n">in, 1, ap_fifo, sum_8_V_out_out, pointer</column>
+<column name="sum_8_V_out_out_write">out, 1, ap_fifo, sum_8_V_out_out, pointer</column>
+<column name="sum_9_V_out_out_din">out, 18, ap_fifo, sum_9_V_out_out, pointer</column>
+<column name="sum_9_V_out_out_full_n">in, 1, ap_fifo, sum_9_V_out_out, pointer</column>
+<column name="sum_9_V_out_out_write">out, 1, ap_fifo, sum_9_V_out_out, pointer</column>
+<column name="sum_10_V_out_out_din">out, 18, ap_fifo, sum_10_V_out_out, pointer</column>
+<column name="sum_10_V_out_out_full_n">in, 1, ap_fifo, sum_10_V_out_out, pointer</column>
+<column name="sum_10_V_out_out_write">out, 1, ap_fifo, sum_10_V_out_out, pointer</column>
+<column name="sum_11_V_out_out_din">out, 18, ap_fifo, sum_11_V_out_out, pointer</column>
+<column name="sum_11_V_out_out_full_n">in, 1, ap_fifo, sum_11_V_out_out, pointer</column>
+<column name="sum_11_V_out_out_write">out, 1, ap_fifo, sum_11_V_out_out, pointer</column>
+<column name="sum_12_V_out_out_din">out, 18, ap_fifo, sum_12_V_out_out, pointer</column>
+<column name="sum_12_V_out_out_full_n">in, 1, ap_fifo, sum_12_V_out_out, pointer</column>
+<column name="sum_12_V_out_out_write">out, 1, ap_fifo, sum_12_V_out_out, pointer</column>
+<column name="sum_13_V_out_out_din">out, 18, ap_fifo, sum_13_V_out_out, pointer</column>
+<column name="sum_13_V_out_out_full_n">in, 1, ap_fifo, sum_13_V_out_out, pointer</column>
+<column name="sum_13_V_out_out_write">out, 1, ap_fifo, sum_13_V_out_out, pointer</column>
+<column name="sum_14_V_out_out_din">out, 18, ap_fifo, sum_14_V_out_out, pointer</column>
+<column name="sum_14_V_out_out_full_n">in, 1, ap_fifo, sum_14_V_out_out, pointer</column>
+<column name="sum_14_V_out_out_write">out, 1, ap_fifo, sum_14_V_out_out, pointer</column>
+<column name="sum_15_V_out_out_din">out, 18, ap_fifo, sum_15_V_out_out, pointer</column>
+<column name="sum_15_V_out_out_full_n">in, 1, ap_fifo, sum_15_V_out_out, pointer</column>
+<column name="sum_15_V_out_out_write">out, 1, ap_fifo, sum_15_V_out_out, pointer</column>
+<column name="sum_16_V_out_out_din">out, 18, ap_fifo, sum_16_V_out_out, pointer</column>
+<column name="sum_16_V_out_out_full_n">in, 1, ap_fifo, sum_16_V_out_out, pointer</column>
+<column name="sum_16_V_out_out_write">out, 1, ap_fifo, sum_16_V_out_out, pointer</column>
+<column name="sum_17_V_out_out_din">out, 18, ap_fifo, sum_17_V_out_out, pointer</column>
+<column name="sum_17_V_out_out_full_n">in, 1, ap_fifo, sum_17_V_out_out, pointer</column>
+<column name="sum_17_V_out_out_write">out, 1, ap_fifo, sum_17_V_out_out, pointer</column>
+<column name="sum_18_V_out_out_din">out, 18, ap_fifo, sum_18_V_out_out, pointer</column>
+<column name="sum_18_V_out_out_full_n">in, 1, ap_fifo, sum_18_V_out_out, pointer</column>
+<column name="sum_18_V_out_out_write">out, 1, ap_fifo, sum_18_V_out_out, pointer</column>
+<column name="sum_19_V_out_out_din">out, 18, ap_fifo, sum_19_V_out_out, pointer</column>
+<column name="sum_19_V_out_out_full_n">in, 1, ap_fifo, sum_19_V_out_out, pointer</column>
+<column name="sum_19_V_out_out_write">out, 1, ap_fifo, sum_19_V_out_out, pointer</column>
+<column name="sum_20_V_out_out_din">out, 18, ap_fifo, sum_20_V_out_out, pointer</column>
+<column name="sum_20_V_out_out_full_n">in, 1, ap_fifo, sum_20_V_out_out, pointer</column>
+<column name="sum_20_V_out_out_write">out, 1, ap_fifo, sum_20_V_out_out, pointer</column>
+<column name="sum_21_V_out_out_din">out, 18, ap_fifo, sum_21_V_out_out, pointer</column>
+<column name="sum_21_V_out_out_full_n">in, 1, ap_fifo, sum_21_V_out_out, pointer</column>
+<column name="sum_21_V_out_out_write">out, 1, ap_fifo, sum_21_V_out_out, pointer</column>
+<column name="sum_22_V_out_out_din">out, 18, ap_fifo, sum_22_V_out_out, pointer</column>
+<column name="sum_22_V_out_out_full_n">in, 1, ap_fifo, sum_22_V_out_out, pointer</column>
+<column name="sum_22_V_out_out_write">out, 1, ap_fifo, sum_22_V_out_out, pointer</column>
+<column name="sum_23_V_out_out_din">out, 18, ap_fifo, sum_23_V_out_out, pointer</column>
+<column name="sum_23_V_out_out_full_n">in, 1, ap_fifo, sum_23_V_out_out, pointer</column>
+<column name="sum_23_V_out_out_write">out, 1, ap_fifo, sum_23_V_out_out, pointer</column>
+<column name="sum_24_V_out_out_din">out, 18, ap_fifo, sum_24_V_out_out, pointer</column>
+<column name="sum_24_V_out_out_full_n">in, 1, ap_fifo, sum_24_V_out_out, pointer</column>
+<column name="sum_24_V_out_out_write">out, 1, ap_fifo, sum_24_V_out_out, pointer</column>
+<column name="sum_25_V_out_out_din">out, 18, ap_fifo, sum_25_V_out_out, pointer</column>
+<column name="sum_25_V_out_out_full_n">in, 1, ap_fifo, sum_25_V_out_out, pointer</column>
+<column name="sum_25_V_out_out_write">out, 1, ap_fifo, sum_25_V_out_out, pointer</column>
+<column name="sum_26_V_out_out_din">out, 18, ap_fifo, sum_26_V_out_out, pointer</column>
+<column name="sum_26_V_out_out_full_n">in, 1, ap_fifo, sum_26_V_out_out, pointer</column>
+<column name="sum_26_V_out_out_write">out, 1, ap_fifo, sum_26_V_out_out, pointer</column>
+<column name="sum_27_V_out_out_din">out, 18, ap_fifo, sum_27_V_out_out, pointer</column>
+<column name="sum_27_V_out_out_full_n">in, 1, ap_fifo, sum_27_V_out_out, pointer</column>
+<column name="sum_27_V_out_out_write">out, 1, ap_fifo, sum_27_V_out_out, pointer</column>
+<column name="sum_28_V_out_out_din">out, 18, ap_fifo, sum_28_V_out_out, pointer</column>
+<column name="sum_28_V_out_out_full_n">in, 1, ap_fifo, sum_28_V_out_out, pointer</column>
+<column name="sum_28_V_out_out_write">out, 1, ap_fifo, sum_28_V_out_out, pointer</column>
+<column name="sum_29_V_out_out_din">out, 18, ap_fifo, sum_29_V_out_out, pointer</column>
+<column name="sum_29_V_out_out_full_n">in, 1, ap_fifo, sum_29_V_out_out, pointer</column>
+<column name="sum_29_V_out_out_write">out, 1, ap_fifo, sum_29_V_out_out, pointer</column>
+<column name="sum_30_V_out_out_din">out, 18, ap_fifo, sum_30_V_out_out, pointer</column>
+<column name="sum_30_V_out_out_full_n">in, 1, ap_fifo, sum_30_V_out_out, pointer</column>
+<column name="sum_30_V_out_out_write">out, 1, ap_fifo, sum_30_V_out_out, pointer</column>
+<column name="sum_31_V_out_out_din">out, 18, ap_fifo, sum_31_V_out_out, pointer</column>
+<column name="sum_31_V_out_out_full_n">in, 1, ap_fifo, sum_31_V_out_out, pointer</column>
+<column name="sum_31_V_out_out_write">out, 1, ap_fifo, sum_31_V_out_out, pointer</column>
+<column name="sum_32_V_out_out_din">out, 18, ap_fifo, sum_32_V_out_out, pointer</column>
+<column name="sum_32_V_out_out_full_n">in, 1, ap_fifo, sum_32_V_out_out, pointer</column>
+<column name="sum_32_V_out_out_write">out, 1, ap_fifo, sum_32_V_out_out, pointer</column>
+<column name="sum_33_V_out_out_din">out, 18, ap_fifo, sum_33_V_out_out, pointer</column>
+<column name="sum_33_V_out_out_full_n">in, 1, ap_fifo, sum_33_V_out_out, pointer</column>
+<column name="sum_33_V_out_out_write">out, 1, ap_fifo, sum_33_V_out_out, pointer</column>
+<column name="sum_34_V_out_out_din">out, 18, ap_fifo, sum_34_V_out_out, pointer</column>
+<column name="sum_34_V_out_out_full_n">in, 1, ap_fifo, sum_34_V_out_out, pointer</column>
+<column name="sum_34_V_out_out_write">out, 1, ap_fifo, sum_34_V_out_out, pointer</column>
+<column name="sum_35_V_out_out_din">out, 18, ap_fifo, sum_35_V_out_out, pointer</column>
+<column name="sum_35_V_out_out_full_n">in, 1, ap_fifo, sum_35_V_out_out, pointer</column>
+<column name="sum_35_V_out_out_write">out, 1, ap_fifo, sum_35_V_out_out, pointer</column>
+<column name="sum_36_V_out_out_din">out, 18, ap_fifo, sum_36_V_out_out, pointer</column>
+<column name="sum_36_V_out_out_full_n">in, 1, ap_fifo, sum_36_V_out_out, pointer</column>
+<column name="sum_36_V_out_out_write">out, 1, ap_fifo, sum_36_V_out_out, pointer</column>
+<column name="sum_37_V_out_out_din">out, 18, ap_fifo, sum_37_V_out_out, pointer</column>
+<column name="sum_37_V_out_out_full_n">in, 1, ap_fifo, sum_37_V_out_out, pointer</column>
+<column name="sum_37_V_out_out_write">out, 1, ap_fifo, sum_37_V_out_out, pointer</column>
+<column name="sum_38_V_out_out_din">out, 18, ap_fifo, sum_38_V_out_out, pointer</column>
+<column name="sum_38_V_out_out_full_n">in, 1, ap_fifo, sum_38_V_out_out, pointer</column>
+<column name="sum_38_V_out_out_write">out, 1, ap_fifo, sum_38_V_out_out, pointer</column>
+<column name="sum_39_V_out_out_din">out, 18, ap_fifo, sum_39_V_out_out, pointer</column>
+<column name="sum_39_V_out_out_full_n">in, 1, ap_fifo, sum_39_V_out_out, pointer</column>
+<column name="sum_39_V_out_out_write">out, 1, ap_fifo, sum_39_V_out_out, pointer</column>
+<column name="sum_40_V_out_out_din">out, 18, ap_fifo, sum_40_V_out_out, pointer</column>
+<column name="sum_40_V_out_out_full_n">in, 1, ap_fifo, sum_40_V_out_out, pointer</column>
+<column name="sum_40_V_out_out_write">out, 1, ap_fifo, sum_40_V_out_out, pointer</column>
+<column name="sum_41_V_out_out_din">out, 18, ap_fifo, sum_41_V_out_out, pointer</column>
+<column name="sum_41_V_out_out_full_n">in, 1, ap_fifo, sum_41_V_out_out, pointer</column>
+<column name="sum_41_V_out_out_write">out, 1, ap_fifo, sum_41_V_out_out, pointer</column>
+<column name="sum_42_V_out_out_din">out, 18, ap_fifo, sum_42_V_out_out, pointer</column>
+<column name="sum_42_V_out_out_full_n">in, 1, ap_fifo, sum_42_V_out_out, pointer</column>
+<column name="sum_42_V_out_out_write">out, 1, ap_fifo, sum_42_V_out_out, pointer</column>
+<column name="sum_43_V_out_out_din">out, 18, ap_fifo, sum_43_V_out_out, pointer</column>
+<column name="sum_43_V_out_out_full_n">in, 1, ap_fifo, sum_43_V_out_out, pointer</column>
+<column name="sum_43_V_out_out_write">out, 1, ap_fifo, sum_43_V_out_out, pointer</column>
+<column name="sum_44_V_out_out_din">out, 18, ap_fifo, sum_44_V_out_out, pointer</column>
+<column name="sum_44_V_out_out_full_n">in, 1, ap_fifo, sum_44_V_out_out, pointer</column>
+<column name="sum_44_V_out_out_write">out, 1, ap_fifo, sum_44_V_out_out, pointer</column>
+<column name="sum_45_V_out_out_din">out, 18, ap_fifo, sum_45_V_out_out, pointer</column>
+<column name="sum_45_V_out_out_full_n">in, 1, ap_fifo, sum_45_V_out_out, pointer</column>
+<column name="sum_45_V_out_out_write">out, 1, ap_fifo, sum_45_V_out_out, pointer</column>
+<column name="sum_46_V_out_out_din">out, 18, ap_fifo, sum_46_V_out_out, pointer</column>
+<column name="sum_46_V_out_out_full_n">in, 1, ap_fifo, sum_46_V_out_out, pointer</column>
+<column name="sum_46_V_out_out_write">out, 1, ap_fifo, sum_46_V_out_out, pointer</column>
+<column name="sum_47_V_out_out_din">out, 18, ap_fifo, sum_47_V_out_out, pointer</column>
+<column name="sum_47_V_out_out_full_n">in, 1, ap_fifo, sum_47_V_out_out, pointer</column>
+<column name="sum_47_V_out_out_write">out, 1, ap_fifo, sum_47_V_out_out, pointer</column>
+<column name="sum_48_V_out_out_din">out, 18, ap_fifo, sum_48_V_out_out, pointer</column>
+<column name="sum_48_V_out_out_full_n">in, 1, ap_fifo, sum_48_V_out_out, pointer</column>
+<column name="sum_48_V_out_out_write">out, 1, ap_fifo, sum_48_V_out_out, pointer</column>
+<column name="sum_49_V_out_out_din">out, 18, ap_fifo, sum_49_V_out_out, pointer</column>
+<column name="sum_49_V_out_out_full_n">in, 1, ap_fifo, sum_49_V_out_out, pointer</column>
+<column name="sum_49_V_out_out_write">out, 1, ap_fifo, sum_49_V_out_out, pointer</column>
+<column name="sum_50_V_out_out_din">out, 18, ap_fifo, sum_50_V_out_out, pointer</column>
+<column name="sum_50_V_out_out_full_n">in, 1, ap_fifo, sum_50_V_out_out, pointer</column>
+<column name="sum_50_V_out_out_write">out, 1, ap_fifo, sum_50_V_out_out, pointer</column>
+<column name="sum_51_V_out_out_din">out, 18, ap_fifo, sum_51_V_out_out, pointer</column>
+<column name="sum_51_V_out_out_full_n">in, 1, ap_fifo, sum_51_V_out_out, pointer</column>
+<column name="sum_51_V_out_out_write">out, 1, ap_fifo, sum_51_V_out_out, pointer</column>
+<column name="sum_52_V_out_out_din">out, 18, ap_fifo, sum_52_V_out_out, pointer</column>
+<column name="sum_52_V_out_out_full_n">in, 1, ap_fifo, sum_52_V_out_out, pointer</column>
+<column name="sum_52_V_out_out_write">out, 1, ap_fifo, sum_52_V_out_out, pointer</column>
+<column name="sum_53_V_out_out_din">out, 18, ap_fifo, sum_53_V_out_out, pointer</column>
+<column name="sum_53_V_out_out_full_n">in, 1, ap_fifo, sum_53_V_out_out, pointer</column>
+<column name="sum_53_V_out_out_write">out, 1, ap_fifo, sum_53_V_out_out, pointer</column>
+<column name="sum_54_V_out_out_din">out, 18, ap_fifo, sum_54_V_out_out, pointer</column>
+<column name="sum_54_V_out_out_full_n">in, 1, ap_fifo, sum_54_V_out_out, pointer</column>
+<column name="sum_54_V_out_out_write">out, 1, ap_fifo, sum_54_V_out_out, pointer</column>
+<column name="sum_55_V_out_out_din">out, 18, ap_fifo, sum_55_V_out_out, pointer</column>
+<column name="sum_55_V_out_out_full_n">in, 1, ap_fifo, sum_55_V_out_out, pointer</column>
+<column name="sum_55_V_out_out_write">out, 1, ap_fifo, sum_55_V_out_out, pointer</column>
+<column name="sum_56_V_out_out_din">out, 18, ap_fifo, sum_56_V_out_out, pointer</column>
+<column name="sum_56_V_out_out_full_n">in, 1, ap_fifo, sum_56_V_out_out, pointer</column>
+<column name="sum_56_V_out_out_write">out, 1, ap_fifo, sum_56_V_out_out, pointer</column>
+<column name="sum_57_V_out_out_din">out, 18, ap_fifo, sum_57_V_out_out, pointer</column>
+<column name="sum_57_V_out_out_full_n">in, 1, ap_fifo, sum_57_V_out_out, pointer</column>
+<column name="sum_57_V_out_out_write">out, 1, ap_fifo, sum_57_V_out_out, pointer</column>
+<column name="sum_58_V_out_out_din">out, 18, ap_fifo, sum_58_V_out_out, pointer</column>
+<column name="sum_58_V_out_out_full_n">in, 1, ap_fifo, sum_58_V_out_out, pointer</column>
+<column name="sum_58_V_out_out_write">out, 1, ap_fifo, sum_58_V_out_out, pointer</column>
+<column name="sum_59_V_out_out_din">out, 18, ap_fifo, sum_59_V_out_out, pointer</column>
+<column name="sum_59_V_out_out_full_n">in, 1, ap_fifo, sum_59_V_out_out, pointer</column>
+<column name="sum_59_V_out_out_write">out, 1, ap_fifo, sum_59_V_out_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,1093 @@
+
+
+================================================================
+== Vivado HLS Report for 'CNN_1D'
+================================================================
+* Date:           Sun Jul  1 02:49:43 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  7523|  7592|  7204|  7204| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+-----------------------+------+------+------+------+---------+
+        |                         |                       |   Latency   |   Interval  | Pipeline|
+        |         Instance        |         Module        |  min |  max |  min |  max |   Type  |
+        +-------------------------+-----------------------+------+------+------+------+---------+
+        |CNN_1D_Loop_2_proc14_U0  |CNN_1D_Loop_2_proc14   |  4071|  4071|  4071|  4071|   none  |
+        |CNN_1D_Loop_Loop_Mul_U0  |CNN_1D_Loop_Loop_Mul   |  7203|  7203|  7203|  7203|   none  |
+        |Layer4_Dense_U0          |Layer4_Dense           |   198|   267|   198|   267|   none  |
+        |CNN_1D_Block_prehea_U0   |CNN_1D_Block_prehea    |    59|    59|    59|    59|   none  |
+        |CNN_1D_Block_Layer2_U0   |CNN_1D_Block_Layer2_s  |    60|    60|    60|    60|   none  |
+        |Layer12_Maxpool_read_U0  |Layer12_Maxpool_read   |  2034|  2034|  2034|  2034|   none  |
+        |CNN_1D_Loop_Loop_Con_U0  |CNN_1D_Loop_Loop_Con   |  2541|  2541|  2541|  2541|   none  |
+        |Layer23_Maxpool_read_U0  |Layer23_Maxpool_read   |   962|   962|   962|   962|   none  |
+        |Layer1_ReadPadding_U0    |Layer1_ReadPadding     |   214|   214|   214|   214|   none  |
+        |CNN_1D_entry11_U0        |CNN_1D_entry11         |     0|     0|     0|     0|   none  |
+        |CNN_1D_entry142_U0       |CNN_1D_entry142        |     0|     0|     0|     0|   none  |
+        +-------------------------+-----------------------+------+------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|   2150|
+|FIFO             |      131|      -|    6757|  12792|
+|Instance         |       18|    199|   27887|  20859|
+|Memory           |        1|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|   1206|
+|Register         |        -|      -|     141|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |      150|    199|   34785|  37007|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       53|     90|      32|     69|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+-----------------------+---------+-------+-------+------+
+    |         Instance        |         Module        | BRAM_18K| DSP48E|   FF  |  LUT |
+    +-------------------------+-----------------------+---------+-------+-------+------+
+    |CNN_1D_Block_Layer2_U0   |CNN_1D_Block_Layer2_s  |        0|      0|   1124|  1091|
+    |CNN_1D_Block_prehea_U0   |CNN_1D_Block_prehea    |        0|      0|     61|  2351|
+    |CNN_1D_Loop_2_proc14_U0  |CNN_1D_Loop_2_proc14   |        0|     90|  16765|  5136|
+    |CNN_1D_Loop_Loop_Con_U0  |CNN_1D_Loop_Loop_Con   |        0|     19|   2532|  1333|
+    |CNN_1D_Loop_Loop_Mul_U0  |CNN_1D_Loop_Loop_Mul   |        0|     60|   3340|  2368|
+    |CNN_1D_entry11_U0        |CNN_1D_entry11         |        0|      0|      3|    35|
+    |CNN_1D_entry142_U0       |CNN_1D_entry142        |        0|      0|      2|    35|
+    |Layer12_Maxpool_read_U0  |Layer12_Maxpool_read   |        0|      0|    179|  3669|
+    |Layer1_ReadPadding_U0    |Layer1_ReadPadding     |        0|      0|     36|   516|
+    |Layer23_Maxpool_read_U0  |Layer23_Maxpool_read   |        0|      0|    434|  1191|
+    |Layer4_Dense_U0          |Layer4_Dense           |       18|     30|   3411|  3134|
+    +-------------------------+-----------------------+---------+-------+-------+------+
+    |Total                    |                       |       18|    199|  27887| 20859|
+    +-------------------------+-----------------------+---------+-------+-------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +----------------+---------------------+---------+---+----+------+-----+------+-------------+
+    |     Memory     |        Module       | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+---------------------+---------+---+----+------+-----+------+-------------+
+    |Layer3_Int_V_U  |CNN_1D_Layer3_Int_V  |        1|  0|   0|    60|   17|     2|         2040|
+    +----------------+---------------------+---------+---+----+------+-----+------+-------------+
+    |Total           |                     |        1|  0|   0|    60|   17|     2|         2040|
+    +----------------+---------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    +------------------------+---------+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF | LUT | Depth| Bits| Size:D*B|
+    +------------------------+---------+----+-----+------+-----+---------+
+    |Conv2_Inter_0_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_1_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_2_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_3_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_4_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_5_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_6_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_7_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_8_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Conv2_Inter_9_V_V_U     |        1|  41|   51|   104|   18|     1872|
+    |Layer1_Int_0_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_0_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_1_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_2_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_3_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_4_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_5_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_6_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_7_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_8_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer1_Int_9_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |Layer2_Int_V_U          |        1|  41|   51|   104|   18|     1872|
+    |intermediate_0_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_1_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_2_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_3_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_4_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_5_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_6_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_7_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_8_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |intermediate_9_V_V_U    |        1|  45|   57|   210|   18|     3780|
+    |maxpool_0_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_1_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_2_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_3_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_4_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_5_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_6_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_7_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_8_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |maxpool_9_V_V_U         |        1|  44|   56|   192|   18|     3456|
+    |src_V_offset_c2_U       |        0|   5|   20|     1|    8|        8|
+    |src_V_offset_c74_U      |        0|   6|   21|     7|    8|       56|
+    |src_V_offset_c_U        |        0|   5|   20|     1|    8|        8|
+    |sum_0_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_10_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_11_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_12_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_13_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_14_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_15_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_16_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_17_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_18_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_19_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_1_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_20_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_21_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_22_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_23_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_24_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_25_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_26_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_27_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_28_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_29_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_2_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_30_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_31_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_32_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_33_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_34_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_35_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_36_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_37_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_38_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_39_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_3_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_40_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_41_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_42_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_43_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_44_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_45_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_46_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_47_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_48_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_49_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_4_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_50_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_51_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_52_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_53_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_54_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_55_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_56_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_57_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_58_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_59_V_loc_c_U        |        0|   5|   30|     5|   18|       90|
+    |sum_5_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_6_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_7_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_8_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_9_V_loc_c_U         |        0|   5|   30|     5|   18|       90|
+    |sum_V_0_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_0_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_10_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_10_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_11_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_11_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_12_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_12_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_13_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_13_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_14_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_14_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_15_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_15_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_16_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_16_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_17_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_17_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_18_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_18_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_19_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_19_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_1_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_1_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_20_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_20_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_21_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_21_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_22_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_22_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_23_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_23_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_24_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_24_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_25_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_25_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_26_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_26_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_27_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_27_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_28_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_28_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_29_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_29_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_2_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_2_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_30_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_30_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_31_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_31_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_32_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_32_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_33_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_33_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_34_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_34_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_35_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_35_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_36_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_36_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_37_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_37_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_38_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_38_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_39_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_39_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_3_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_3_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_40_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_40_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_41_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_41_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_42_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_42_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_43_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_43_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_44_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_44_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_45_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_45_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_46_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_46_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_47_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_47_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_48_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_48_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_49_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_49_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_4_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_4_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_50_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_50_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_51_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_51_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_52_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_52_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_53_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_53_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_54_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_54_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_55_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_55_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_56_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_56_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_57_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_57_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_58_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_58_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_59_cast_loc_ch_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_59_loc_channel_U  |        0|   5|   30|     2|   18|       36|
+    |sum_V_5_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_5_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_6_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_6_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_7_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_7_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_8_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_8_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    |sum_V_9_cast_loc_cha_U  |        0|   5|   29|     2|   17|       34|
+    |sum_V_9_loc_channel_U   |        0|   5|   30|     2|   18|       36|
+    +------------------------+---------+----+-----+------+-----+---------+
+    |Total                   |      131|6757|12792| 26713| 5562|   480624|
+    +------------------------+---------+----+-----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |CNN_1D_Block_Layer2_U0_ap_ready_count       |     +    |      0|  0|  10|           2|           1|
+    |CNN_1D_Loop_2_proc14_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |CNN_1D_Loop_Loop_Con_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |CNN_1D_Loop_Loop_Mul_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |CNN_1D_entry11_U0_ap_ready_count            |     +    |      0|  0|  10|           2|           1|
+    |Layer1_ReadPadding_U0_ap_ready_count        |     +    |      0|  0|  10|           2|           1|
+    |Layer4_Dense_U0_ap_ready_count              |     +    |      0|  0|  10|           2|           1|
+    |CNN_1D_Block_Layer2_U0_ap_start             |    and   |      0|  0|   8|           1|           1|
+    |CNN_1D_Block_prehea_U0_ap_start             |    and   |      0|  0|   8|           1|           1|
+    |CNN_1D_Loop_2_proc14_U0_ap_start            |    and   |      0|  0|   8|           1|           1|
+    |CNN_1D_Loop_Loop_Con_U0_ap_start            |    and   |      0|  0|   8|           1|           1|
+    |CNN_1D_Loop_Loop_Mul_U0_ap_continue         |    and   |      0|  0|   8|           1|           1|
+    |CNN_1D_Loop_Loop_Mul_U0_ap_start            |    and   |      0|  0|   8|           1|           1|
+    |CNN_1D_entry11_U0_ap_start                  |    and   |      0|  0|   8|           1|           1|
+    |Layer1_ReadPadding_U0_ap_start              |    and   |      0|  0|   8|           1|           1|
+    |Layer4_Dense_U0_ap_start                    |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_0_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_0_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_10_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_10_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_11_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_11_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_12_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_12_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_13_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_13_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_14_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_14_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_15_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_15_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_16_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_16_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_17_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_17_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_18_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_18_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_19_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_19_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_1_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_1_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_20_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_20_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_21_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_21_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_22_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_22_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_23_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_23_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_24_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_24_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_25_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_25_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_26_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_26_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_27_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_27_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_28_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_28_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_29_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_29_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_2_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_2_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_30_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_30_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_31_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_31_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_32_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_32_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_33_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_33_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_34_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_34_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_35_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_35_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_36_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_36_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_37_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_37_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_38_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_38_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_39_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_39_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_3_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_3_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_40_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_40_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_41_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_41_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_42_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_42_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_43_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_43_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_44_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_44_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_45_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_45_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_46_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_46_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_47_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_47_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_48_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_48_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_49_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_49_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_4_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_4_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_50_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_50_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_51_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_51_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_52_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_52_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_53_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_53_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_54_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_54_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_55_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_55_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_56_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_56_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_57_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_57_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_58_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_58_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_59_cast_loc_ch        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_59_loc_channel        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_5_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_5_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_6_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_6_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_7_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_7_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_8_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_8_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_9_cast_loc_cha        |    and   |      0|  0|   8|           1|           1|
+    |ap_channel_done_sum_V_9_loc_channel         |    and   |      0|  0|   8|           1|           1|
+    |ap_idle                                     |    and   |      0|  0|   8|           1|           1|
+    |ap_sync_continue                            |    and   |      0|  0|   8|           1|           1|
+    |ap_sync_done                                |    and   |      0|  0|   8|           1|           1|
+    |ap_sync_ready                               |    and   |      0|  0|   8|           1|           1|
+    |ap_sync_CNN_1D_Block_Layer2_U0_ap_ready     |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_CNN_1D_Loop_2_proc14_U0_ap_ready    |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_CNN_1D_Loop_Loop_Con_U0_ap_ready    |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_CNN_1D_Loop_Loop_Mul_U0_ap_ready    |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_CNN_1D_entry11_U0_ap_ready          |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_Layer1_ReadPadding_U0_ap_ready      |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_Layer4_Dense_U0_ap_ready            |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_0_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_0_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_10_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_10_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_11_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_11_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_12_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_12_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_13_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_13_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_14_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_14_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_15_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_15_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_16_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_16_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_17_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_17_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_18_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_18_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_19_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_19_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_1_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_1_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_20_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_20_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_21_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_21_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_22_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_22_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_23_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_23_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_24_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_24_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_25_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_25_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_26_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_26_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_27_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_27_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_28_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_28_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_29_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_29_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_2_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_2_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_30_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_30_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_31_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_31_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_32_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_32_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_33_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_33_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_34_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_34_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_35_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_35_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_36_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_36_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_37_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_37_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_38_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_38_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_39_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_39_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_3_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_3_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_40_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_40_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_41_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_41_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_42_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_42_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_43_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_43_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_44_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_44_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_45_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_45_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_46_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_46_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_47_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_47_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_48_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_48_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_49_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_49_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_4_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_4_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_50_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_50_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_51_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_51_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_52_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_52_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_53_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_53_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_54_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_54_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_55_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_55_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_56_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_56_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_57_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_57_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_58_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_58_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_59_cast_loc_ch  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_59_loc_channel  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_5_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_5_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_6_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_6_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_7_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_7_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_8_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_8_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_9_cast_loc_cha  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_channel_write_sum_V_9_loc_channel   |    or    |      0|  0|   8|           1|           1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                       |          |      0|  0|2150|         274|         267|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                      | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |CNN_1D_Block_Layer2_U0_ap_ready_count           |   9|          2|    2|          4|
+    |CNN_1D_Loop_2_proc14_U0_ap_ready_count          |   9|          2|    2|          4|
+    |CNN_1D_Loop_Loop_Con_U0_ap_ready_count          |   9|          2|    2|          4|
+    |CNN_1D_Loop_Loop_Mul_U0_ap_ready_count          |   9|          2|    2|          4|
+    |CNN_1D_entry11_U0_ap_ready_count                |   9|          2|    2|          4|
+    |Layer1_ReadPadding_U0_ap_ready_count            |   9|          2|    2|          4|
+    |Layer4_Dense_U0_ap_ready_count                  |   9|          2|    2|          4|
+    |ap_sync_reg_CNN_1D_Block_Layer2_U0_ap_ready     |   9|          2|    1|          2|
+    |ap_sync_reg_CNN_1D_Loop_2_proc14_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_CNN_1D_Loop_Loop_Con_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_CNN_1D_Loop_Loop_Mul_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_CNN_1D_entry11_U0_ap_ready          |   9|          2|    1|          2|
+    |ap_sync_reg_Layer1_ReadPadding_U0_ap_ready      |   9|          2|    1|          2|
+    |ap_sync_reg_Layer4_Dense_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_0_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_0_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_10_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_10_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_11_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_11_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_12_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_12_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_13_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_13_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_14_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_14_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_15_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_15_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_16_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_16_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_17_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_17_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_18_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_18_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_19_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_19_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_1_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_1_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_20_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_20_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_21_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_21_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_22_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_22_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_23_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_23_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_24_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_24_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_25_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_25_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_26_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_26_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_27_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_27_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_28_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_28_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_29_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_29_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_2_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_2_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_30_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_30_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_31_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_31_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_32_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_32_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_33_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_33_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_34_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_34_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_35_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_35_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_36_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_36_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_37_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_37_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_38_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_38_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_39_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_39_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_3_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_3_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_40_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_40_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_41_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_41_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_42_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_42_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_43_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_43_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_44_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_44_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_45_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_45_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_46_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_46_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_47_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_47_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_48_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_48_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_49_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_49_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_4_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_4_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_50_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_50_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_51_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_51_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_52_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_52_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_53_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_53_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_54_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_54_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_55_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_55_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_56_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_56_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_57_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_57_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_58_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_58_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_59_cast_loc_ch  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_59_loc_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_5_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_5_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_6_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_6_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_7_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_7_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_8_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_8_loc_channel   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_9_cast_loc_cha  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_sum_V_9_loc_channel   |   9|          2|    1|          2|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                           |1206|        268|  141|        282|
+    +------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |CNN_1D_Block_Layer2_U0_ap_ready_count           |  2|   0|    2|          0|
+    |CNN_1D_Loop_2_proc14_U0_ap_ready_count          |  2|   0|    2|          0|
+    |CNN_1D_Loop_Loop_Con_U0_ap_ready_count          |  2|   0|    2|          0|
+    |CNN_1D_Loop_Loop_Mul_U0_ap_ready_count          |  2|   0|    2|          0|
+    |CNN_1D_entry11_U0_ap_ready_count                |  2|   0|    2|          0|
+    |Layer1_ReadPadding_U0_ap_ready_count            |  2|   0|    2|          0|
+    |Layer4_Dense_U0_ap_ready_count                  |  2|   0|    2|          0|
+    |ap_sync_reg_CNN_1D_Block_Layer2_U0_ap_ready     |  1|   0|    1|          0|
+    |ap_sync_reg_CNN_1D_Loop_2_proc14_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_CNN_1D_Loop_Loop_Con_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_CNN_1D_Loop_Loop_Mul_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_CNN_1D_entry11_U0_ap_ready          |  1|   0|    1|          0|
+    |ap_sync_reg_Layer1_ReadPadding_U0_ap_ready      |  1|   0|    1|          0|
+    |ap_sync_reg_Layer4_Dense_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_0_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_0_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_10_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_10_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_11_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_11_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_12_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_12_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_13_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_13_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_14_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_14_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_15_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_15_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_16_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_16_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_17_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_17_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_18_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_18_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_19_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_19_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_1_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_1_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_20_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_20_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_21_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_21_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_22_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_22_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_23_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_23_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_24_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_24_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_25_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_25_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_26_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_26_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_27_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_27_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_28_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_28_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_29_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_29_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_2_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_2_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_30_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_30_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_31_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_31_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_32_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_32_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_33_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_33_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_34_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_34_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_35_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_35_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_36_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_36_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_37_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_37_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_38_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_38_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_39_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_39_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_3_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_3_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_40_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_40_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_41_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_41_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_42_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_42_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_43_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_43_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_44_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_44_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_45_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_45_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_46_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_46_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_47_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_47_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_48_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_48_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_49_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_49_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_4_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_4_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_50_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_50_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_51_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_51_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_52_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_52_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_53_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_53_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_54_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_54_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_55_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_55_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_56_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_56_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_57_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_57_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_58_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_58_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_59_cast_loc_ch  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_59_loc_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_5_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_5_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_6_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_6_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_7_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_7_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_8_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_8_loc_channel   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_9_cast_loc_cha  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_sum_V_9_loc_channel   |  1|   0|    1|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           |141|   0|  141|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+-----------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                        |  in |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|ap_rst                        |  in |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|ap_done                       | out |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|ap_start                      |  in |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|ap_ready                      | out |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|ap_idle                       | out |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|ap_continue                   |  in |    1| ap_ctrl_hs |         CNN_1D        | return value |
+|src_V_address0                | out |   16|  ap_memory |         src_V         |     array    |
+|src_V_ce0                     | out |    1|  ap_memory |         src_V         |     array    |
+|src_V_d0                      | out |   18|  ap_memory |         src_V         |     array    |
+|src_V_q0                      |  in |   18|  ap_memory |         src_V         |     array    |
+|src_V_we0                     | out |    1|  ap_memory |         src_V         |     array    |
+|src_V_offset                  |  in |    8|   ap_none  |      src_V_offset     |    scalar    |
+|src_V_offset_ap_vld           |  in |    1|   ap_none  |      src_V_offset     |    scalar    |
+|saveValueLayer1_V_Addr_A      | out |   32|    bram    |   saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_EN_A        | out |    1|    bram    |   saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Din_A       | out |   32|    bram    |   saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Dout_A      |  in |   32|    bram    |   saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_WEN_A       | out |    4|    bram    |   saveValueLayer1_V   |     array    |
+|saveValueLayer2_V_Addr_A      | out |   32|    bram    |   saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_EN_A        | out |    1|    bram    |   saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Din_A       | out |   32|    bram    |   saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Dout_A      |  in |   32|    bram    |   saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_WEN_A       | out |    4|    bram    |   saveValueLayer2_V   |     array    |
+|saveValueLayer3_V_Addr_A      | out |   32|    bram    |   saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_EN_A        | out |    1|    bram    |   saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Din_A       | out |   32|    bram    |   saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Dout_A      |  in |   32|    bram    |   saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_WEN_A       | out |    4|    bram    |   saveValueLayer3_V   |     array    |
+|Layer1_WeightArray_V_Addr_A   | out |   32|    bram    |  Layer1_WeightArray_V |     array    |
+|Layer1_WeightArray_V_EN_A     | out |    1|    bram    |  Layer1_WeightArray_V |     array    |
+|Layer1_WeightArray_V_Din_A    | out |   32|    bram    |  Layer1_WeightArray_V |     array    |
+|Layer1_WeightArray_V_Dout_A   |  in |   32|    bram    |  Layer1_WeightArray_V |     array    |
+|Layer1_WeightArray_V_WEN_A    | out |    4|    bram    |  Layer1_WeightArray_V |     array    |
+|Layer1_BiasArray_V_Addr_A     | out |   32|    bram    |   Layer1_BiasArray_V  |     array    |
+|Layer1_BiasArray_V_EN_A       | out |    1|    bram    |   Layer1_BiasArray_V  |     array    |
+|Layer1_BiasArray_V_Din_A      | out |   32|    bram    |   Layer1_BiasArray_V  |     array    |
+|Layer1_BiasArray_V_Dout_A     |  in |   32|    bram    |   Layer1_BiasArray_V  |     array    |
+|Layer1_BiasArray_V_WEN_A      | out |    4|    bram    |   Layer1_BiasArray_V  |     array    |
+|Layer2_WeightMatrix_s_Addr_A  | out |   32|    bram    | Layer2_WeightMatrix_s |     array    |
+|Layer2_WeightMatrix_s_EN_A    | out |    1|    bram    | Layer2_WeightMatrix_s |     array    |
+|Layer2_WeightMatrix_s_Din_A   | out |   32|    bram    | Layer2_WeightMatrix_s |     array    |
+|Layer2_WeightMatrix_s_Dout_A  |  in |   32|    bram    | Layer2_WeightMatrix_s |     array    |
+|Layer2_WeightMatrix_s_WEN_A   | out |    4|    bram    | Layer2_WeightMatrix_s |     array    |
+|Layer2_BiasArray_V_Addr_A     | out |   32|    bram    |   Layer2_BiasArray_V  |     array    |
+|Layer2_BiasArray_V_EN_A       | out |    1|    bram    |   Layer2_BiasArray_V  |     array    |
+|Layer2_BiasArray_V_Din_A      | out |   32|    bram    |   Layer2_BiasArray_V  |     array    |
+|Layer2_BiasArray_V_Dout_A     |  in |   32|    bram    |   Layer2_BiasArray_V  |     array    |
+|Layer2_BiasArray_V_WEN_A      | out |    4|    bram    |   Layer2_BiasArray_V  |     array    |
+|Layer3_weightArray_0_Addr_A   | out |   32|    bram    |  Layer3_weightArray_0 |     array    |
+|Layer3_weightArray_0_EN_A     | out |    1|    bram    |  Layer3_weightArray_0 |     array    |
+|Layer3_weightArray_0_Din_A    | out |   32|    bram    |  Layer3_weightArray_0 |     array    |
+|Layer3_weightArray_0_Dout_A   |  in |   32|    bram    |  Layer3_weightArray_0 |     array    |
+|Layer3_weightArray_0_WEN_A    | out |    4|    bram    |  Layer3_weightArray_0 |     array    |
+|Layer3_weightArray_1_Addr_A   | out |   32|    bram    |  Layer3_weightArray_1 |     array    |
+|Layer3_weightArray_1_EN_A     | out |    1|    bram    |  Layer3_weightArray_1 |     array    |
+|Layer3_weightArray_1_Din_A    | out |   32|    bram    |  Layer3_weightArray_1 |     array    |
+|Layer3_weightArray_1_Dout_A   |  in |   32|    bram    |  Layer3_weightArray_1 |     array    |
+|Layer3_weightArray_1_WEN_A    | out |    4|    bram    |  Layer3_weightArray_1 |     array    |
+|Layer3_weightArray_2_Addr_A   | out |   32|    bram    |  Layer3_weightArray_2 |     array    |
+|Layer3_weightArray_2_EN_A     | out |    1|    bram    |  Layer3_weightArray_2 |     array    |
+|Layer3_weightArray_2_Din_A    | out |   32|    bram    |  Layer3_weightArray_2 |     array    |
+|Layer3_weightArray_2_Dout_A   |  in |   32|    bram    |  Layer3_weightArray_2 |     array    |
+|Layer3_weightArray_2_WEN_A    | out |    4|    bram    |  Layer3_weightArray_2 |     array    |
+|Layer3_weightArray_3_Addr_A   | out |   32|    bram    |  Layer3_weightArray_3 |     array    |
+|Layer3_weightArray_3_EN_A     | out |    1|    bram    |  Layer3_weightArray_3 |     array    |
+|Layer3_weightArray_3_Din_A    | out |   32|    bram    |  Layer3_weightArray_3 |     array    |
+|Layer3_weightArray_3_Dout_A   |  in |   32|    bram    |  Layer3_weightArray_3 |     array    |
+|Layer3_weightArray_3_WEN_A    | out |    4|    bram    |  Layer3_weightArray_3 |     array    |
+|Layer3_Bias_V_Addr_A          | out |   32|    bram    |     Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_EN_A            | out |    1|    bram    |     Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Din_A           | out |   32|    bram    |     Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Dout_A          |  in |   32|    bram    |     Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_WEN_A           | out |    4|    bram    |     Layer3_Bias_V     |     array    |
+|Layer4_weightArray_V_Addr_A   | out |   32|    bram    |  Layer4_weightArray_V |     array    |
+|Layer4_weightArray_V_EN_A     | out |    1|    bram    |  Layer4_weightArray_V |     array    |
+|Layer4_weightArray_V_Din_A    | out |   32|    bram    |  Layer4_weightArray_V |     array    |
+|Layer4_weightArray_V_Dout_A   |  in |   32|    bram    |  Layer4_weightArray_V |     array    |
+|Layer4_weightArray_V_WEN_A    | out |    4|    bram    |  Layer4_weightArray_V |     array    |
+|Layer4_Bias_V_Addr_A          | out |   32|    bram    |     Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_EN_A            | out |    1|    bram    |     Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Din_A           | out |   32|    bram    |     Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Dout_A          |  in |   32|    bram    |     Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_WEN_A           | out |    4|    bram    |     Layer4_Bias_V     |     array    |
+|dst_V_address0                | out |   10|  ap_memory |         dst_V         |     array    |
+|dst_V_ce0                     | out |    1|  ap_memory |         dst_V         |     array    |
+|dst_V_d0                      | out |   16|  ap_memory |         dst_V         |     array    |
+|dst_V_q0                      |  in |   16|  ap_memory |         dst_V         |     array    |
+|dst_V_we0                     | out |    1|  ap_memory |         dst_V         |     array    |
++------------------------------+-----+-----+------------+-----------------------+--------------+
+

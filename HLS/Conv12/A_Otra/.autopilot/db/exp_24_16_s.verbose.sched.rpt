@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vivado HLS Report for 'exp_24_16_s'
+================================================================
+* Date:           Sun Jul  1 02:49:14 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.63|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    4|    4|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+
+* FSM state operations: 
+
+ <State 1> : 3.25ns
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%x_V_read = call i14 @_ssdm_op_Read.ap_auto.i14(i14 %x_V)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i14.i32(i14 %x_V_read, i32 13)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:283]
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_Result_s = call i7 @_ssdm_op_PartSelect.i7.i14.i32.i32(i14 %x_V_read, i32 5, i32 11)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:294]
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_Result_s_25 = call i8 @_ssdm_op_BitConcatenate.i8.i1.i7(i1 %tmp, i7 %p_Result_s)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:294]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_7 = trunc i14 %x_V_read to i5"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%loc_V = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %tmp_7, i3 0)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:296]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_s = zext i8 %loc_V to i64" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%f_x_msb_2_table_addr = getelementptr [256 x i46]* @f_x_msb_2_table, i64 0, i64 %tmp_s" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429]
+ST_1 : Operation 14 [2/2] (3.25ns)   --->   "%f_x_msb_2_V = load i46* %f_x_msb_2_table_addr, align 8" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 50> <Depth = 256> <ROM>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_3 = zext i8 %p_Result_s_25 to i64" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:507]
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%exp_x_msb_1_table32_s = getelementptr [256 x i50]* @exp_x_msb_1_table32, i64 0, i64 %tmp_3" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:507]
+ST_1 : Operation 17 [2/2] (3.25ns)   --->   "%p_Val2_8 = load i50* %exp_x_msb_1_table32_s, align 8" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:507]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 50> <Depth = 256> <ROM>
+
+ <State 2> : 5.17ns
+ST_2 : Operation 18 [1/2] (3.25ns)   --->   "%f_x_msb_2_V = load i46* %f_x_msb_2_table_addr, align 8" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 50> <Depth = 256> <ROM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%loc_V_1 = call i5 @_ssdm_op_PartSelect.i5.i46.i32.i32(i46 %f_x_msb_2_V, i32 41, i32 45)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:431]
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_1 = zext i5 %loc_V_1 to i9" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:432]
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_2 = zext i8 %loc_V to i9" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:432]
+ST_2 : Operation 22 [1/1] (1.91ns)   --->   "%r_V_3 = add i9 %tmp_2, %tmp_1" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:432]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.15> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_9 = trunc i46 %f_x_msb_2_V to i41" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:435]
+ST_2 : Operation 24 [1/2] (3.25ns)   --->   "%p_Val2_8 = load i50* %exp_x_msb_1_table32_s, align 8" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:507]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 50> <Depth = 256> <ROM>
+
+ <State 3> : 8.63ns
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%p_Result_1 = call i50 @_ssdm_op_BitConcatenate.i50.i9.i41(i9 %r_V_3, i41 %tmp_9)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:435]
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%OP1_V = zext i50 %p_Val2_8 to i100" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:508]
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%OP2_V = zext i50 %p_Result_1 to i100" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:508]
+ST_3 : Operation 28 [2/2] (8.62ns)   --->   "%r_V_4 = mul i100 %OP2_V, %OP1_V" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:508]   --->   Core 17 'MulnS' <Latency = 1> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 4> : 8.63ns
+ST_4 : Operation 29 [1/2] (8.62ns)   --->   "%r_V_4 = mul i100 %OP2_V, %OP1_V" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:508]   --->   Core 17 'MulnS' <Latency = 1> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%p_Val2_7 = call i48 @_ssdm_op_PartSelect.i48.i100.i32.i32(i100 %r_V_4, i32 52, i32 99)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:509]
+
+ <State 5> : 6.83ns
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:37]
+ST_5 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i14.i32(i14 %x_V_read, i32 12)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:283]
+ST_5 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%not_s = xor i1 %tmp_4, %tmp" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:283]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%p_cast_cast_cast = select i1 %tmp, i46 0, i46 35184372088831" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:287]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_5 = zext i48 %p_Val2_7 to i50" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:510]
+ST_5 : Operation 36 [1/1] (3.15ns)   --->   "%p_Val2_9 = add i50 %p_Val2_8, %tmp_5" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:510]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.15> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%y_V = call i46 @_ssdm_op_PartSelect.i46.i50.i32.i32(i50 %p_Val2_9, i32 4, i32 49)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:511]
+ST_5 : Operation 38 [1/1] (1.37ns) (out node of the LUT)   --->   "%p_Val2_10 = select i1 %not_s, i46 %p_cast_cast_cast, i46 %y_V" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 45)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 44)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 43)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 42)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 41)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 40)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 39)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i46.i32(i46 %p_Val2_10, i32 38)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]
+ST_5 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%tmp4 = or i1 %tmp_10, %tmp_11" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node tmp3)   --->   "%tmp5 = or i1 %tmp_12, %tmp_13" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 49 [1/1] (0.93ns) (out node of the LUT)   --->   "%tmp3 = or i1 %tmp5, %tmp4" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp7 = or i1 %tmp_14, %tmp_15" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp8 = or i1 %tmp_16, %tmp_17" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp6 = or i1 %tmp8, %tmp7" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp_8 = or i1 %tmp6, %tmp3" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node r_V)   --->   "%tmp_6 = call i24 @_ssdm_op_PartSelect.i24.i46.i32.i32(i46 %p_Val2_10, i32 15, i32 38)" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:529]
+ST_5 : Operation 55 [1/1] (1.37ns) (out node of the LUT)   --->   "%r_V = select i1 %tmp_8, i24 8388607, i24 %tmp_6" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:529]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "ret i24 %r_V" [C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:928]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.25ns
+The critical path consists of the following:
+	wire read on port 'x_V' [5]  (0 ns)
+	'getelementptr' operation ('f_x_msb_2_table_addr', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429) [15]  (0 ns)
+	'load' operation ('f_x_msb_2.V', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429) on array 'f_x_msb_2_table' [16]  (3.25 ns)
+
+ <State 2>: 5.17ns
+The critical path consists of the following:
+	'load' operation ('f_x_msb_2.V', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:429) on array 'f_x_msb_2_table' [16]  (3.25 ns)
+	'add' operation ('r.V', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:432) [20]  (1.92 ns)
+
+ <State 3>: 8.63ns
+The critical path consists of the following:
+	'mul' operation ('r.V', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:508) [28]  (8.63 ns)
+
+ <State 4>: 8.63ns
+The critical path consists of the following:
+	'mul' operation ('r.V', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:508) [28]  (8.63 ns)
+
+ <State 5>: 6.83ns
+The critical path consists of the following:
+	'add' operation ('__Val2__', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:510) [31]  (3.16 ns)
+	'select' operation ('__Val2__', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517) [33]  (1.37 ns)
+	'or' operation ('tmp4', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517) [42]  (0 ns)
+	'or' operation ('tmp3', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517) [44]  (0.931 ns)
+	'or' operation ('tmp_8', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:517) [48]  (0 ns)
+	'select' operation ('r.V', C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_exp_apfixed.h:529) [50]  (1.37 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

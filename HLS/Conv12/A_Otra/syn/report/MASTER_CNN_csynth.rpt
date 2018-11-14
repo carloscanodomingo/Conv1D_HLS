@@ -1,0 +1,261 @@
+
+
+================================================================
+== Vivado HLS Report for 'MASTER_CNN'
+================================================================
+* Date:           Sun Jul  1 02:49:51 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+---------+------+---------+---------+
+    |     Latency    |    Interval    | Pipeline|
+    |  min |   max   |  min |   max   |   Type  |
+    +------+---------+------+---------+---------+
+    |  7526|  1518801|  7526|  1518801|   none  |
+    +------+---------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------+--------+------+------+------+------+----------+
+        |                   |        |   Latency   |   Interval  | Pipeline |
+        |      Instance     | Module |  min |  max |  min |  max |   Type   |
+        +-------------------+--------+------+------+------+------+----------+
+        |grp_CNN_1D_fu_110  |CNN_1D  |  7523|  7592|  7204|  7204| dataflow |
+        +-------------------+--------+------+------+------+------+----------+
+
+        * Loop: 
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+        |                |     Latency    |  Iteration  |  Initiation Interval  |   Trip  |          |
+        |    Loop Name   |  min |   max   |   Latency   |  achieved |   target  |  Count  | Pipelined|
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+        |- Loop_Rep_CNN  |  7525|  1518800| 7525 ~ 7594 |          -|          -| 1 ~ 200 |    no    |
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     45|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |      280|    199|   34995|  37203|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     39|
+|Register         |        -|      -|      29|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |      280|    199|   35024|  37287|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |      100|     90|      32|     70|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+------------------------+---------+-------+-------+-------+
+    |         Instance         |         Module         | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +--------------------------+------------------------+---------+-------+-------+-------+
+    |grp_CNN_1D_fu_110         |CNN_1D                  |      150|    199|  34785|  37007|
+    |MASTER_CNN_BUS_A_s_axi_U  |MASTER_CNN_BUS_A_s_axi  |      130|      0|    210|    196|
+    +--------------------------+------------------------+---------+-------+-------+-------+
+    |Total                     |                        |      280|    199|  34995|  37203|
+    +--------------------------+------------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_171_p2           |     +    |      0|  0|  15|           8|           1|
+    |exitcond_fu_166_p2      |   icmp   |      0|  0|  11|           8|           8|
+    |tmp_fu_152_p2           |   icmp   |      0|  0|  11|           8|           7|
+    |Config_rep_s_fu_158_p3  |  select  |      0|  0|   8|           1|           8|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0|  45|          25|          24|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------+----+-----------+-----+-----------+
+    |                Name                | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                           |  21|          4|    1|          4|
+    |ap_sync_grp_CNN_1D_fu_110_ap_ready  |   9|          2|    1|          2|
+    |i_reg_98                            |   9|          2|    8|         16|
+    +------------------------------------+----+-----------+-----+-----------+
+    |Total                               |  39|          8|   10|         22|
+    +------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+---+----+-----+-----------+
+    |                  Name                  | FF| LUT| Bits| Const Bits|
+    +----------------------------------------+---+----+-----+-----------+
+    |Config_rep_s_reg_177                    |  8|   0|    8|          0|
+    |ap_CS_fsm                               |  3|   0|    3|          0|
+    |ap_reg_grp_CNN_1D_fu_110_ap_start       |  1|   0|    1|          0|
+    |ap_sync_reg_grp_CNN_1D_fu_110_ap_ready  |  1|   0|    1|          0|
+    |i_1_reg_185                             |  8|   0|    8|          0|
+    |i_reg_98                                |  8|   0|    8|          0|
+    +----------------------------------------+---+----+-----+-----------+
+    |Total                                   | 29|   0|   29|          0|
+    +----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|s_axi_BUS_A_AWVALID            |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_AWREADY            | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_AWADDR             |  in |   20|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WVALID             |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WREADY             | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WDATA              |  in |   32|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WSTRB              |  in |    4|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_ARVALID            |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_ARREADY            | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_ARADDR             |  in |   20|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RVALID             | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RREADY             |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RDATA              | out |   32|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RRESP              | out |    2|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_BVALID             | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_BREADY             |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_BRESP              | out |    2|    s_axi   |          BUS_A         |     array    |
+|ap_clk                         |  in |    1| ap_ctrl_hs |       MASTER_CNN       | return value |
+|ap_rst_n                       |  in |    1| ap_ctrl_hs |       MASTER_CNN       | return value |
+|interrupt                      | out |    1| ap_ctrl_hs |       MASTER_CNN       | return value |
+|saveValueLayer1_V_Addr_A       | out |   32|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_EN_A         | out |    1|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_WEN_A        | out |    4|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Din_A        | out |   32|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Dout_A       |  in |   32|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Clk_A        | out |    1|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Rst_A        | out |    1|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer2_V_Addr_A       | out |   32|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_EN_A         | out |    1|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_WEN_A        | out |    4|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Din_A        | out |   32|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Dout_A       |  in |   32|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Clk_A        | out |    1|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Rst_A        | out |    1|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer3_V_Addr_A       | out |   32|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_EN_A         | out |    1|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_WEN_A        | out |    4|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Din_A        | out |   32|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Dout_A       |  in |   32|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Clk_A        | out |    1|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Rst_A        | out |    1|    bram    |    saveValueLayer3_V   |     array    |
+|Layer1_WeightArray_V_Addr_A    | out |   32|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_EN_A      | out |    1|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_WEN_A     | out |    4|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Din_A     | out |   32|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Dout_A    |  in |   32|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Clk_A     | out |    1|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Rst_A     | out |    1|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_BiasArray_V_Addr_A      | out |   32|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_EN_A        | out |    1|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_WEN_A       | out |    4|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Din_A       | out |   32|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Dout_A      |  in |   32|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Clk_A       | out |    1|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Rst_A       | out |    1|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer2_WeightMatrix_V_Addr_A   | out |   32|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_EN_A     | out |    1|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_WEN_A    | out |    4|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Din_A    | out |   32|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Dout_A   |  in |   32|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Clk_A    | out |    1|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Rst_A    | out |    1|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_BiasArray_V_Addr_A      | out |   32|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_EN_A        | out |    1|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_WEN_A       | out |    4|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Din_A       | out |   32|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Dout_A      |  in |   32|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Clk_A       | out |    1|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Rst_A       | out |    1|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer3_weightArray_0_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_EN_A    | out |    1|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Din_A   | out |   32|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_1_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_EN_A    | out |    1|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Din_A   | out |   32|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_2_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_EN_A    | out |    1|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Din_A   | out |   32|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_3_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_EN_A    | out |    1|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Din_A   | out |   32|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_Bias_V_Addr_A           | out |   32|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_EN_A             | out |    1|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_WEN_A            | out |    4|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Din_A            | out |   32|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Dout_A           |  in |   32|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Clk_A            | out |    1|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Rst_A            | out |    1|    bram    |      Layer3_Bias_V     |     array    |
+|Layer4_weightArray_V_Addr_A    | out |   32|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_EN_A      | out |    1|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_WEN_A     | out |    4|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Din_A     | out |   32|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Dout_A    |  in |   32|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Clk_A     | out |    1|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Rst_A     | out |    1|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_Bias_V_Addr_A           | out |   32|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_EN_A             | out |    1|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_WEN_A            | out |    4|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Din_A            | out |   32|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Dout_A           |  in |   32|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Clk_A            | out |    1|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Rst_A            | out |    1|    bram    |      Layer4_Bias_V     |     array    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+

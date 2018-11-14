@@ -1,0 +1,252 @@
+
+
+================================================================
+== Vivado HLS Report for 'Layer1_ReadPadding'
+================================================================
+* Date:           Sun Jul  1 02:48:39 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.23|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  214|  214|  214|  214|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                       |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop_Padding_Before  |    9|    9|         1|          -|          -|     9|    no    |
+        |- Loop_Padding_Read    |  192|  192|         2|          1|          1|   192|    yes   |
+        |- Loop_Padding_After   |    9|    9|         1|          -|          -|     9|    no    |
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!exitcond9_i)
+	3  / (exitcond9_i)
+3 --> 
+	5  / (exitcond1_i)
+	4  / (!exitcond1_i)
+4 --> 
+	3  / true
+5 --> 
+	6  / true
+6 --> 
+	6  / (!exitcond3_i)
+
+* FSM state operations: 
+
+ <State 1> : 7.23ns
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([38400 x i18]* %src_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_9_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_8_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_7_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_6_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_5_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_4_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_3_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_2_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_1_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i18* %dst_0_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src_V_offset, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 19 [1/1] (3.61ns)   --->   "%src_V_offset_read = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %src_V_offset)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %src_V_offset_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 21 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i8P(i8* %src_V_offset_out, i8 %src_V_offset_read)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp = call i16 @_ssdm_op_BitConcatenate.i16.i8.i8(i8 %src_V_offset_read, i8 0)"
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i16 %tmp to i17"
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_s = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %src_V_offset_read, i6 0)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i14 %tmp_s to i17" [SRC/1_keras.cpp:54]
+ST_1 : Operation 26 [1/1] (2.07ns)   --->   "%tmp_51 = sub i17 %p_shl_cast, %p_shl1_cast" [SRC/1_keras.cpp:54]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (1.76ns)   --->   "br label %0" [SRC/1_keras.cpp:40]
+
+ <State 2> : 3.61ns
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%col_i = phi i4 [ 0, %entry ], [ %col, %1 ]"
+ST_2 : Operation 29 [1/1] (1.30ns)   --->   "%exitcond9_i = icmp eq i4 %col_i, -7" [SRC/1_keras.cpp:40]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"
+ST_2 : Operation 31 [1/1] (1.73ns)   --->   "%col = add i4 %col_i, 1" [SRC/1_keras.cpp:40]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %exitcond9_i, label %.preheader37.i.preheader, label %1" [SRC/1_keras.cpp:40]
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str5) nounwind" [SRC/1_keras.cpp:40]
+ST_2 : Operation 34 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_0_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 35 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_1_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 36 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_2_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 37 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_3_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 38 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_4_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 39 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_5_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 40 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_6_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 41 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_7_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 42 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_8_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 43 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_9_V_V, i18 0)" [SRC/1_keras.cpp:44]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "br label %0" [SRC/1_keras.cpp:40]
+ST_2 : Operation 45 [1/1] (1.76ns)   --->   "br label %.preheader37.i" [SRC/1_keras.cpp:49]
+
+ <State 3> : 4.67ns
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%col1_i = phi i8 [ %col_2, %2 ], [ 0, %.preheader37.i.preheader ]"
+ST_3 : Operation 47 [1/1] (1.55ns)   --->   "%exitcond1_i = icmp eq i8 %col1_i, -64" [SRC/1_keras.cpp:49]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (1.91ns)   --->   "%col_2 = add i8 %col1_i, 1" [SRC/1_keras.cpp:49]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %.preheader.i.preheader, label %2" [SRC/1_keras.cpp:49]
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_i_cast = zext i8 %col1_i to i17" [SRC/1_keras.cpp:54]
+ST_3 : Operation 51 [1/1] (2.10ns)   --->   "%tmp_52 = add i17 %tmp_51, %tmp_i_cast" [SRC/1_keras.cpp:54]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_61_cast = sext i17 %tmp_52 to i64" [SRC/1_keras.cpp:54]
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%src_V_addr = getelementptr [38400 x i18]* %src_V, i64 0, i64 %tmp_61_cast" [SRC/1_keras.cpp:54]
+ST_3 : Operation 54 [2/2] (2.56ns)   --->   "%tmp_V = load i18* %src_V_addr, align 4" [SRC/1_keras.cpp:54]   --->   Core 42 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 38400> <RAM>
+
+ <State 4> : 6.18ns
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 192, i64 192, i64 192)"
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([18 x i8]* @p_str7) nounwind" [SRC/1_keras.cpp:49]
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_69_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @p_str7)" [SRC/1_keras.cpp:49]
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [SRC/1_keras.cpp:50]
+ST_4 : Operation 59 [1/2] (2.56ns)   --->   "%tmp_V = load i18* %src_V_addr, align 4" [SRC/1_keras.cpp:54]   --->   Core 42 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 18> <Depth = 38400> <RAM>
+ST_4 : Operation 60 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_0_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 61 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_1_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 62 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_2_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 63 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_3_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 64 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_4_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 65 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_5_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 66 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_6_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 67 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_7_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 68 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_8_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 69 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_9_V_V, i18 %tmp_V)" [SRC/1_keras.cpp:54]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @p_str7, i32 %tmp_69_i)" [SRC/1_keras.cpp:56]
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "br label %.preheader37.i" [SRC/1_keras.cpp:49]
+
+ <State 5> : 1.77ns
+ST_5 : Operation 72 [1/1] (1.76ns)   --->   "br label %.preheader.i" [SRC/1_keras.cpp:58]
+
+ <State 6> : 3.61ns
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%col3_i = phi i4 [ %col_3, %3 ], [ 0, %.preheader.i.preheader ]"
+ST_6 : Operation 74 [1/1] (1.30ns)   --->   "%exitcond3_i = icmp eq i4 %col3_i, -7" [SRC/1_keras.cpp:58]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"
+ST_6 : Operation 76 [1/1] (1.73ns)   --->   "%col_3 = add i4 %col3_i, 1" [SRC/1_keras.cpp:58]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "br i1 %exitcond3_i, label %.exit, label %3" [SRC/1_keras.cpp:58]
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str9) nounwind" [SRC/1_keras.cpp:58]
+ST_6 : Operation 79 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_0_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 80 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_1_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 81 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_2_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 82 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_3_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 83 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_4_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 84 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_5_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 85 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_6_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 86 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_7_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 87 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_8_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 88 [1/1] (3.61ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i18P(i18* %dst_9_V_V, i18 0)" [SRC/1_keras.cpp:62]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 18> <Depth = 5> <FIFO>
+ST_6 : Operation 89 [1/1] (0.00ns)   --->   "br label %.preheader.i" [SRC/1_keras.cpp:58]
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "ret void"
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 7.23ns
+The critical path consists of the following:
+	fifo read on port 'src_V_offset' [26]  (3.61 ns)
+	fifo write on port 'src_V_offset_out' [28]  (3.61 ns)
+
+ <State 2>: 3.61ns
+The critical path consists of the following:
+	fifo write on port 'dst_0_V_V' (SRC/1_keras.cpp:44) [43]  (3.61 ns)
+
+ <State 3>: 4.67ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', SRC/1_keras.cpp:49) [57]  (0 ns)
+	'add' operation ('tmp_52', SRC/1_keras.cpp:54) [67]  (2.11 ns)
+	'getelementptr' operation ('src_V_addr', SRC/1_keras.cpp:54) [69]  (0 ns)
+	'load' operation ('tmp.V', SRC/1_keras.cpp:54) on array 'src_V' [70]  (2.57 ns)
+
+ <State 4>: 6.18ns
+The critical path consists of the following:
+	'load' operation ('tmp.V', SRC/1_keras.cpp:54) on array 'src_V' [70]  (2.57 ns)
+	fifo write on port 'dst_0_V_V' (SRC/1_keras.cpp:54) [71]  (3.61 ns)
+
+ <State 5>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('col') with incoming values : ('col', SRC/1_keras.cpp:58) [86]  (1.77 ns)
+
+ <State 6>: 3.61ns
+The critical path consists of the following:
+	fifo write on port 'dst_0_V_V' (SRC/1_keras.cpp:62) [93]  (3.61 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

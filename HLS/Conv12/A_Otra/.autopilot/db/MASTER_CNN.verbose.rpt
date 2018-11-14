@@ -1,0 +1,1220 @@
+
+
+================================================================
+== Vivado HLS Report for 'MASTER_CNN'
+================================================================
+* Date:           Sun Jul  1 02:49:51 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        Conv12
+* Solution:       A_Otra
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      9.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+---------+------+---------+---------+
+    |     Latency    |    Interval    | Pipeline|
+    |  min |   max   |  min |   max   |   Type  |
+    +------+---------+------+---------+---------+
+    |  7526|  1518801|  7526|  1518801|   none  |
+    +------+---------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------+--------+------+------+------+------+----------+
+        |                   |        |   Latency   |   Interval  | Pipeline |
+        |      Instance     | Module |  min |  max |  min |  max |   Type   |
+        +-------------------+--------+------+------+------+------+----------+
+        |grp_CNN_1D_fu_110  |CNN_1D  |  7523|  7592|  7204|  7204| dataflow |
+        +-------------------+--------+------+------+------+------+----------+
+
+        * Loop: 
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+        |                |     Latency    |  Iteration  |  Initiation Interval  |   Trip  |          |
+        |    Loop Name   |  min |   max   |   Latency   |  achieved |   target  |  Count  | Pipelined|
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+        |- Loop_Rep_CNN  |  7525|  1518800| 7525 ~ 7594 |          -|          -| 1 ~ 200 |    no    |
+        +----------------+------+---------+-------------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     45|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |      280|    199|   34995|  37203|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     39|
+|Register         |        -|      -|      29|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |      280|    199|   35024|  37287|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |      100|     90|      32|     70|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+------------------------+---------+-------+-------+-------+
+    |         Instance         |         Module         | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +--------------------------+------------------------+---------+-------+-------+-------+
+    |grp_CNN_1D_fu_110         |CNN_1D                  |      150|    199|  34785|  37007|
+    |MASTER_CNN_BUS_A_s_axi_U  |MASTER_CNN_BUS_A_s_axi  |      130|      0|    210|    196|
+    +--------------------------+------------------------+---------+-------+-------+-------+
+    |Total                     |                        |      280|    199|  34995|  37203|
+    +--------------------------+------------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_171_p2           |     +    |      0|  0|  15|           8|           1|
+    |exitcond_fu_166_p2      |   icmp   |      0|  0|  11|           8|           8|
+    |tmp_fu_152_p2           |   icmp   |      0|  0|  11|           8|           7|
+    |Config_rep_s_fu_158_p3  |  select  |      0|  0|   8|           1|           8|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0|  45|          25|          24|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------+----+-----------+-----+-----------+
+    |                Name                | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                           |  21|          4|    1|          4|
+    |ap_sync_grp_CNN_1D_fu_110_ap_ready  |   9|          2|    1|          2|
+    |i_reg_98                            |   9|          2|    8|         16|
+    +------------------------------------+----+-----------+-----+-----------+
+    |Total                               |  39|          8|   10|         22|
+    +------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+---+----+-----+-----------+
+    |                  Name                  | FF| LUT| Bits| Const Bits|
+    +----------------------------------------+---+----+-----+-----------+
+    |Config_rep_s_reg_177                    |  8|   0|    8|          0|
+    |ap_CS_fsm                               |  3|   0|    3|          0|
+    |ap_reg_grp_CNN_1D_fu_110_ap_start       |  1|   0|    1|          0|
+    |ap_sync_reg_grp_CNN_1D_fu_110_ap_ready  |  1|   0|    1|          0|
+    |i_1_reg_185                             |  8|   0|    8|          0|
+    |i_reg_98                                |  8|   0|    8|          0|
+    +----------------------------------------+---+----+-----+-----------+
+    |Total                                   | 29|   0|   29|          0|
+    +----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+|s_axi_BUS_A_AWVALID            |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_AWREADY            | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_AWADDR             |  in |   20|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WVALID             |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WREADY             | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WDATA              |  in |   32|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_WSTRB              |  in |    4|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_ARVALID            |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_ARREADY            | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_ARADDR             |  in |   20|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RVALID             | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RREADY             |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RDATA              | out |   32|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_RRESP              | out |    2|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_BVALID             | out |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_BREADY             |  in |    1|    s_axi   |          BUS_A         |     array    |
+|s_axi_BUS_A_BRESP              | out |    2|    s_axi   |          BUS_A         |     array    |
+|ap_clk                         |  in |    1| ap_ctrl_hs |       MASTER_CNN       | return value |
+|ap_rst_n                       |  in |    1| ap_ctrl_hs |       MASTER_CNN       | return value |
+|interrupt                      | out |    1| ap_ctrl_hs |       MASTER_CNN       | return value |
+|saveValueLayer1_V_Addr_A       | out |   32|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_EN_A         | out |    1|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_WEN_A        | out |    4|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Din_A        | out |   32|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Dout_A       |  in |   32|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Clk_A        | out |    1|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer1_V_Rst_A        | out |    1|    bram    |    saveValueLayer1_V   |     array    |
+|saveValueLayer2_V_Addr_A       | out |   32|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_EN_A         | out |    1|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_WEN_A        | out |    4|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Din_A        | out |   32|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Dout_A       |  in |   32|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Clk_A        | out |    1|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer2_V_Rst_A        | out |    1|    bram    |    saveValueLayer2_V   |     array    |
+|saveValueLayer3_V_Addr_A       | out |   32|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_EN_A         | out |    1|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_WEN_A        | out |    4|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Din_A        | out |   32|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Dout_A       |  in |   32|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Clk_A        | out |    1|    bram    |    saveValueLayer3_V   |     array    |
+|saveValueLayer3_V_Rst_A        | out |    1|    bram    |    saveValueLayer3_V   |     array    |
+|Layer1_WeightArray_V_Addr_A    | out |   32|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_EN_A      | out |    1|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_WEN_A     | out |    4|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Din_A     | out |   32|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Dout_A    |  in |   32|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Clk_A     | out |    1|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_WeightArray_V_Rst_A     | out |    1|    bram    |  Layer1_WeightArray_V  |     array    |
+|Layer1_BiasArray_V_Addr_A      | out |   32|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_EN_A        | out |    1|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_WEN_A       | out |    4|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Din_A       | out |   32|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Dout_A      |  in |   32|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Clk_A       | out |    1|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer1_BiasArray_V_Rst_A       | out |    1|    bram    |   Layer1_BiasArray_V   |     array    |
+|Layer2_WeightMatrix_V_Addr_A   | out |   32|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_EN_A     | out |    1|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_WEN_A    | out |    4|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Din_A    | out |   32|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Dout_A   |  in |   32|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Clk_A    | out |    1|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_WeightMatrix_V_Rst_A    | out |    1|    bram    |  Layer2_WeightMatrix_V |     array    |
+|Layer2_BiasArray_V_Addr_A      | out |   32|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_EN_A        | out |    1|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_WEN_A       | out |    4|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Din_A       | out |   32|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Dout_A      |  in |   32|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Clk_A       | out |    1|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer2_BiasArray_V_Rst_A       | out |    1|    bram    |   Layer2_BiasArray_V   |     array    |
+|Layer3_weightArray_0_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_EN_A    | out |    1|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Din_A   | out |   32|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_0_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_0_V |     array    |
+|Layer3_weightArray_1_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_EN_A    | out |    1|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Din_A   | out |   32|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_1_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_1_V |     array    |
+|Layer3_weightArray_2_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_EN_A    | out |    1|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Din_A   | out |   32|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_2_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_2_V |     array    |
+|Layer3_weightArray_3_V_Addr_A  | out |   32|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_EN_A    | out |    1|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_WEN_A   | out |    4|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Din_A   | out |   32|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Dout_A  |  in |   32|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Clk_A   | out |    1|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_weightArray_3_V_Rst_A   | out |    1|    bram    | Layer3_weightArray_3_V |     array    |
+|Layer3_Bias_V_Addr_A           | out |   32|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_EN_A             | out |    1|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_WEN_A            | out |    4|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Din_A            | out |   32|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Dout_A           |  in |   32|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Clk_A            | out |    1|    bram    |      Layer3_Bias_V     |     array    |
+|Layer3_Bias_V_Rst_A            | out |    1|    bram    |      Layer3_Bias_V     |     array    |
+|Layer4_weightArray_V_Addr_A    | out |   32|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_EN_A      | out |    1|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_WEN_A     | out |    4|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Din_A     | out |   32|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Dout_A    |  in |   32|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Clk_A     | out |    1|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_weightArray_V_Rst_A     | out |    1|    bram    |  Layer4_weightArray_V  |     array    |
+|Layer4_Bias_V_Addr_A           | out |   32|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_EN_A             | out |    1|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_WEN_A            | out |    4|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Din_A            | out |   32|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Dout_A           |  in |   32|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Clk_A            | out |    1|    bram    |      Layer4_Bias_V     |     array    |
+|Layer4_Bias_V_Rst_A            | out |    1|    bram    |      Layer4_Bias_V     |     array    |
++-------------------------------+-----+-----+------------+------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	2  / true
+
+* FSM state operations: 
+
+ <State 1> : 3.92ns
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_3_V), !map !656"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_2_V), !map !663"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_1_V), !map !669"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([7200 x i18]* %Layer3_weightArray_0_V), !map !675"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %Config_rep), !map !681"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([38400 x i18]* %src_V), !map !687"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([600 x i16]* %dst_V), !map !694"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1920 x i18]* %saveValueLayer1_V), !map !700"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([960 x i18]* %saveValueLayer2_V), !map !706"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([60 x i18]* %saveValueLayer3_V), !map !712"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([190 x i18]* %Layer1_WeightArray_V), !map !718"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x i18]* %Layer1_BiasArray_V), !map !724"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([900 x i18]* %Layer2_WeightMatrix_V), !map !729"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x i18]* %Layer2_BiasArray_V), !map !735"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([60 x i18]* %Layer3_Bias_V), !map !739"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([180 x i18]* %Layer4_weightArray_V), !map !743"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([3 x i18]* %Layer4_Bias_V), !map !748"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @MASTER_CNN_str) nounwind"
+ST_1 : Operation 22 [1/1] (1.00ns)   --->   "%Config_rep_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %Config_rep)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind" [SRC/2_Manage_CNN.cpp:6]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([38400 x i18]* %src_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([38400 x i18]* %src_V, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([600 x i16]* %dst_V, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([600 x i16]* %dst_V, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8 %Config_rep, [10 x i8]* @p_str31, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [6 x i8]* @p_str3101, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind" [SRC/2_Manage_CNN.cpp:9]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([3 x i18]* %Layer4_Bias_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([3 x i18]* %Layer4_Bias_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([180 x i18]* %Layer4_weightArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([180 x i18]* %Layer4_weightArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([60 x i18]* %Layer3_Bias_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([60 x i18]* %Layer3_Bias_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([10 x i18]* %Layer2_BiasArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([10 x i18]* %Layer2_BiasArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([900 x i18]* %Layer2_WeightMatrix_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([900 x i18]* %Layer2_WeightMatrix_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([10 x i18]* %Layer1_BiasArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([10 x i18]* %Layer1_BiasArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([190 x i18]* %Layer1_WeightArray_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([190 x i18]* %Layer1_WeightArray_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([60 x i18]* %saveValueLayer3_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([60 x i18]* %saveValueLayer3_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100) nounwind"
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([960 x i18]* %saveValueLayer2_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([960 x i18]* %saveValueLayer2_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([1920 x i18]* %saveValueLayer1_V, [5 x i8]* @p_str5103, i32 0, i32 0, [1 x i8]* @p_str2100, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([1920 x i18]* %saveValueLayer1_V, [1 x i8]* @p_str2100, [12 x i8]* @p_str4102, [1 x i8]* @p_str2100, i32 -1, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100, [1 x i8]* @p_str2100)"
+ST_1 : Operation 51 [1/1] (1.55ns)   --->   "%tmp = icmp ult i8 %Config_rep_read, -56" [SRC/2_Manage_CNN.cpp:40]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (1.37ns)   --->   "%Config_rep_s = select i1 %tmp, i8 %Config_rep_read, i8 -56" [SRC/2_Manage_CNN.cpp:40]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (1.76ns)   --->   "br label %0" [SRC/2_Manage_CNN.cpp:46]
+
+ <State 2> : 1.92ns
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%i = phi i8 [ 0, %._crit_edge ], [ %i_1, %1 ]"
+ST_2 : Operation 55 [1/1] (1.55ns)   --->   "%exitcond = icmp eq i8 %i, %Config_rep_s" [SRC/2_Manage_CNN.cpp:46]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (1.91ns)   --->   "%i_1 = add i8 %i, 1" [SRC/2_Manage_CNN.cpp:46]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %2, label %1" [SRC/2_Manage_CNN.cpp:46]
+ST_2 : Operation 58 [2/2] (0.00ns)   --->   "call fastcc void @CNN_1D([38400 x i18]* %src_V, i8 %i, [1920 x i18]* %saveValueLayer1_V, [960 x i18]* %saveValueLayer2_V, [60 x i18]* %saveValueLayer3_V, [190 x i18]* %Layer1_WeightArray_V, [10 x i18]* %Layer1_BiasArray_V, [900 x i18]* %Layer2_WeightMatrix_V, [10 x i18]* %Layer2_BiasArray_V, [7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [60 x i18]* %Layer3_Bias_V, [180 x i18]* %Layer4_weightArray_V, [3 x i18]* %Layer4_Bias_V, [600 x i16]* %dst_V)" [SRC/2_Manage_CNN.cpp:51]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "ret void" [SRC/2_Manage_CNN.cpp:53]
+
+ <State 3> : 0.00ns
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str7105) nounwind" [SRC/2_Manage_CNN.cpp:46]
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str7105)" [SRC/2_Manage_CNN.cpp:46]
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 1, i32 200, i32 50, [1 x i8]* @p_str2100) nounwind" [SRC/2_Manage_CNN.cpp:47]
+ST_3 : Operation 63 [1/2] (0.00ns)   --->   "call fastcc void @CNN_1D([38400 x i18]* %src_V, i8 %i, [1920 x i18]* %saveValueLayer1_V, [960 x i18]* %saveValueLayer2_V, [60 x i18]* %saveValueLayer3_V, [190 x i18]* %Layer1_WeightArray_V, [10 x i18]* %Layer1_BiasArray_V, [900 x i18]* %Layer2_WeightMatrix_V, [10 x i18]* %Layer2_BiasArray_V, [7200 x i18]* %Layer3_weightArray_0_V, [7200 x i18]* %Layer3_weightArray_1_V, [7200 x i18]* %Layer3_weightArray_2_V, [7200 x i18]* %Layer3_weightArray_3_V, [60 x i18]* %Layer3_Bias_V, [180 x i18]* %Layer4_weightArray_V, [3 x i18]* %Layer4_Bias_V, [600 x i16]* %dst_V)" [SRC/2_Manage_CNN.cpp:51]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str7105, i32 %tmp_s)" [SRC/2_Manage_CNN.cpp:52]
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "br label %0" [SRC/2_Manage_CNN.cpp:46]
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ Config_rep]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ src_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ dst_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
+Port [ saveValueLayer1_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[0]; IO mode=bram:ce=0
+Port [ saveValueLayer2_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[0]; IO mode=bram:ce=0
+Port [ saveValueLayer3_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[0]; IO mode=bram:ce=0
+Port [ Layer1_WeightArray_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer1_BiasArray_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer2_WeightMatrix_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer2_BiasArray_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer3_weightArray_0_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer3_weightArray_1_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer3_weightArray_2_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer3_weightArray_3_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer3_Bias_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer4_weightArray_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ Layer4_Bias_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=bram:ce=0
+Port [ f_x_msb_2_table]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ exp_x_msb_1_table32]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+StgValue_4      (specbitsmap      ) [ 0000]
+StgValue_5      (specbitsmap      ) [ 0000]
+StgValue_6      (specbitsmap      ) [ 0000]
+StgValue_7      (specbitsmap      ) [ 0000]
+StgValue_8      (specbitsmap      ) [ 0000]
+StgValue_9      (specbitsmap      ) [ 0000]
+StgValue_10     (specbitsmap      ) [ 0000]
+StgValue_11     (specbitsmap      ) [ 0000]
+StgValue_12     (specbitsmap      ) [ 0000]
+StgValue_13     (specbitsmap      ) [ 0000]
+StgValue_14     (specbitsmap      ) [ 0000]
+StgValue_15     (specbitsmap      ) [ 0000]
+StgValue_16     (specbitsmap      ) [ 0000]
+StgValue_17     (specbitsmap      ) [ 0000]
+StgValue_18     (specbitsmap      ) [ 0000]
+StgValue_19     (specbitsmap      ) [ 0000]
+StgValue_20     (specbitsmap      ) [ 0000]
+StgValue_21     (spectopmodule    ) [ 0000]
+Config_rep_read (read             ) [ 0000]
+StgValue_23     (specinterface    ) [ 0000]
+StgValue_24     (specmemcore      ) [ 0000]
+StgValue_25     (specinterface    ) [ 0000]
+StgValue_26     (specmemcore      ) [ 0000]
+StgValue_27     (specinterface    ) [ 0000]
+StgValue_28     (specinterface    ) [ 0000]
+StgValue_29     (specmemcore      ) [ 0000]
+StgValue_30     (specinterface    ) [ 0000]
+StgValue_31     (specmemcore      ) [ 0000]
+StgValue_32     (specinterface    ) [ 0000]
+StgValue_33     (specmemcore      ) [ 0000]
+StgValue_34     (specinterface    ) [ 0000]
+StgValue_35     (specinterface    ) [ 0000]
+StgValue_36     (specmemcore      ) [ 0000]
+StgValue_37     (specinterface    ) [ 0000]
+StgValue_38     (specmemcore      ) [ 0000]
+StgValue_39     (specinterface    ) [ 0000]
+StgValue_40     (specmemcore      ) [ 0000]
+StgValue_41     (specinterface    ) [ 0000]
+StgValue_42     (specmemcore      ) [ 0000]
+StgValue_43     (specinterface    ) [ 0000]
+StgValue_44     (specmemcore      ) [ 0000]
+StgValue_45     (specmemcore      ) [ 0000]
+StgValue_46     (specinterface    ) [ 0000]
+StgValue_47     (specmemcore      ) [ 0000]
+StgValue_48     (specinterface    ) [ 0000]
+StgValue_49     (specinterface    ) [ 0000]
+StgValue_50     (specmemcore      ) [ 0000]
+tmp             (icmp             ) [ 0000]
+Config_rep_s    (select           ) [ 0011]
+StgValue_53     (br               ) [ 0111]
+i               (phi              ) [ 0011]
+exitcond        (icmp             ) [ 0011]
+i_1             (add              ) [ 0111]
+StgValue_57     (br               ) [ 0000]
+StgValue_59     (ret              ) [ 0000]
+StgValue_60     (specloopname     ) [ 0000]
+tmp_s           (specregionbegin  ) [ 0000]
+StgValue_62     (speclooptripcount) [ 0000]
+StgValue_63     (call             ) [ 0000]
+empty           (specregionend    ) [ 0000]
+StgValue_65     (br               ) [ 0111]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="Config_rep">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Config_rep"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="src_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="src_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="dst_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dst_V"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="saveValueLayer1_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="saveValueLayer1_V"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="saveValueLayer2_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="saveValueLayer2_V"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="saveValueLayer3_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="saveValueLayer3_V"/><MemPortTyVec>0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="Layer1_WeightArray_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer1_WeightArray_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="Layer1_BiasArray_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer1_BiasArray_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="Layer2_WeightMatrix_V">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer2_WeightMatrix_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="Layer2_BiasArray_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer2_BiasArray_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="Layer3_weightArray_0_V">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer3_weightArray_0_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="Layer3_weightArray_1_V">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer3_weightArray_1_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="Layer3_weightArray_2_V">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer3_weightArray_2_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="Layer3_weightArray_3_V">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer3_weightArray_3_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="Layer3_Bias_V">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer3_Bias_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="Layer4_weightArray_V">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer4_weightArray_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="Layer4_Bias_V">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Layer4_Bias_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="f_x_msb_2_table">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="f_x_msb_2_table"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="exp_x_msb_1_table32">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="exp_x_msb_1_table32"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MASTER_CNN_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.s_axilite.i8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str31"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str2100"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str3101"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecMemCore"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="RAM_1P_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str4102"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str5103"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="CNN_1D"/></StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1001" name="const_76">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1001" name="const_78">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str7105"/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1001" name="const_80">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecRegionBegin"/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1001" name="const_82">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecRegionEnd"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="Config_rep_read_read_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="8" slack="0"/>
+<pin id="94" dir="0" index="1" bw="8" slack="0"/>
+<pin id="95" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="Config_rep_read/1 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1005" name="i_reg_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="8" slack="1"/>
+<pin id="100" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="i (phireg) "/>
+</bind>
+</comp>
+
+<comp id="102" class="1004" name="i_phi_fu_102">
+<pin_list>
+<pin id="103" dir="0" index="0" bw="1" slack="1"/>
+<pin id="104" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="105" dir="0" index="2" bw="8" slack="0"/>
+<pin id="106" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="107" dir="1" index="4" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="i/2 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1004" name="grp_CNN_1D_fu_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="0" slack="0"/>
+<pin id="112" dir="0" index="1" bw="18" slack="0"/>
+<pin id="113" dir="0" index="2" bw="8" slack="0"/>
+<pin id="114" dir="0" index="3" bw="18" slack="0"/>
+<pin id="115" dir="0" index="4" bw="18" slack="0"/>
+<pin id="116" dir="0" index="5" bw="18" slack="0"/>
+<pin id="117" dir="0" index="6" bw="18" slack="0"/>
+<pin id="118" dir="0" index="7" bw="18" slack="0"/>
+<pin id="119" dir="0" index="8" bw="18" slack="0"/>
+<pin id="120" dir="0" index="9" bw="18" slack="0"/>
+<pin id="121" dir="0" index="10" bw="18" slack="0"/>
+<pin id="122" dir="0" index="11" bw="18" slack="0"/>
+<pin id="123" dir="0" index="12" bw="18" slack="0"/>
+<pin id="124" dir="0" index="13" bw="18" slack="0"/>
+<pin id="125" dir="0" index="14" bw="18" slack="0"/>
+<pin id="126" dir="0" index="15" bw="18" slack="0"/>
+<pin id="127" dir="0" index="16" bw="18" slack="0"/>
+<pin id="128" dir="0" index="17" bw="16" slack="0"/>
+<pin id="129" dir="0" index="18" bw="46" slack="0"/>
+<pin id="130" dir="0" index="19" bw="50" slack="0"/>
+<pin id="131" dir="1" index="20" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_58/2 "/>
+</bind>
+</comp>
+
+<comp id="152" class="1004" name="tmp_fu_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="8" slack="0"/>
+<pin id="154" dir="0" index="1" bw="8" slack="0"/>
+<pin id="155" dir="1" index="2" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="tmp/1 "/>
+</bind>
+</comp>
+
+<comp id="158" class="1004" name="Config_rep_s_fu_158">
+<pin_list>
+<pin id="159" dir="0" index="0" bw="1" slack="0"/>
+<pin id="160" dir="0" index="1" bw="8" slack="0"/>
+<pin id="161" dir="0" index="2" bw="8" slack="0"/>
+<pin id="162" dir="1" index="3" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opcode="select(49) " fcode="select"/>
+<opset="Config_rep_s/1 "/>
+</bind>
+</comp>
+
+<comp id="166" class="1004" name="exitcond_fu_166">
+<pin_list>
+<pin id="167" dir="0" index="0" bw="8" slack="0"/>
+<pin id="168" dir="0" index="1" bw="8" slack="1"/>
+<pin id="169" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="exitcond/2 "/>
+</bind>
+</comp>
+
+<comp id="171" class="1004" name="i_1_fu_171">
+<pin_list>
+<pin id="172" dir="0" index="0" bw="8" slack="0"/>
+<pin id="173" dir="0" index="1" bw="1" slack="0"/>
+<pin id="174" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="i_1/2 "/>
+</bind>
+</comp>
+
+<comp id="177" class="1005" name="Config_rep_s_reg_177">
+<pin_list>
+<pin id="178" dir="0" index="0" bw="8" slack="1"/>
+<pin id="179" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="Config_rep_s "/>
+</bind>
+</comp>
+
+<comp id="185" class="1005" name="i_1_reg_185">
+<pin_list>
+<pin id="186" dir="0" index="0" bw="8" slack="0"/>
+<pin id="187" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opset="i_1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="96"><net_src comp="44" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="97"><net_src comp="0" pin="0"/><net_sink comp="92" pin=1"/></net>
+
+<net id="101"><net_src comp="70" pin="0"/><net_sink comp="98" pin=0"/></net>
+
+<net id="108"><net_src comp="98" pin="1"/><net_sink comp="102" pin=0"/></net>
+
+<net id="109"><net_src comp="102" pin="4"/><net_sink comp="98" pin=0"/></net>
+
+<net id="132"><net_src comp="74" pin="0"/><net_sink comp="110" pin=0"/></net>
+
+<net id="133"><net_src comp="2" pin="0"/><net_sink comp="110" pin=1"/></net>
+
+<net id="134"><net_src comp="102" pin="4"/><net_sink comp="110" pin=2"/></net>
+
+<net id="135"><net_src comp="6" pin="0"/><net_sink comp="110" pin=3"/></net>
+
+<net id="136"><net_src comp="8" pin="0"/><net_sink comp="110" pin=4"/></net>
+
+<net id="137"><net_src comp="10" pin="0"/><net_sink comp="110" pin=5"/></net>
+
+<net id="138"><net_src comp="12" pin="0"/><net_sink comp="110" pin=6"/></net>
+
+<net id="139"><net_src comp="14" pin="0"/><net_sink comp="110" pin=7"/></net>
+
+<net id="140"><net_src comp="16" pin="0"/><net_sink comp="110" pin=8"/></net>
+
+<net id="141"><net_src comp="18" pin="0"/><net_sink comp="110" pin=9"/></net>
+
+<net id="142"><net_src comp="20" pin="0"/><net_sink comp="110" pin=10"/></net>
+
+<net id="143"><net_src comp="22" pin="0"/><net_sink comp="110" pin=11"/></net>
+
+<net id="144"><net_src comp="24" pin="0"/><net_sink comp="110" pin=12"/></net>
+
+<net id="145"><net_src comp="26" pin="0"/><net_sink comp="110" pin=13"/></net>
+
+<net id="146"><net_src comp="28" pin="0"/><net_sink comp="110" pin=14"/></net>
+
+<net id="147"><net_src comp="30" pin="0"/><net_sink comp="110" pin=15"/></net>
+
+<net id="148"><net_src comp="32" pin="0"/><net_sink comp="110" pin=16"/></net>
+
+<net id="149"><net_src comp="4" pin="0"/><net_sink comp="110" pin=17"/></net>
+
+<net id="150"><net_src comp="34" pin="0"/><net_sink comp="110" pin=18"/></net>
+
+<net id="151"><net_src comp="36" pin="0"/><net_sink comp="110" pin=19"/></net>
+
+<net id="156"><net_src comp="92" pin="2"/><net_sink comp="152" pin=0"/></net>
+
+<net id="157"><net_src comp="68" pin="0"/><net_sink comp="152" pin=1"/></net>
+
+<net id="163"><net_src comp="152" pin="2"/><net_sink comp="158" pin=0"/></net>
+
+<net id="164"><net_src comp="92" pin="2"/><net_sink comp="158" pin=1"/></net>
+
+<net id="165"><net_src comp="68" pin="0"/><net_sink comp="158" pin=2"/></net>
+
+<net id="170"><net_src comp="102" pin="4"/><net_sink comp="166" pin=0"/></net>
+
+<net id="175"><net_src comp="102" pin="4"/><net_sink comp="171" pin=0"/></net>
+
+<net id="176"><net_src comp="72" pin="0"/><net_sink comp="171" pin=1"/></net>
+
+<net id="180"><net_src comp="158" pin="3"/><net_sink comp="177" pin=0"/></net>
+
+<net id="181"><net_src comp="177" pin="1"/><net_sink comp="166" pin=1"/></net>
+
+<net id="188"><net_src comp="171" pin="2"/><net_sink comp="185" pin=0"/></net>
+
+<net id="189"><net_src comp="185" pin="1"/><net_sink comp="102" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: dst_V | {2 3 }
+	Port: saveValueLayer1_V | {2 3 }
+	Port: saveValueLayer2_V | {2 3 }
+	Port: saveValueLayer3_V | {2 3 }
+ - Input state : 
+	Port: MASTER_CNN : Config_rep | {1 }
+	Port: MASTER_CNN : src_V | {2 3 }
+	Port: MASTER_CNN : Layer1_WeightArray_V | {2 3 }
+	Port: MASTER_CNN : Layer1_BiasArray_V | {2 3 }
+	Port: MASTER_CNN : Layer2_WeightMatrix_V | {2 3 }
+	Port: MASTER_CNN : Layer2_BiasArray_V | {2 3 }
+	Port: MASTER_CNN : Layer3_weightArray_0_V | {2 3 }
+	Port: MASTER_CNN : Layer3_weightArray_1_V | {2 3 }
+	Port: MASTER_CNN : Layer3_weightArray_2_V | {2 3 }
+	Port: MASTER_CNN : Layer3_weightArray_3_V | {2 3 }
+	Port: MASTER_CNN : Layer3_Bias_V | {2 3 }
+	Port: MASTER_CNN : Layer4_weightArray_V | {2 3 }
+	Port: MASTER_CNN : Layer4_Bias_V | {2 3 }
+	Port: MASTER_CNN : f_x_msb_2_table | {2 3 }
+	Port: MASTER_CNN : exp_x_msb_1_table32 | {2 3 }
+  - Chain level:
+	State 1
+		Config_rep_s : 1
+	State 2
+		exitcond : 1
+		i_1 : 1
+		StgValue_57 : 2
+		StgValue_58 : 1
+	State 3
+		empty : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------------------|---------|---------|---------|---------|---------|
+| Operation|       Functional Unit      |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+|   call   |      grp_CNN_1D_fu_110     |    1    |   199   | 933.983 |  31261  |  12242  |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+|   icmp   |         tmp_fu_152         |    0    |    0    |    0    |    0    |    11   |
+|          |       exitcond_fu_166      |    0    |    0    |    0    |    0    |    11   |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+|    add   |         i_1_fu_171         |    0    |    0    |    0    |    0    |    15   |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+|  select  |     Config_rep_s_fu_158    |    0    |    0    |    0    |    0    |    8    |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+|   read   | Config_rep_read_read_fu_92 |    0    |    0    |    0    |    0    |    0    |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+|   Total  |                            |    1    |   199   | 933.983 |  31261  |  12287  |
+|----------|----------------------------|---------|---------|---------|---------|---------|
+
+Memories:
++-------------------+--------+--------+--------+
+|                   |  BRAM  |   FF   |   LUT  |
++-------------------+--------+--------+--------+
+|exp_x_msb_1_table32|    2   |    0   |    0   |
+|  f_x_msb_2_table  |    2   |    0   |    0   |
++-------------------+--------+--------+--------+
+|       Total       |    4   |    0   |    0   |
++-------------------+--------+--------+--------+
+
+* Register list:
++--------------------+--------+
+|                    |   FF   |
++--------------------+--------+
+|Config_rep_s_reg_177|    8   |
+|     i_1_reg_185    |    8   |
+|      i_reg_98      |    8   |
++--------------------+--------+
+|        Total       |   24   |
++--------------------+--------+
+
+* Multiplexer (MUX) list: 
+|----------|------|------|------|--------||---------||---------|
+|   Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|----------|------|------|------|--------||---------||---------|
+| i_reg_98 |  p0  |   2  |   8  |   16   ||    9    |
+|----------|------|------|------|--------||---------||---------|
+|   Total  |      |      |      |   16   ||  1.769  ||    9    |
+|----------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |    1   |   199  |   933  |  31261 |  12287 |
+|   Memory  |    4   |    -   |    -   |    0   |    0   |
+|Multiplexer|    -   |    -   |    1   |    -   |    9   |
+|  Register |    -   |    -   |    -   |   24   |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |    5   |   199  |   935  |  31285 |  12296 |
++-----------+--------+--------+--------+--------+--------+

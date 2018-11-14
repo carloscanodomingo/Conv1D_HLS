@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="2_Manage_CNN.h" path="D:\HLS\After_ICDD\ForVivado_NUEVOSPESOS\MergeringBRAM\SRC\2_Manage_CNN.h"/>
+    <originFiles name="2_Manage_CNN.cpp" path="D:\HLS\After_ICDD\ForVivado_NUEVOSPESOS\MergeringBRAM\SRC\2_Manage_CNN.cpp"/>
+    <originFiles name="1_keras.h" path="D:\HLS\After_ICDD\ForVivado_NUEVOSPESOS\MergeringBRAM\SRC\1_keras.h"/>
+    <originFiles name="1_keras.cpp" path="D:\HLS\After_ICDD\ForVivado_NUEVOSPESOS\MergeringBRAM\SRC\1_keras.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="1_keras_tb.h" path="D:\HLS\After_ICDD\ForVivado_NUEVOSPESOS\MergeringBRAM\SRC\1_keras_tb.h"/>
+    <originFiles name="1_keras_tb.cpp" path="D:\HLS\After_ICDD\ForVivado_NUEVOSPESOS\MergeringBRAM\SRC\1_keras_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

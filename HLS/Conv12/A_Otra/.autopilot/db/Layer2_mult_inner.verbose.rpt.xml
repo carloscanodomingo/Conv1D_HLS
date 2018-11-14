@@ -1,0 +1,184 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Layer2_mult_inner'" level="0">
+<item name = "Date">Sun Jul  1 02:49:26 2018
+</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
+<item name = "Project">Conv12</item>
+<item name = "Solution">A_Otra</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.40, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">4, 4, 1, 1, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, 9, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 9</column>
+<column name="Register">0, -, 1287, 256</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 4, 1, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="MASTER_CNN_mac_mubkb_U154">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U155">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U156">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U157">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U158">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U159">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U160">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mac_mubkb_U161">MASTER_CNN_mac_mubkb, i0 * i1 + i2</column>
+<column name="MASTER_CNN_mul_mucud_U153">MASTER_CNN_mul_mucud, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_return">9, 2, 18, 36</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_ce_reg">1, 0, 1, 0</column>
+<column name="ap_reg_pp0_iter1_p_read_5_reg_508">18, 0, 18, 0</column>
+<column name="ap_reg_pp0_iter1_p_read_6_reg_513">18, 0, 18, 0</column>
+<column name="ap_reg_pp0_iter1_weight_3_V_read_1_reg_473">18, 0, 18, 0</column>
+<column name="ap_reg_pp0_iter1_weight_4_V_read_1_reg_468">18, 0, 18, 0</column>
+<column name="ap_return_int_reg">18, 0, 18, 0</column>
+<column name="p_read1_int_reg">18, 0, 18, 0</column>
+<column name="p_read2_int_reg">18, 0, 18, 0</column>
+<column name="p_read3_int_reg">18, 0, 18, 0</column>
+<column name="p_read4_int_reg">18, 0, 18, 0</column>
+<column name="p_read5_int_reg">18, 0, 18, 0</column>
+<column name="p_read6_int_reg">18, 0, 18, 0</column>
+<column name="p_read7_int_reg">18, 0, 18, 0</column>
+<column name="p_read8_int_reg">18, 0, 18, 0</column>
+<column name="p_read_1_reg_488">18, 0, 18, 0</column>
+<column name="p_read_2_reg_493">18, 0, 18, 0</column>
+<column name="p_read_3_reg_498">18, 0, 18, 0</column>
+<column name="p_read_4_reg_503">18, 0, 18, 0</column>
+<column name="p_read_5_reg_508">18, 0, 18, 0</column>
+<column name="p_read_6_reg_513">18, 0, 18, 0</column>
+<column name="p_read_7_reg_518">18, 0, 18, 0</column>
+<column name="p_read_8_reg_523">18, 0, 18, 0</column>
+<column name="p_read_int_reg">18, 0, 18, 0</column>
+<column name="tmp_25_reg_528">18, 0, 18, 0</column>
+<column name="tmp_27_reg_533">18, 0, 18, 0</column>
+<column name="tmp_29_reg_538">18, 0, 18, 0</column>
+<column name="tmp_31_reg_543">18, 0, 18, 0</column>
+<column name="weight_0_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_1_V_read_1_reg_483">18, 0, 18, 0</column>
+<column name="weight_1_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_2_V_read_1_reg_478">18, 0, 18, 0</column>
+<column name="weight_2_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_3_V_read_1_reg_473">18, 0, 18, 0</column>
+<column name="weight_3_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_4_V_read_1_reg_468">18, 0, 18, 0</column>
+<column name="weight_4_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_5_V_read_1_reg_463">18, 0, 18, 0</column>
+<column name="weight_5_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_6_V_read_1_reg_458">18, 0, 18, 0</column>
+<column name="weight_6_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_7_V_read_1_reg_453">18, 0, 18, 0</column>
+<column name="weight_7_V_read_int_reg">18, 0, 18, 0</column>
+<column name="weight_8_V_read_1_reg_448">18, 0, 18, 0</column>
+<column name="weight_8_V_read_int_reg">18, 0, 18, 0</column>
+<column name="p_read_1_reg_488">64, 32, 18, 0</column>
+<column name="p_read_2_reg_493">64, 32, 18, 0</column>
+<column name="p_read_3_reg_498">64, 32, 18, 0</column>
+<column name="p_read_4_reg_503">64, 32, 18, 0</column>
+<column name="weight_5_V_read_1_reg_463">64, 32, 18, 0</column>
+<column name="weight_6_V_read_1_reg_458">64, 32, 18, 0</column>
+<column name="weight_7_V_read_1_reg_453">64, 32, 18, 0</column>
+<column name="weight_8_V_read_1_reg_448">64, 32, 18, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Layer2_mult_inner, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Layer2_mult_inner, return value</column>
+<column name="ap_return">out, 18, ap_ctrl_hs, Layer2_mult_inner, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, Layer2_mult_inner, return value</column>
+<column name="p_read">in, 18, ap_none, p_read, scalar</column>
+<column name="p_read1">in, 18, ap_none, p_read1, scalar</column>
+<column name="p_read2">in, 18, ap_none, p_read2, scalar</column>
+<column name="p_read3">in, 18, ap_none, p_read3, scalar</column>
+<column name="p_read4">in, 18, ap_none, p_read4, scalar</column>
+<column name="p_read5">in, 18, ap_none, p_read5, scalar</column>
+<column name="p_read6">in, 18, ap_none, p_read6, scalar</column>
+<column name="p_read7">in, 18, ap_none, p_read7, scalar</column>
+<column name="p_read8">in, 18, ap_none, p_read8, scalar</column>
+<column name="weight_0_V_read">in, 18, ap_none, weight_0_V_read, scalar</column>
+<column name="weight_1_V_read">in, 18, ap_none, weight_1_V_read, scalar</column>
+<column name="weight_2_V_read">in, 18, ap_none, weight_2_V_read, scalar</column>
+<column name="weight_3_V_read">in, 18, ap_none, weight_3_V_read, scalar</column>
+<column name="weight_4_V_read">in, 18, ap_none, weight_4_V_read, scalar</column>
+<column name="weight_5_V_read">in, 18, ap_none, weight_5_V_read, scalar</column>
+<column name="weight_6_V_read">in, 18, ap_none, weight_6_V_read, scalar</column>
+<column name="weight_7_V_read">in, 18, ap_none, weight_7_V_read, scalar</column>
+<column name="weight_8_V_read">in, 18, ap_none, weight_8_V_read, scalar</column>
+</table>
+</item>
+</section>
+</profile>

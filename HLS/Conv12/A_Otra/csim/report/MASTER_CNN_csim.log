@@ -1,0 +1,83 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../SRC/1_keras_tb.cpp in debug mode
+   Compiling ../../../../SRC/2_Manage_CNN.cpp in debug mode
+   Compiling ../../../../SRC/1_keras.cpp in debug mode
+   Generating csim.exe
+POS: 0	Results:105.531	105.531	1	Class: Real 2	Calculate: 0
+ERROR 0
+POS: 1	Results:0.539063	0.457031	90.8945	Class: Real 0	Calculate: 2
+ERROR 1
+POS: 2	Results:27.2266	27.2266	1	Class: Real 2	Calculate: 0
+ERROR 2
+POS: 3	Results:96.6563	0.394531	0.601563	Class: Real 2	Calculate: 0
+ERROR 3
+POS: 4	Results:0.503906	0.496094	108.68	Class: Real 0	Calculate: 2
+ERROR 4
+POS: 5	Results:0.503906	0.496094	118.293	Class: Real 0	Calculate: 2
+ERROR 5
+POS: 6	Results:0.535156	0.464844	112.215	Class: Real 0	Calculate: 2
+ERROR 6
+POS: 7	Results:0.496094	0.5	93.0859	Class: Real 1	Calculate: 2
+ERROR 7
+POS: 8	Results:79.8203	79.8203	1	Class: Real 2	Calculate: 0
+ERROR 8
+POS: 9	Results:0.5	0.496094	118.508	Class: Real 0	Calculate: 2
+ERROR 9
+POS: a	Results:0.507813	0.488281	99.7461	Class: Real 0	Calculate: 2
+ERROR a
+POS: b	Results:0.488281	0.511719	104.352	Class: Real 1	Calculate: 2
+ERROR b
+POS: c	Results:-106.379	1.00391	-106.379	Class: Real 1	Calculate: 1
+POS: d	Results:0.507813	0.492188	89.2813	Class: Real 0	Calculate: 2
+ERROR d
+POS: e	Results:0.53125	0.46875	109.957	Class: Real 0	Calculate: 2
+ERROR e
+POS: f	Results:-1.99219	1.00391	-1.99219	Class: Real 1	Calculate: 1
+POS: 10	Results:0.5	0.5	112.602	Class: Real 1	Calculate: 2
+ERROR 10
+POS: 11	Results:0.492188	0.503906	122.266	Class: Real 1	Calculate: 2
+ERROR 11
+POS: 12	Results:0.492188	0.507813	109.406	Class: Real 1	Calculate: 2
+ERROR 12
+POS: 13	Results:0.195313	0.800781	1.15234	Class: Real 1	Calculate: 2
+ERROR 13
+POS: 14	Results:0.5	0.5	114.57	Class: Real 0	Calculate: 2
+ERROR 14
+POS: 15	Results:0.507813	0.488281	119.152	Class: Real 0	Calculate: 2
+ERROR 15
+POS: 16	Results:0.496094	0.5	125.785	Class: Real 1	Calculate: 2
+ERROR 16
+POS: 17	Results:0.496094	0.503906	93.8867	Class: Real 1	Calculate: 2
+ERROR 17
+POS: 18	Results:-20.2656	-20.2656	1.00391	Class: Real 2	Calculate: 2
+POS: 19	Results:0.519531	0.480469	120.027	Class: Real 0	Calculate: 2
+ERROR 19
+POS: 1a	Results:0.523438	0.472656	77.832	Class: Real 0	Calculate: 2
+ERROR 1a
+POS: 1b	Results:0.488281	0.507813	107.965	Class: Real 1	Calculate: 2
+ERROR 1b
+POS: 1c	Results:0.488281	0.507813	123.883	Class: Real 1	Calculate: 2
+ERROR 1c
+POS: 1d	Results:0.484375	0.511719	120.027	Class: Real 1	Calculate: 2
+ERROR 1d
+POS: 1e	Results:0.511719	0.488281	110.512	Class: Real 0	Calculate: 2
+ERROR 1e
+POS: 1f	Results:-15.0625	1.00391	-15.0625	Class: Real 1	Calculate: 1
+POS: 20	Results:0.5	0.5	119.586	Class: Real 0	Calculate: 2
+ERROR 20
+POS: 21	Results:79.5313	79.5313	1	Class: Real 2	Calculate: 0
+ERROR 21
+POS: 22	Results:0.453125	0.546875	86.1133	Class: Real 1	Calculate: 2
+ERROR 22
+POS: 23	Results:0.519531	0.476563	60.1211	Class: Real 0	Calculate: 2
+ERROR 23
+POS: 24	Results:0.507813	0.488281	113.578	Class: Real 0	Calculate: 2
+ERROR 24
+POS: 25	Results:-16.8242	1.00391	-16.8242	Class: Real 1	Calculate: 1
+POS: 26	Results:0.515625	0.480469	95.668	Class: Real 0	Calculate: 2
+ERROR 26
+POS: 27	Results:0.488281	0.507813	122.953	Class: Real 1	Calculate: 2
+ERROR 27
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
